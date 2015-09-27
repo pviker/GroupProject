@@ -1,32 +1,53 @@
 
 /* MAIN NAVIGATION STYLE */
 
-.navDiv {
+/*.navDiv {
 	text-align: center;
 	margin-left: auto;
     margin-right: auto; 
-    padding: 2%; 
+}*/
+
+body {
+		background: white url("../images/header2.jpg") no-repeat fixed;
+		color: white;
+	
+}
+
+div.header {
+	color: white;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	position: fixed;
+	min-width: 100%;
+	z-index: 1;
+	background-color: gray;
+	font-size: 25px;
+	top: 0;
+
+}
+
+span.spanHeader {
+	padding-left: 1em;
 }
 
 #mainNav {
+	padding-top: 2em;
 	background-color: gray;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 15px;
     margin-left: auto;
     margin-right: auto;
-    padding-right: 50%;
     list-style:none;
     font-weight:bold;
-    margin-bottom:10px;
+    /*margin-bottom:10px;
     float:left;
     position:relative;
     z-index:5;
     text-align: left;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;*/
+    /*border-bottom-right-radius: 20px;*/
     box-shadow: 0px 10px 15px 2px black;
     position: fixed;
-    
+    min-width: 100%;
 }
 
 #mainNav li{
@@ -82,7 +103,7 @@
 	background: #333;
 	text-decoration:underline;
 	transition-property: background;
-	transition-duration: .8s;
+	transition-duration: .5s;
 }
 
 #mainNav li:hover ul a{

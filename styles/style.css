@@ -1,14 +1,39 @@
-@CHARSET "UTF-8";
-
-body {
+/*body {
 	font-family: sans-serif;
+	background: black;
 }
 
 td {
-	padding: 5px;
+	padding: 20px;
 }
 
-.submitButton {
+button {
+	background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1 {
+	color: white;
+	
+	text-align: center;
+	margin-left:auto; 
+    margin-right:auto;
+}*/
+
+/*.submitButton {
 	border : solid 2px #ffffff;
 	border-radius : 6px;
 	-webkit-box-shadow : 3px 6px 14px rgba(0,0,0,1.0);
@@ -35,10 +60,70 @@ td {
 }
 
 table {
+	background: white;
 	border: 1px solid black;
-	background-color: #DEB887;
+	background-color: white-space: normal;;
 	border-radius : 11px 11px 11px 11px;
 	box-shadow : 3px 6px 14px rgba(0,0,0,1.0);
 	margin-left:auto; 
     margin-right:auto;
+    table-layout: fixed;
 }
+
+td.left {
+	/*float: left;
+		margin-left:auto; 
+    margin-right:auto;*/
+/*}*/
+
+body{
+    font-family:"Lucida Grande", arial, sans-serif;
+    background: orange;
+}
+
+ul{
+    margin:0;
+    padding:0;
+}
+
+li{
+    width:100px;
+    height:50px;
+    float:left;
+    color:#191919;
+    text-align:center;
+    overflow:hidden;
+	background-color: black;
+}
+
+a{
+    color:#FFF;
+    text-decoration:none;
+}
+
+p{
+	padding: 10em;
+}
+
+span {
+	padding-right: 5em;
+	margin-right: 8em;
+	font-family:"Arial Black";
+	margin-left:auto; 
+    margin-right:auto;
+	color: white;
+	font-size: 16px;
+	
+	background: black;
+}
+
+    .subtext{
+        padding-top:15px;
+    }
+
+/*Menu Color Classes*/
+.green{background:#6AA63B;}
+.yellow{background:#FBC700;}
+.red{background:#D52100;}
+.purple{background:#5122B4;}
+.blue{background:#0292C0;}

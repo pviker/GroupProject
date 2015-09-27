@@ -1,0 +1,25 @@
+$(document).ready(function(){
+	$("button").click(function(){
+		$("p").hide();
+
+});
+
+$("span").mouseover(function(){
+	$(this).stop().animate({
+		height:'150px'
+	},
+		{queue:false, duration:600, easing: 'easeInQuad'})
+});
+
+$("span").mouseout(function(){
+	$(this).stop().animate({
+		height:'25px'
+	},
+		{queue:false, duration:600, easing: 'easeOutQuad'})
+});
+
+});
+
+//$(document).ready(function(){
+//
+//});

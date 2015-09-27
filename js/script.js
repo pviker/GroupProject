@@ -4,14 +4,14 @@ $(document).ready(function(){
 
 });
 
-$("span").mouseover(function(){
+$("#id").mouseover(function(){
 	$(this).stop().animate({
 		height:'150px'
 	},
 		{queue:false, duration:600, easing: 'easeInQuad'})
 });
 
-$("span").mouseout(function(){
+$("#id").mouseout(function(){
 	$(this).stop().animate({
 		height:'25px'
 	},

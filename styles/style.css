@@ -81,6 +81,11 @@ body{
     background: orange;
 }
 
+html, body {
+    		height: 100%;
+    		margin: 0;
+    	}
+
 ul{
     margin:0;
     padding:0;
@@ -105,7 +110,7 @@ p{
 	padding: 10em;
 }
 
-span {
+/*span {
 	padding-right: 5em;
 	margin-right: 8em;
 	font-family:"Arial Black";
@@ -115,7 +120,7 @@ span {
 	font-size: 16px;
 	
 	background: black;
-}
+}*/
 
     .subtext{
         padding-top:15px;

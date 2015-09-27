@@ -2,21 +2,19 @@
 /* MAIN NAVIGATION STYLE */
 
 .navDiv {
-	padding: auto;
 	text-align: center;
 	margin-left: auto;
-    margin-right: auto;
-    width: 90%;   
+    margin-right: auto; 
+    padding: 2%; 
 }
 
 #mainNav {
 	background-color: gray;
-	/*font-family: Arial, "MS Trebuchet", sans-serif;*/
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 15px;
     margin-left: auto;
     margin-right: auto;
-    padding: .35em;
+    padding-right: 50%;
     list-style:none;
     font-weight:bold;
     margin-bottom:10px;
@@ -24,8 +22,10 @@
     position:relative;
     z-index:5;
     text-align: left;
-    border-radius: 5px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     box-shadow: 0px 10px 15px 2px black;
+    position: fixed;
     
 }
 
@@ -39,7 +39,7 @@
     display:block;
     padding:5px;
     color:#fff;
-    background:#333;
+    background:gray;
     text-decoration:none;
   
 }
@@ -59,9 +59,7 @@
 	position:absolute;
 	display: none;
 	padding-left: 0;
-	
 	white-space: nowrap;
-	
 }
 
 #mainNav ul li{

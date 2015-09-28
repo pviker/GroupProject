@@ -11,7 +11,6 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
 		<script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
 		<script src="js/script.js" type="text/javascript"></script>
-		<script></script>
 		
 		<title>ICS325 - Group Project</title>
 		
@@ -19,55 +18,50 @@
 	<body>
 
 <!--START MENU-->
-	<div class="navDiv" align="center">
-			<ul id="mainNav">
-				<li><a href="#">home</a></li>
-				
-				<li>
-					<a href="#">guitars</a>
-					<ul>
-						<li><a href="#">acoustics</a></li>
-						<li><a href="#">electrics</a></li>
-						<li><a href="#">basses</a></li>
-						<li><a href="#">other</a></li>
-					</ul>
-				</li>
-				
-				<li>
-					<a href="#">amps</a>
-					<ul>
-						<li><a href="#">acoustic</a></li>
-						<li><a href="#">solid-state electric</a></li>
-						<li><a href="#">tube electric</a></li>
-						<li><a href="#">bass</a></li>
-					</ul>
-				</li>
-				
-				<li>
-					<a href="#">accessories</a>
-					<ul>
-						<li><a href="#">cables</a></li>
-						<li><a href="#">parts</a></li>
-						<li><a href="#">stands</a></li>
-						<li><a href="#">strings</a></li>
-					</ul>
-				</li>
-				
-				<li>
-					<a href="#">information</a>
-					<ul>
-						<li><a href="#">about</a></li>
-						<li><a href="#">contact</a></li>
-						<li><a href="#">mailing list</a></li>
-						<li><a href="#">sitemap</a></li>
-					</ul>
-				</li>
-				
-			</ul>
+	<div class="header"><span class="spanHeader">Music Electric Inc.</span></div>
+	<div>
+		<ul id="mainNav">
+			<li><a href="#">home</a></li>
+			
+			<li>
+				<a href="#">guitars</a>
+				<ul>
+					<li><a href="#">acoustics</a></li>
+					<li><a href="#">electrics</a></li>
+					<li><a href="#">basses</a></li>
+				</ul>
+			</li>
+			
+			<li>
+				<a href="#">amps</a>
+				<ul>
+					<li><a href="#">acoustic</a></li>
+					<li><a href="#">electric</a></li>
+					<li><a href="#">bass</a></li>
+				</ul>
+			</li>
+			
+			<li>
+				<a href="#">drums</a>
+				<ul>
+					<li><a href="#">acoustic</a></li>
+					<li><a href="#">electric</a></li>
+				</ul>
+			</li>
+			
+			<li>
+				<a href="#">information</a>
+				<ul>
+					<li><a href="#">about</a></li>
+					<li><a href="#">contact</a></li>
+				</ul>
+			</li>
+			
+		</ul>
 	</div>
 	<!--END MENU-->	
 
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in sagittis neque. Aliquam vestibulum quis felis dignissim rhoncus. Morbi tristique aliquam mi sed bibendum. Donec volutpat sagittis nulla id condimentum. Cras sed lorem molestie, commodo mi nec, rhoncus diam. Donec eget urna leo. Sed rhoncus pretium lorem, at eleifend mi sodales sollicitudin.
+	<p class="mainContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in sagittis neque. Aliquam vestibulum quis felis dignissim rhoncus. Morbi tristique aliquam mi sed bibendum. Donec volutpat sagittis nulla id condimentum. Cras sed lorem molestie, commodo mi nec, rhoncus diam. Donec eget urna leo. Sed rhoncus pretium lorem, at eleifend mi sodales sollicitudin.
 
 		Nullam id maximus leo, ac tincidunt diam. Donec sed mattis felis, at auctor urna. Maecenas consectetur fermentum congue. Ut arcu tellus, molestie eu libero vitae, pharetra condimentum nulla. In maximus nunc sed laoreet dignissim. Curabitur rhoncus a ipsum non lacinia. Etiam metus nisi, mattis laoreet lectus sed, tristique vestibulum justo. Suspendisse sed enim nibh. Vivamus eget nunc a felis condimentum commodo eu ut mauris. Donec maximus et risus at placerat.
 		

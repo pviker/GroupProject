@@ -11,7 +11,7 @@ $("#id").mouseover(function(){
 		{queue:false, duration:600, easing: 'easeInQuad'})
 });
 
-$("#id").mouseout(function(){
+$("").mouseout(function(){
 	$(this).stop().animate({
 		height:'25px'
 	},

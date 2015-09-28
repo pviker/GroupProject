@@ -61,7 +61,7 @@
 	</div>
 	<!--END MENU-->	
 
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in sagittis neque. Aliquam vestibulum quis felis dignissim rhoncus. Morbi tristique aliquam mi sed bibendum. Donec volutpat sagittis nulla id condimentum. Cras sed lorem molestie, commodo mi nec, rhoncus diam. Donec eget urna leo. Sed rhoncus pretium lorem, at eleifend mi sodales sollicitudin.
+	<p class="mainContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in sagittis neque. Aliquam vestibulum quis felis dignissim rhoncus. Morbi tristique aliquam mi sed bibendum. Donec volutpat sagittis nulla id condimentum. Cras sed lorem molestie, commodo mi nec, rhoncus diam. Donec eget urna leo. Sed rhoncus pretium lorem, at eleifend mi sodales sollicitudin.
 
 		Nullam id maximus leo, ac tincidunt diam. Donec sed mattis felis, at auctor urna. Maecenas consectetur fermentum congue. Ut arcu tellus, molestie eu libero vitae, pharetra condimentum nulla. In maximus nunc sed laoreet dignissim. Curabitur rhoncus a ipsum non lacinia. Etiam metus nisi, mattis laoreet lectus sed, tristique vestibulum justo. Suspendisse sed enim nibh. Vivamus eget nunc a felis condimentum commodo eu ut mauris. Donec maximus et risus at placerat.
 		

@@ -25,9 +25,9 @@
 			<li>
 				<a href="#">guitars</a>
 				<ul>
-					<li><a href="#">acoustics</a></li>
-					<li><a href="guitars/electrics.php">electrics</a></li>
-					<li><a href="#">basses</a></li>
+					<li><a href="#">acoustic</a></li>
+					<li><a href="guitars/electrics.php">electric</a></li>
+					<li><a href="#">bass</a></li>
 				</ul>
 			</li>
 			

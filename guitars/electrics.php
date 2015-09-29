@@ -59,8 +59,8 @@
 	<div class="head">Music Electric Inc.</div>
 
 	
-	<div class="mainContent">
-		
+	<!--START MAIN CONTENT-->
+	<div class="mainContent">		
 		<table>
 			<tr>
 				<td><span class="img"><img src="../images/guitars/strat.jpg" height="200" width="200" /></span></td>
@@ -72,32 +72,9 @@
 				<td>Fender American Standard Stratocaster</td>
 				<td>$1000</td>
 			</tr>
-		</table>
-		
-<!--		<p><div class="img"></div>
-		<span class="productDesc"></span>
-		</p>
-		<p>
-		<div class="img"><img src="../images/guitars/strat.jpg" height="200" width="200" /></div>
-		<span class="productDesc">Fender American Standard Stratocaster</span>
-		</p>
-		<p>
-		<div class="img"><img src="../images/guitars/strat.jpg" height="200" width="200" /></div>
-		<span class="productDesc">Fender American Standard Stratocaster</span>
-		</p>
-				<p><div class="img"><img src="../images/guitars/strat.jpg" height="200" width="200" /></div>
-		<span class="productDesc">Fender American Standard Stratocaster</span>
-		</p>
-		<p>
-		<div class="img"><img src="../images/guitars/strat.jpg" height="200" width="200" /></div>
-		<span class="productDesc">Fender American Standard Stratocaster</span>
-		</p>
-		<p>
-		<div class="img"><img src="../images/guitars/strat.jpg" height="200" width="200" /></div>
-		<span class="productDesc">Fender American Standard Stratocaster</span>
-		</p>
--->		
+		</table>	
 	</div>
+	<!--END MAIN CONTENT-->
 
 	</body>
 </html>

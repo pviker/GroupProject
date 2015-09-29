@@ -1,59 +1,36 @@
 
 /* MAIN NAVIGATION STYLE */
 
-/*.navDiv {
-	text-align: center;
-	margin-left: auto;
-    margin-right: auto; 
-}*/
-
-body {
-
-		color: white;
-	
-}
-
-div.header {
-	color: white;
-	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	position: fixed;
-	min-width: 100%;
-	z-index: 1;
-	background-color: gray;
-	font-size: 25px;
-	top: 0;
-
-}
-
-span.spanHeader {
-	padding-left: 1em;
-}
-
 #mainNav {
-	padding-top: 2em;
-	background-color: gray;
+	padding-top: 5em;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 15px;
-    margin-left: auto;
-    margin-right: auto;
     list-style:none;
     font-weight:bold;
-    /*margin-bottom:10px;
-    float:left;
-    position:relative;
-    z-index:5;
-    text-align: left;
-    border-top-right-radius: 20px;*/
-    /*border-bottom-right-radius: 20px;*/
     box-shadow: 0px 10px 15px 2px black;
     position: fixed;
     min-width: 100%;
+    margin: 0;    
+    top: 0;
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d7e7d+0,0e0e0e+47 */
+	background: rgb(125,126,125); /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  rgba(125,126,125,1) 0%, rgba(14,14,14,1) 47%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(125,126,125,1)), color-stop(47%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 47%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 47%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 47%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 47%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	z-index: 1;
 }
 
 #mainNav li{
     float:left;
-    margin-right:10px;
+    margin-right:2px;
     position:static;
+
 }
 
 #mainNav a{
@@ -81,6 +58,7 @@ span.spanHeader {
 	display: none;
 	padding-left: 0;
 	white-space: nowrap;
+	
 }
 
 #mainNav ul li{
@@ -88,6 +66,7 @@ span.spanHeader {
 	float: none;
 	margin: 0 -3px 0 0;
 	white-space: nowrap;
+	
 }
 
 #mainNav ul a{

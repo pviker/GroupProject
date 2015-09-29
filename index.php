@@ -18,7 +18,6 @@
 	<body>
 
 <!--START MENU-->
-	<div class="header"><span class="spanHeader">Music Electric Inc.</span></div>
 	<div>
 		<ul id="mainNav">
 			<li><a href="#">home</a></li>
@@ -27,7 +26,7 @@
 				<a href="#">guitars</a>
 				<ul>
 					<li><a href="#">acoustics</a></li>
-					<li><a href="#">electrics</a></li>
+					<li><a href="guitars/electrics.php">electrics</a></li>
 					<li><a href="#">basses</a></li>
 				</ul>
 			</li>
@@ -60,14 +59,25 @@
 		</ul>
 	</div>
 	<!--END MENU-->	
+	
+	<div class="head">Music Electric Inc.</div>
 
-	<p class="mainContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in sagittis neque. Aliquam vestibulum quis felis dignissim rhoncus. Morbi tristique aliquam mi sed bibendum. Donec volutpat sagittis nulla id condimentum. Cras sed lorem molestie, commodo mi nec, rhoncus diam. Donec eget urna leo. Sed rhoncus pretium lorem, at eleifend mi sodales sollicitudin.
+	<p class="mainContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in sagittis neque. 
+		Aliquam vestibulum quis felis dignissim rhoncus. Morbi tristique aliquam mi sed bibendum. Donec volutpat 
+		sagittis nulla id condimentum. Cras sed lorem molestie, commodo mi nec, rhoncus diam. Donec eget urna leo.
+		 Sed rhoncus pretium lorem, at eleifend mi sodales sollicitudin.
 
-		Nullam id maximus leo, ac tincidunt diam. Donec sed mattis felis, at auctor urna. Maecenas consectetur fermentum congue. Ut arcu tellus, molestie eu libero vitae, pharetra condimentum nulla. In maximus nunc sed laoreet dignissim. Curabitur rhoncus a ipsum non lacinia. Etiam metus nisi, mattis laoreet lectus sed, tristique vestibulum justo. Suspendisse sed enim nibh. Vivamus eget nunc a felis condimentum commodo eu ut mauris. Donec maximus et risus at placerat.
+		Nullam id maximus leo, ac tincidunt diam. Donec sed mattis felis, at auctor urna. Maecenas consectetur 
+		fermentum congue. Ut arcu tellus, molestie eu libero vitae, pharetra condimentum nulla. In maximus nunc sed 
+		laoreet dignissim. Curabitur rhoncus a ipsum non lacinia. Etiam metus nisi, mattis laoreet lectus sed, tristique 
+		vestibulum justo. Suspendisse sed enim nibh. Vivamus eget nunc a felis condimentum commodo eu ut mauris. Donec 
+		maximus et risus at placerat.
 		
-		Phasellus suscipit rutrum posuere. Nulla mauris est, malesuada a luctus vitae, laoreet sit amet sapien. Aenean et rhoncus nulla, id bibendum orci. Nunc ut augue sapien. Praesent bibendum augue est, et dapibus ligula venenatis at. Nunc quis neque a est luctus varius ac at magna. Proin dignissim nec libero sagittis egestas. Phasellus in placerat mauris. Morbi interdum odio ut rutrum cursus.
+		Phasellus suscipit rutrum posuere. Nulla mauris est, malesuada a luctus vitae, laoreet sit amet sapien. 
+		Aenean et rhoncus nulla, id bibendum orci. Nunc ut augue sapien. Praesent bibendum augue est, et dapibus ligula venenatis at. Nunc quis neque a est luctus varius ac at magna. Proin dignissim nec libero sagittis egestas. Phasellus in placerat mauris. Morbi interdum odio ut rutrum cursus.
 		
-		Ut gravida lorem sed nisl efficitur gravida quis at urna. Aliquam aliquam aliquam lectus, sollicitudin convallis justo. Duis velit tortor, malesuada vitae posuere et, commodo non urna. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent iaculis sagittis est sit amet tempor. Fusce a tortor sit amet dolor commodo tincidunt. Mauris vitae nibh interdum, consectetur augue id, aliquet ipsum. Aenean accumsan sapien at mi malesuada, a sodales dolor mattis.
+		Ut gravida lorem sed nisl efficitur gravida quis at urna. Aliquam aliquam aliquam lectus, sollicitudin 
+		convallis justo. Duis velit tortor, malesuada vitae posuere et, commodo non urna. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent iaculis sagittis est sit amet tempor. Fusce a tortor sit amet dolor commodo tincidunt. Mauris vitae nibh interdum, consectetur augue id, aliquet ipsum. Aenean accumsan sapien at mi malesuada, a sodales dolor mattis.
 		
 		Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec tincidunt imperdiet neque, sit amet luctus purus consequat non. Nullam nibh velit, dignissim quis commodo pretium, rhoncus id risus. Curabitur nunc augue, ullamcorper eget tincidunt in, venenatis id nunc. Aliquam eu arcu semper elit efficitur ullamcorper ac non risus. Sed ac neque sagittis, gravida velit eget, vehicula ante. Donec tempor eget tortor quis aliquet. Suspendisse vitae ullamcorper ante. In egestas ex non accumsan scelerisque.
 		

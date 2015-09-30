@@ -77,7 +77,7 @@
 	<div class="mainContent">		
 		<table>
 			<tr>
-				<td><a href="productPages/superSonic.php"><span class="img"><img src="../images/amplifiers/Fender_SuperSonic.jpg" height="200" width="200" /></span></a></td>
+				<td><a href="productPages/supersonic.php"><span class="img"><img src="../images/amplifiers/Fender_SuperSonic.jpg" height="200" width="200" /></span></a></td>
 				<td><a href="productPages/superSonic.php">Fender Super Sonic 22 Watt 1x12" Combo</a></td>
 				<td>$1049</td>
 			</tr>

@@ -21,15 +21,9 @@
 			<li>
 				<a href="#">guitars</a>
 				<ul>
-<<<<<<< HEAD
-					<li><a href="#">acoustics</a></li>
-					<li><a href="electrics.php">electrics</a></li>
-					<li><a href="#">basses</a></li>
-=======
 					<li><a href="#">acoustic</a></li>
 					<li><a href="#">electric</a></li>
 					<li><a href="#">bass</a></li>
->>>>>>> origin/master
 				</ul>
 			</li>
 			

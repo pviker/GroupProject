@@ -45,7 +45,7 @@
 				<a href="#">amps</a>
 				<ul>
 					<li><a href="#">acoustic</a></li>
-					<li><a href="../electric.php">electric</a></li>
+					<li><a href="../../amps/electric.php">electric</a></li>
 					<li><a href="#">bass</a></li>
 				</ul>
 			</li>

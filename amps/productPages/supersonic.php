@@ -76,26 +76,24 @@
 	<!--START MAIN CONTENT-->
 	<div class="productContent">		
 			<p><h2>Fender Super Sonic 22 Watt 1x12" Combo</h2></p>
+			<h3>$1049</h3>
 			<span class="productImg"><img src="../../images/amplifiers/Fender_SuperSonic.jpg" height="450" width="450" /></span>
 		    <span>
-			    <p>$1049</p>
-			    <p>FEATURES:</p>
-			       <ul>
-				       <li>Deluxe Reverb power platform</li>
-				       <li>Vintage channel contains pre-gain tone controls and two switchable voices</li>
-				       <li>Burn channel contains dual gain controls and post-gain EQ</li>
-				       <li>Fender long-spring Reverb by Accutronics</li>
-				       <li>Ivory "radio" knobs</li>
-				       <li>4-button footswitch for Channel, Fat, Reverb, Effects Loop</li>
-				       <li>Amp Type: Tube</li>
-				       <li>Output: 22 Watts, 8 ohms</li>
-	                   <li>Speaker: 12", 50 Watt Fender "Lightning Bolt" Speaker by Eminence</li>
-	                   <li>Channels: 2 (Vintage and Burn)</li>
-	                   <li>Controls: Vintage Channel: Volume, Treble, Bass, Voicing Switch (Normal/Fat). <br /> Channel: Gain 1, Gain 2, Treble, Bass, Middle, Volume, Master Reverb</li>
-	                   <li>Effects Spring Reverb</li>
-	              </ul>
-			</span>    
-			
+				<ul>
+					<li>Deluxe Reverb power platform</li>
+					<li>Vintage channel contains pre-gain tone controls and two switchable voices</li>
+					<li>Burn channel contains dual gain controls and post-gain EQ</li>
+					<li>Fender long-spring Reverb by Accutronics</li>
+					<li>Ivory "radio" knobs</li>
+					<li>4-button footswitch for Channel, Fat, Reverb, Effects Loop</li>
+					<li>Amp Type: Tube</li>
+					<li>Output: 22 Watts, 8 ohms</li>
+					<li>Speaker: 12", 50 Watt Fender "Lightning Bolt" Speaker by Eminence</li>
+					<li>Channels: 2 (Vintage and Burn)</li>
+					<li>Controls: Vintage Channel: Volume, Treble, Bass, Voicing Switch (Normal/Fat) <br/> Channel: Gain 1, Gain 2, Treble, Bass, Middle, Volume, Master Reverb</li>
+					<li>Effects Spring Reverb</li>
+				</ul>
+			</span>			
 	</div>
 	<!--END MAIN CONTENT-->
 

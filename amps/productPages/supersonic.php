@@ -61,18 +61,11 @@
 	
 	<!--START MAIN CONTENT-->
 	<div class="productContent">		
-			
-<<<<<<< Updated upstream
 			<p><h2>Fender Super Sonic 22 Watt 1x12" Combo</h2></p>
 			<span class="productImg"><img src="../../images/amplifiers/Fender_SuperSonic.jpg" height="450" width="450" /></span>
 		    <span>
-		    
-		    <p>FEATURES:</p>
-=======
-			    <p>Fender Super Sonic 22 Watt 1x12" Combo</p>
 			    <p>$1049</p>
 			    <p>FEATURES:</p>
->>>>>>> Stashed changes
 			       <ul>
 				       <li>Deluxe Reverb power platform</li>
 				       <li>Vintage channel contains pre-gain tone controls and two switchable voices</li>
@@ -82,30 +75,12 @@
 				       <li>4-button footswitch for Channel, Fat, Reverb, Effects Loop</li>
 				       <li>Amp Type: Tube</li>
 				       <li>Output: 22 Watts, 8 ohms</li>
-<<<<<<< Updated upstream
 	                   <li>Speaker: 12", 50 Watt Fender "Lightning Bolt" Speaker by Eminence</li>
 	                   <li>Channels: 2 (Vintage and Burn)</li>
 	                   <li>Controls: Vintage Channel: Volume, Treble, Bass, Voicing Switch (Normal/Fat). <br /> Channel: Gain 1, Gain 2, Treble, Bass, Middle, Volume, Master Reverb</li>
 	                   <li>Effects Spring Reverb</li>
 	              </ul>
 			</span>    
-				
-				
-			
-			<!--<tr>
-				<td><span class="img"><img src="../images/amplifiers/Marshall_bluesbreaker.jpg" height="200" width="200" /></span></td>
-				<td>Marshall 1962 Bluesbreaker - Used</td>
-				<td>$1399</td>
-			</tr> -->
-=======
-                       <li>Speaker: 12", 50 Watt Fender "Lightning Bolt" Speaker by Eminence</li>
-                       <li>Channels: 2 (Vintage and Burn)</li>
-                       <li>Controls: Vintage Channel: Volume, Treble, Bass, Voicing Switch (Normal/Fat). Burn Channel: Gain 1, Gain 2, Treble, Bass, Middle, Volume, Master Reverb</li>
-                       <li>Effects Spring Reverb</li>
-                  </ul>
-                  
-				<span class="img"><img src="../../images/amplifiers/Fender_SuperSonic.jpg" height="450" width="450" /></span>
->>>>>>> Stashed changes
 			
 	</div>
 	<!--END MAIN CONTENT-->

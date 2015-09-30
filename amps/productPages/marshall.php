@@ -55,26 +55,22 @@
 		</ul>
 	</div>
 	<!--END MENU-->	
-	
 	<div class="head">Music Electric Inc.</div>
-
 	
 	<!--START MAIN CONTENT-->
-	<div class="mainContent">		
-			
-			    <p>Marshall 1962 Bluesbreaker - Used</p>
-			    <p>$1399</p>
-			    <p>FEATURES:</p>
-			       <ul>
-				       <li>30W output</li>
-				       <li>2 - 12" 25W Celestion Greenback speakers</li>
-				       <li>Valve rectifier</li>
-				       
-                  </ul>
-                  
-				<span class="img"><img src="../../images/amplifiers/Marshall_bluesbreaker.jpg" height="450" width="450" /></span>
-			
-	</div>
+		<div class="productContent">		
+			<p><h2>Marshall 1962 Bluesbreaker - Used</h2></p>
+			<span class="productImg"><img src="../../images/amplifiers/Marshall_bluesbreaker.jpg" height="450" width="450" /></span>
+		    <span>
+				<p>$1399</p>
+				<p>FEATURES:</p>
+					<ul>
+						<li>30W output</li>
+						<li>2 - 12" 25W Celestion Greenback speakers</li>
+						<li>Valve rectifier</li>
+					</ul>
+			</span>	
+		</div>
 	<!--END MAIN CONTENT-->
 
 	</body>

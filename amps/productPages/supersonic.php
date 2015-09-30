@@ -62,9 +62,10 @@
 	<!--START MAIN CONTENT-->
 	<div class="productContent">		
 			
+			<p><h2>Fender Super Sonic 22 Watt 1x12" Combo</h2></p>
 			<span class="productImg"><img src="../../images/amplifiers/Fender_SuperSonic.jpg" height="450" width="450" /></span>
 		    <span>
-		    <p>Fender Super Sonic 22 Watt 1x12" Combo</p>
+		    
 		    <p>FEATURES:</p>
 			       <ul>
 				       <li>Deluxe Reverb power platform</li>

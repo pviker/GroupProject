@@ -5,8 +5,8 @@
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		
-		<link  rel="stylesheet" type="text/css" href="../styles/style.css" />
-		<link  rel="stylesheet" type="text/css" href="../styles/navigation.css" />
+		<link  rel="stylesheet" type="text/css" href="../../styles/style.css" />
+		<link  rel="stylesheet" type="text/css" href="../../styles/navigation.css" />
 		
 		<title>ICS325 - Group Project - Electric Guitar Amps</title>
 		
@@ -16,13 +16,13 @@
 <!--START MENU-->
 	<div>
 		<ul id="mainNav">
-			<li><a href="../index.php">home</a></li>
+			<li><a href="../../index.php">home</a></li>
 			
 			<li>
 				<a href="#">guitars</a>
 				<ul>
 					<li><a href="#">acoustics</a></li>
-					<li><a href="../guitars/electrics.php">electrics</a></li>
+					<li><a href="../../guitars/electrics.php">electrics</a></li>
 					<li><a href="#">basses</a></li>
 				</ul>
 			</li>
@@ -31,7 +31,7 @@
 				<a href="#">amps</a>
 				<ul>
 					<li><a href="#">acoustic</a></li>
-					<li><a href="electric.php">electric</a></li>
+					<li><a href="../electric.php">electric</a></li>
 					<li><a href="#">bass</a></li>
 				</ul>
 			</li>
@@ -61,18 +61,19 @@
 	
 	<!--START MAIN CONTENT-->
 	<div class="mainContent">		
-		<table>
-			<tr>
-				<td><a href="productPages/superSonic.php"><span class="img"><img src="../images/amplifiers/Fender_SuperSonic.jpg" height="200" width="200" /></span></a></td>
-				<td>Fender Super Sonic 22 Watt 1x12" Combo</td>
-				<td>$1049</td>
-			</tr>
-			<tr>
-				<td><a href="productPages/marshall.php"><span class="img"><img src="../images/amplifiers/Marshall_bluesbreaker.jpg" height="200" width="200" /></span></a></td>
-				<td>Marshall 1962 Bluesbreaker - Used</td>
-				<td>$1399</td>
-			</tr>
-		</table>	
+			
+			    <p>Marshall 1962 Bluesbreaker - Used</p>
+			    <p>$1399</p>
+			    <p>FEATURES:</p>
+			       <ul>
+				       <li>30W output</li>
+				       <li>2 - 12" 25W Celestion Greenback speakers</li>
+				       <li>Valve rectifier</li>
+				       
+                  </ul>
+                  
+				<span class="img"><img src="../../images/amplifiers/Marshall_bluesbreaker.jpg" height="450" width="450" /></span>
+			
 	</div>
 	<!--END MAIN CONTENT-->
 

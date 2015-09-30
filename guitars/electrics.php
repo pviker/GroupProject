@@ -16,7 +16,7 @@
 <!--START MENU-->
 	<div>
 		<ul id="mainNav">
-			<li><a href="#">home</a></li>
+			<li><a href="../index.php">home</a></li>
 			
 			<li>
 				<a href="#">guitars</a>
@@ -68,9 +68,9 @@
 				<td>$1000</td>
 			</tr>
 			<tr>
-				<td><span class="img"><img src="../images/guitars/strat.jpg" height="200" width="200" /></span></td>
-				<td>Fender American Standard Stratocaster</td>
-				<td>$1000</td>
+				<td><span class="img"><img src="../images/guitars/Gibson_ES335.jpg" height="200" width="200" /></span></td>
+				<td>Gibson Custom Shop VOS ES-335</td>
+				<td>$3999</td>
 			</tr>
 		</table>	
 	</div>

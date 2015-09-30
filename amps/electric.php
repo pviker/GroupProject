@@ -1,3 +1,17 @@
+<?php 
+
+/* 
+ * ICS325 - Group Project
+ * Iteration: 1
+ * Group: D for Dolphins
+ * File: electric.php
+ * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
+ * Description: Listing of electric amp product
+ *   
+ * */
+
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
@@ -64,12 +78,12 @@
 		<table>
 			<tr>
 				<td><a href="productPages/superSonic.php"><span class="img"><img src="../images/amplifiers/Fender_SuperSonic.jpg" height="200" width="200" /></span></a></td>
-				<td>Fender Super Sonic 22 Watt 1x12" Combo</td>
+				<td><a href="productPages/superSonic.php">Fender Super Sonic 22 Watt 1x12" Combo</a></td>
 				<td>$1049</td>
 			</tr>
 			<tr>
 				<td><a href="productPages/marshall.php"><span class="img"><img src="../images/amplifiers/Marshall_bluesbreaker.jpg" height="200" width="200" /></span></a></td>
-				<td>Marshall 1962 Bluesbreaker - Used</td>
+				<td><a href="productPages/marshall.php">Marshall 1962 Bluesbreaker - Used</a></td>
 				<td>$1399</td>
 			</tr>
 		</table>	

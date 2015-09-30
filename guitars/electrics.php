@@ -1,3 +1,17 @@
+<?php 
+
+/* 
+ * ICS325 - Group Project
+ * Iteration: 1
+ * Group: D for Dolphins
+ * File: electrics.php
+ * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
+ * Description: Electric guitar product listing page.
+ *   
+ * */
+
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
@@ -63,14 +77,14 @@
 	<div class="mainContent">		
 		<table>
 			<tr>
-				<td><span class="img"><img src="../images/guitars/strat.jpg" height="200" width="200" /></span></td>
-				<td>Fender American Standard Stratocaster</td>
-				<td>$1000</td>
+				<td><a href="productPages/strat.php"><span class="img"><img src="../images/guitars/strat.jpg" height="200" width="200" /></span></a></td>
+				<td><a href="productPages/strat.php">Fender American Standard Stratocaster</a></td>
+				<td>$1299</td>
 			</tr>
 			<tr>
-				<td><span class="img"><img src="../images/guitars/Gibson_ES335.jpg" height="200" width="200" /></span></td>
-				<td>Gibson Custom Shop VOS ES-335</td>
-				<td>$3999</td>
+				<td><a href="productPages/es335.php"><span class="img"><img src="../images/guitars/Gibson_ES335.jpg" height="200" width="200" /></span></a></td>
+				<td><a href="productPages/es335.php">Gibson Custom Shop VOS ES-335</a></td>
+				<td>$3199</td>
 			</tr>
 		</table>	
 	</div>

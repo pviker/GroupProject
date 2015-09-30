@@ -1,3 +1,17 @@
+<?php 
+
+/* 
+ * ICS325 - Group Project
+ * Iteration: 1
+ * Group: D for Dolphins
+ * File: marshall.php
+ * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
+ * Description: Product page for Marshall amp.
+ *   
+ * */
+
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
@@ -21,9 +35,9 @@
 			<li>
 				<a href="#">guitars</a>
 				<ul>
-					<li><a href="#">acoustics</a></li>
-					<li><a href="../../guitars/electrics.php">electrics</a></li>
-					<li><a href="#">basses</a></li>
+					<li><a href="#">acoustic</a></li>
+					<li><a href="../../guitars/electrics.php">electric</a></li>
+					<li><a href="#">bass</a></li>
 				</ul>
 			</li>
 			
@@ -54,7 +68,7 @@
 
 		</ul>
 	</div>
-	<!--END MENU-->	
+	<!--END MENU-->
 	<div class="head">Music Electric Inc.</div>
 	
 	<!--START MAIN CONTENT-->

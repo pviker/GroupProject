@@ -76,9 +76,10 @@
 	<!--START MAIN CONTENT-->
 	<div class="productContent">		
 			<p><h2>Fender Super Sonic 22 Watt 1x12" Combo</h2></p>
-			<h3>$1049</h3>
 			<span class="productImg"><img src="../../images/amplifiers/Fender_SuperSonic.jpg" height="450" width="450" /></span>
 		    <span>
+		    	<p>FEATURES:</p>
+		    	<p>$1049</p>
 				<ul>
 					<li>Deluxe Reverb power platform</li>
 					<li>Vintage channel contains pre-gain tone controls and two switchable voices</li>

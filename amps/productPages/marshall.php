@@ -1,23 +1,17 @@
 <?php 
-<<<<<<< HEAD
-	session_start();	
-	require ("menu.php");
-?>
-=======
 
 /* 
  * ICS325 - Group Project
  * Iteration: 1
  * Group: D for Dolphins
- * File: electrics.php
+ * File: marshall.php
  * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
- * Description: Electric guitar product listing page.
+ * Description: Product page for Marshall amp.
  *   
  * */
 
 ?>
 
->>>>>>> origin/master
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
@@ -25,26 +19,24 @@
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		
-		<link  rel="stylesheet" type="text/css" href="../styles/style.css" />
-		<link  rel="stylesheet" type="text/css" href="../styles/navigation.css" />
+		<link  rel="stylesheet" type="text/css" href="../../styles/style.css" />
+		<link  rel="stylesheet" type="text/css" href="../../styles/navigation.css" />
 		
-		<title>ICS325 - Group Project - Electric Guitars</title>
+		<title>ICS325 - Group Project - Electric Guitar Amps</title>
 		
 	</head>
 	<body>
-<<<<<<< HEAD
-=======
 
 <!--START MENU-->
 	<div>
 		<ul id="mainNav">
-			<li><a href="../index.php">home</a></li>
+			<li><a href="../../index.php">home</a></li>
 			
 			<li>
 				<a href="#">guitars</a>
 				<ul>
 					<li><a href="#">acoustic</a></li>
-					<li><a href="#">electric</a></li>
+					<li><a href="../../guitars/electrics.php">electric</a></li>
 					<li><a href="#">bass</a></li>
 				</ul>
 			</li>
@@ -53,7 +45,7 @@
 				<a href="#">amps</a>
 				<ul>
 					<li><a href="#">acoustic</a></li>
-					<li><a href="../amps/electric.php">electric</a></li>
+					<li><a href="../electric.php">electric</a></li>
 					<li><a href="#">bass</a></li>
 				</ul>
 			</li>
@@ -76,27 +68,23 @@
 
 		</ul>
 	</div>
-	<!--END MENU-->	
->>>>>>> origin/master
-	
+	<!--END MENU-->
 	<div class="head">Music Electric Inc.</div>
-
 	
 	<!--START MAIN CONTENT-->
-	<div class="mainContent">		
-		<table>
-			<tr>
-				<td><a href="productPages/strat.php"><span class="img"><img src="../images/guitars/strat.jpg" height="200" width="200" /></span></a></td>
-				<td><a href="productPages/strat.php">Fender American Standard Stratocaster</a></td>
-				<td>$1299</td>
-			</tr>
-			<tr>
-				<td><a href="productPages/es335.php"><span class="img"><img src="../images/guitars/Gibson_ES335.jpg" height="200" width="200" /></span></a></td>
-				<td><a href="productPages/es335.php">Gibson Custom Shop VOS ES-335</a></td>
-				<td>$3199</td>
-			</tr>
-		</table>	
-	</div>
+		<div class="productContent">		
+			<p><h2>Marshall 1962 Bluesbreaker - Used</h2></p>
+			<span class="productImg"><img src="../../images/amplifiers/Marshall_bluesbreaker.jpg" height="450" width="450" /></span>
+		    <span>
+				<p>$1399</p>
+				<p>FEATURES:</p>
+					<ul>
+						<li>30W output</li>
+						<li>2 - 12" 25W Celestion Greenback speakers</li>
+						<li>Valve rectifier</li>
+					</ul>
+			</span>	
+		</div>
 	<!--END MAIN CONTENT-->
 
 	</body>

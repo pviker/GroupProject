@@ -1,43 +1,30 @@
 <?php
 class Navigation {
   // class Page's attributes
-  protected $content;
   protected $title = "Music Electric Inc.";
   protected $keywords = "Music, Electric, Inc, Instruments, Gear, Guitars, Drums";
-  protected $buttons;
- 
-  // public function __construct()  {
-    // $this->buttons = array("Home"   => "home.php",
-                           // "Contact"  => "contact.php",
-                           // "Services" => "services.php",
-                           // "Site Map" => "map.php");
-  // }
-//   
-  // public function setContent ( $str )  {
-    // $this->content = $str.$this->buttons["Site Map"];
-  // }
  
   public function __toString() {
     return  "<html>\n<head>\n".
 			$this -> DisplayTitle().
     		$this -> DisplayKeywords().
     		$this -> DisplayStyles().
-    		"</head>\n<body>\n".
+    		"</head>\n<body>\n\n".
     		$this -> DisplayMenu();
   }
  
   public function DisplayTitle() {
-    return "<title>".$this->title."</title>";
+    return "<title>".$this->title."</title>\n";
   }
  
   public function DisplayKeywords() {
     return "<meta name=\"keywords\" content=\"" . 
-   $this->keywords."\"/>";
+   				$this->keywords."\" />\n";
   }
  
   public function DisplayStyles() {
   	 return "<link rel=\"stylesheet\" type=\"text/css\" href=\"styles/style.css\" />\n" .
-	 			"<link rel=\"stylesheet\" type=\"text/css\" href=\"styles/navigation.css\" />";
+	 			"<link rel=\"stylesheet\" type=\"text/css\" href=\"styles/navigation.css\" />\n";
   }
  
   public function DisplayMenu()  {
@@ -83,7 +70,7 @@ class Navigation {
 				
 			</ul>
 		</div>
-		<!--END MENU-->	";    
+<!--END MENU-->\n";    
   }
 }
 ?>

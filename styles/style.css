@@ -153,9 +153,74 @@ a:hover{
 	text-decoration: underline;
 }
 
+fieldset {
+	/*margin: 8px;*/
+}
 
+#field1 {
+	border: 1px solid;
+	border-color: white;
+	border-radius: 20px;
+	border-top-right-radius: 20px;
+}
 
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 9em;
+    text-align: right;
+    padding: 4px;
+	margin: 4px;
+}
 
+select {
+	display:inline-block;
+    float: right;
+    clear: left;
+    width: 9em;
+    text-align: right;
+    padding: 4px;
+	margin: 4px;
+}
+
+label.noLabel {
+	display: inline-block;
+    float: right;
+    clear: left;
+    width: 9em;
+    text-align: right;
+    padding: 4px;
+	margin: 4px;
+}
+
+input {
+	padding: 4px;
+	/*margin: 0px;*/
+	display: inline-block;
+  	float: left;
+}
+
+input.fields:hover {
+	border-color: white;		
+}
+
+/*form {
+	padding: 2px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	background-size: 100% auto;
+	min-width: 30em;
+	min-height: auto;
+	box-shadow: 16px 16px 16px black;
+	border: 2px solid;
+	border-color: black;
+	border-radius: 20px;
+}
+
+fieldset {
+	margin: 8px;
+}*/
 
 
 

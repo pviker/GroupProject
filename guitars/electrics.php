@@ -1,7 +1,5 @@
 <?php 
 	session_start();	
-
-
 /* 
  * ICS325 - Group Project
  * Iteration: 1
@@ -12,12 +10,18 @@
  *   
  * */
 
-
-  require("../navigation.inc");
+	require("../navigation.inc");
  
-  $navigation = new Navigation();
+	$navigation = new Navigation();
 
-  echo $navigation;
+	echo $navigation;
+  
+  	$myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+	$txt = "John Doe\n";
+	fwrite($myfile, $txt);
+	$txt = "Jane Doe\n";
+	fwrite($myfile, $txt);
+	fclose($myfile);
  
 ?>	
 	

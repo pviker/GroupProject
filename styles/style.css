@@ -52,6 +52,13 @@ div.head {
 	z-index: 1;
 }
 
+div.users {
+	position: fixed;
+	top: 5px;
+	right: 10px;
+	z-index: 1;
+}
+
 span.spanHeader {
 	padding-left: 1em;
 }

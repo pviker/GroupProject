@@ -88,7 +88,9 @@ class Navigation {
 			</ul>
 		</div>
 <!--END MENU-->\n
-		<div class=\"head\">Music Electric Inc.</div>";    
+		<div class=\"head\">Music Electric Inc.</div>
+		<div class=\"users\"><a href=\"$this->server/ics325/GroupProject/accounts/login.php\">login</a> | 
+			<a href=\"$this->server/ics325/GroupProject/accounts/register.php\">register</a></div>";    
   }
 }
 ?>

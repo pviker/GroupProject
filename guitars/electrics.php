@@ -1,4 +1,6 @@
 <?php 
+	session_start();	
+
 
 /* 
  * ICS325 - Group Project
@@ -9,6 +11,7 @@
  * Description: Electric guitar product listing page.
  *   
  * */
+
 
   require("../navigation.inc");
  

@@ -1,5 +1,5 @@
 <?php 
-
+	session_start();	
 /* 
  * ICS325 - Group Project
  * Iteration: 1
@@ -16,8 +16,7 @@
 
 	echo $navigation;
 	
-?>		
-	
+?>			
 		<div class="mainContent" >
 			<img src="images/mainguitar.jpg" id="mainPageImg"/><br />
 			<p id="indexContent">

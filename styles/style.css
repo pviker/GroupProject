@@ -52,6 +52,13 @@ div.head {
 	z-index: 1;
 }
 
+div.users {
+	position: fixed;
+	top: 5px;
+	right: 10px;
+	z-index: 1;
+}
+
 span.spanHeader {
 	padding-left: 1em;
 }
@@ -60,7 +67,7 @@ span.spanHeader {
 	/*position:absolute;*/
 	margin-top: 15%;
 	/*white-space: nowrap;*/
-		margin-left: auto;
+	margin-left: auto;
 	margin-right: auto;
 	width: 50%;
 }
@@ -69,7 +76,7 @@ span.spanHeader {
 		/*position:absolute;*/
 	margin-top: 15%;
 	white-space: nowrap;
-		margin-left: auto;
+	margin-left: auto;
 	margin-right: auto;
 	width: 80%;
 }
@@ -146,57 +153,72 @@ a:hover{
 	text-decoration: underline;
 }
 
-
-
-
-
-
-
-
-
-/*ul{
-    margin:0;
-    padding:0;
+fieldset {
+	/*margin: 8px;*/
 }
 
-li{
-    width:100px;
-    height:50px;
-    float:left;
-    color:#191919;
-    text-align:center;
-    overflow:hidden;
-	background-color: black;
+#field1 {
+	border: 1px solid;
+	border-color: white;
+	border-radius: 20px;
+	border-top-right-radius: 20px;
 }
 
-a{
-    color:#FFF;
-    text-decoration:none;
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 9em;
+    text-align: right;
+    padding: 4px;
+	margin: 4px;
 }
 
-p{
-	padding: 10em;
-}*/
+select {
+	display:inline-block;
+    float: right;
+    clear: left;
+    width: 9em;
+    text-align: right;
+    padding: 4px;
+	margin: 4px;
+}
 
-/*span {
-	padding-right: 5em;
-	margin-right: 8em;
-	font-family:"Arial Black";
-	margin-left:auto; 
-    margin-right:auto;
+label.noLabel {
+	display: inline-block;
+    float: right;
+    clear: left;
+    width: 9em;
+    text-align: right;
+    padding: 4px;
+	margin: 4px;
+}
+
+input {
+	padding: 4px;
+	/*margin: 0px;*/
+	display: inline-block;
+  	float: left;
+}
+
+input.fields:hover {
+	border-color: white;		
+}
+
+/*form {
+	padding: 2px;
+	font-family: Arial, Helvetica, sans-serif;
 	color: white;
-	font-size: 16px;
-	
-	background: black;
+	background-size: 100% auto;
+	min-width: 30em;
+	min-height: auto;
+	box-shadow: 16px 16px 16px black;
+	border: 2px solid;
+	border-color: black;
+	border-radius: 20px;
+}
+
+fieldset {
+	margin: 8px;
 }*/
 
-/*    .subtext{
-        padding-top:15px;
-    }*/
-
-/*Menu Color Classes*/
-/*.green{background:#6AA63B;}
-.yellow{background:#FBC700;}
-.red{background:#D52100;}
-.purple{background:#5122B4;}
-.blue{background:#0292C0;}*/

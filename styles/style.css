@@ -67,7 +67,7 @@ span.spanHeader {
 	/*position:absolute;*/
 	margin-top: 15%;
 	/*white-space: nowrap;*/
-		margin-left: auto;
+	margin-left: auto;
 	margin-right: auto;
 	width: 50%;
 }
@@ -76,7 +76,7 @@ span.spanHeader {
 		/*position:absolute;*/
 	margin-top: 15%;
 	white-space: nowrap;
-		margin-left: auto;
+	margin-left: auto;
 	margin-right: auto;
 	width: 80%;
 }
@@ -222,53 +222,3 @@ fieldset {
 	margin: 8px;
 }*/
 
-
-
-
-
-/*ul{
-    margin:0;
-    padding:0;
-}
-
-li{
-    width:100px;
-    height:50px;
-    float:left;
-    color:#191919;
-    text-align:center;
-    overflow:hidden;
-	background-color: black;
-}
-
-a{
-    color:#FFF;
-    text-decoration:none;
-}
-
-p{
-	padding: 10em;
-}*/
-
-/*span {
-	padding-right: 5em;
-	margin-right: 8em;
-	font-family:"Arial Black";
-	margin-left:auto; 
-    margin-right:auto;
-	color: white;
-	font-size: 16px;
-	
-	background: black;
-}*/
-
-/*    .subtext{
-        padding-top:15px;
-    }*/
-
-/*Menu Color Classes*/
-/*.green{background:#6AA63B;}
-.yellow{background:#FBC700;}
-.red{background:#D52100;}
-.purple{background:#5122B4;}
-.blue{background:#0292C0;}*/

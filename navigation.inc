@@ -16,11 +16,12 @@ class Navigation {
 			$this -> DisplayTitle().
     		$this -> DisplayKeywords().
     		$this -> DisplayStyles().
+    		$this -> DisplayScripts().
     		"</head>\n<body>\n\n".
     		$this -> DisplayMenu();			
   }
   
-  public function GetServer(){
+  public function GetServer() {
   	return $this->server;
   }
  
@@ -37,6 +38,10 @@ class Navigation {
 		
   	return "<link rel=\"stylesheet\" type=\"text/css\" href=\"$this->server/ics325/GroupProject/styles/style.css\" />\n" .
 	 	   "<link rel=\"stylesheet\" type=\"text/css\" href=\"$this->server/ics325/GroupProject/styles/navigation.css\" />\n";
+  }
+  
+  public function DisplayScripts() {
+  	return "<script type=\"text/javascript\" src=\"$this->server/ics325/GroupProject/js/validateScript.js\"> </script>\n";
   }
  
   public function DisplayMenu()  {

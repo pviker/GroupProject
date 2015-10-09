@@ -17,7 +17,7 @@ body{
 	background: #4c4c4c;
 	background: -moz-linear-gradient(45deg,  #4c4c4c 0%, #595959 12%, #474747 18%, #666666 25%, #2c2c2c 50%, #000000 58%, #2b2b2b 65%, #111111 71%, #1c1c1c 85%, #131313 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#4c4c4c), color-stop(12%,#595959), color-stop(18%,#474747), color-stop(25%,#666666), 
-	color-stop(50%,#2c2c2c), color-stop(58%,#000000), color-stop(65%,#2b2b2b), color-stop(71%,#111111), color-stop(85%,#1c1c1c), color-stop(100%,#131313)); /* Chrome,Safari4+ */
+								color-stop(50%,#2c2c2c), color-stop(58%,#000000), color-stop(65%,#2b2b2b), color-stop(71%,#111111), color-stop(85%,#1c1c1c), color-stop(100%,#131313)); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(45deg,  #4c4c4c 0%,#595959 12%,#474747 18%,#666666 25%,#2c2c2c 50%,#000000 58%,#2b2b2b 65%,#111111 71%,#1c1c1c 85%,#131313 100%); /* Chrome10+,Safari5.1+ */
 	background: -o-linear-gradient(45deg,  #4c4c4c 0%,#595959 12%,#474747 18%,#666666 25%,#2c2c2c 50%,#000000 58%,#2b2b2b 65%,#111111 71%,#1c1c1c 85%,#131313 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(45deg,  #4c4c4c 0%,#595959 12%,#474747 18%,#666666 25%,#2c2c2c 50%,#000000 58%,#2b2b2b 65%,#111111 71%,#1c1c1c 85%,#131313 100%); /* IE10+ */
@@ -28,7 +28,6 @@ body{
 }
 
 #mainPageImg {
-	
 	position: fixed;
     /*left: 0px;
     top: 0px;*/
@@ -152,73 +151,4 @@ a:hover{
 	color: white;
 	text-decoration: underline;
 }
-
-fieldset {
-	/*margin: 8px;*/
-}
-
-#field1 {
-	border: 1px solid;
-	border-color: white;
-	border-radius: 20px;
-	border-top-right-radius: 20px;
-}
-
-label{
-    display: inline-block;
-    float: left;
-    clear: left;
-    width: 9em;
-    text-align: right;
-    padding: 4px;
-	margin: 4px;
-}
-
-select {
-	display:inline-block;
-    float: right;
-    clear: left;
-    width: 9em;
-    text-align: right;
-    padding: 4px;
-	margin: 4px;
-}
-
-label.noLabel {
-	display: inline-block;
-    float: right;
-    clear: left;
-    width: 9em;
-    text-align: right;
-    padding: 4px;
-	margin: 4px;
-}
-
-input {
-	padding: 4px;
-	/*margin: 0px;*/
-	display: inline-block;
-  	float: left;
-}
-
-input.fields:hover {
-	border-color: white;		
-}
-
-/*form {
-	padding: 2px;
-	font-family: Arial, Helvetica, sans-serif;
-	color: white;
-	background-size: 100% auto;
-	min-width: 30em;
-	min-height: auto;
-	box-shadow: 16px 16px 16px black;
-	border: 2px solid;
-	border-color: black;
-	border-radius: 20px;
-}
-
-fieldset {
-	margin: 8px;
-}*/
 

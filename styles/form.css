@@ -1,0 +1,126 @@
+form {
+	/*padding: 2px;*/
+	/*font-family: Arial, Helvetica, sans-serif;*/
+	color: white;
+	/*background-size: 100% auto;*/
+	/*min-width: 30em;
+	min-height: 25em;*/
+	box-shadow: 16px 16px 16px black;
+	border-radius: 50px;
+}
+
+fieldset {
+	margin: 8px;
+	border: none;
+}
+
+label {
+	display: inline-block;
+	width: 10em;
+	text-align: right;
+}
+
+label.noLabel {
+	display: inline;
+	width: 2em;
+	text-align: center;
+}
+
+#field1 {
+	border: 1px solid;
+	border-color: white;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+
+#fieldYN {
+	border: 1px solid;
+	border-color: white;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+legend {
+	padding: 4px;
+	font-weight: bolder;
+}
+
+input {
+	padding: 4px;
+	margin: 4px;
+	background-color: white;
+	color: black;
+	border-top-color: white;
+	border-left-color: white;
+	border-right-color: black;
+	border-bottom-color: black;
+	border-radius: 5px;
+	
+}
+
+input.validates {
+	background-color:white;
+	color: black;
+}
+
+select	{
+	padding: 4px;
+	margin: 4px;
+	display:inline-block;
+	border-top-color: white;
+	border-left-color: white;
+	border-right-color: black;
+	border-bottom-color: black;
+}
+
+input:hover {
+	border-top-color: black;
+	border-left-color: black;		
+}
+
+select:hover {
+	border-top-color: black;
+	border-left-color: black;		
+}
+
+input:focus {
+	border-color: black;
+}
+
+div.buttons {
+	margin: auto;
+	width: 30%;
+	padding: 4px;
+		
+}
+
+input.buttons {
+	border-radius: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	width: 4em;
+	height: 2em;
+	
+}
+
+input.buttons:active {
+	border-top-color: black;
+	border-left-color: black;
+	border-right-color: white;
+	border-bottom-color: white;
+}
+
+optgroup {
+	color: gray;
+	font-weight: bold;
+	font-style: italic;
+}
+
+option {
+	color: white;
+}
+
+select[name="REGION"] {
+	background-color: white;
+	color: black;
+}

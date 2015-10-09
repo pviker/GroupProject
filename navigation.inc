@@ -5,10 +5,12 @@ class Navigation {
   protected $title = "Music Electric Inc.";
   protected $keywords = "Music, Electric, Inc, Instruments, Gear, Guitars, Drums";
   protected	$server;
+  protected $filePath;
   
   public function __construct(){
   	$this->server = 'http://'.$_SERVER["SERVER_NAME"];    					// domain name for localhost
 //	$this->server = 'http://'.$_SERVER["SERVER_NAME"].'/~ics325fa1528';		// domain name for school server
+//	$this->filePath = $_SERVER["DOCUMENT_ROOT"]."/ics325/GroupProject/\n";
   }
  
   public function __toString() {
@@ -18,11 +20,16 @@ class Navigation {
     		$this -> DisplayStyles().
     		$this -> DisplayScripts().
     		"</head>\n<body>\n\n".
-    		$this -> DisplayMenu();			
+    		$this -> DisplayMenu().
+			$this-> filePath;			
   }
   
   public function GetServer() {
   	return $this->server;
+  }
+  
+  public function GetFilePath() {
+  	return $this->filePath;
   }
  
   public function DisplayTitle() {
@@ -37,6 +44,7 @@ class Navigation {
   public function DisplayStyles() {
 		
   	return "<link rel=\"stylesheet\" type=\"text/css\" href=\"$this->server/ics325/GroupProject/styles/style.css\" />\n" .
+  		   "<link rel=\"stylesheet\" type=\"text/css\" href=\"$this->server/ics325/GroupProject/styles/form.css\" />\n" .
 	 	   "<link rel=\"stylesheet\" type=\"text/css\" href=\"$this->server/ics325/GroupProject/styles/navigation.css\" />\n";
   }
   

@@ -115,12 +115,11 @@
 						<span class="formcheck" id="spanEmail"> </span><br />
 						
 						<label>Password:</label>
-						<input type="text" name="PASSWORD" size="30" id="passwd" class="validates" />
-						<span class="formcheck" id="spanEmail"> </span><br />
+						<input type="password" name="PASSWORD" size="30" id="passwd" class="validates" /><br />
 						
 						<label>Confirm Password:</label>
-						<input type="text" name="CONFIRMPASSWORD" size="30" id="confirmPasswd" class="validates" onkeyup="confirmPasswd()" />
-						<span class="formcheck" id="spanEmail"> </span><br />
+						<input type="password" name="CONFIRMPASSWORD" size="30" id="confirmPasswd" class="validates" onkeyup="passwdValid()" />
+						<span class="formcheck" id="spanPasswd"></span><br />
 					
 				</fieldset>
 				<fieldset id="fieldYN">

@@ -33,6 +33,8 @@ function emailValid() {
 	email = document.getElementById( "email" ).value;
 	emailPatt = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 	
+
+	
 	if (emailPatt.test(email) == false){
 		document.getElementById( "spanEmail" ).innerHTML = "<-- Invalid email";
 	}
@@ -44,7 +46,11 @@ function emailValid() {
 }
 
 /** confirms 2nd passwd with 1st passwd **/
-function confirmPasswd() {
+function passwdValid() {
 	passwd = document.getElementById( "passwd" ).value;
 	confirmPasswd = document.getElementById( "confirmPasswd" ).value;
+	
+	if (passwd == confirmPasswd){
+		document.getElementById( "spanPasswd" ).innerHTML = "<-- It's a match!";
+	} // else document.getElementById( "spanPasswd" ).innerHTML = "No match";
 }

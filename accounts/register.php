@@ -20,7 +20,7 @@
 	
 	<!--START MAIN CONTENT-->
 	<div class="mainContent">
-			<form onsubmit="<!-- return submitForm() -->" action="<!-- mailinglistresults.html -->">
+			<form onsubmit="<!-- return submitForm() -->" action="mailinglistresults.php" method="post">
 				
 				<fieldset id="field1">
 					<legend>Account Registration</legend>

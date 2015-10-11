@@ -20,6 +20,8 @@
 
 <?php 
     
+    echo "<div class=\"mainContent\"><h1>" . $_POST['FIRST'] . "</h1></div>";
+    
     @ $db = mysqli_connect('localhost', 'user1', 'abc123', 'music_electric');
     
     if(mysqli_connect_errno() ) {
@@ -34,5 +36,7 @@
     
     mysqli_free_result($result);
     mysqli_close($db);
+	
+	
     
 ?>

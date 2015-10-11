@@ -20,10 +20,14 @@
 	
 	<!--START MAIN CONTENT-->
 	<div class="mainContent">
-			<form onsubmit="<!-- return submitForm() -->" action="mailinglistresults.php" method="post">
+			<form action="mailinglistresults.php" method="post">
 				
 				<fieldset id="field1">
 					<legend>Account Registration</legend>
+					
+						<label>Todays date is:</label>
+						<input type="text" readonly="true" name="DATE" value="<?php echo date("m/d/Y") ?>" id="date" /><br />
+						<!-- <span><?php echo date("m/d/Y") ?></span><br /> -->
 					
 						<label>Name:</label>
 						<input type="text" name="FIRST" value="First" size="15" id="firstName" />
@@ -97,17 +101,20 @@
 						
 					
 						<label>ZIP/Postal Code:</label>
-						<input type="text" name="POSTAL" size="10" id="postalcode" class="validates" onkeyup="zipValid()" /><!-- (#####) -->
+						<input type="text" name="POSTAL" size="10" id="postalcode" class="validates" onkeyup="zipValid()" value="#####"/><!-- (#####) -->
 						<span class="formcheck" id="spanZip"></span><br />
 					
 					
 						<label>Phone:</label>
-						<input type="text" name="PHONE" size="17" id="phone" class="validates" onkeyup="phoneValid()" value=""/><!-- (###-###-####) -->
+						<input type="text" name="PHONE" size="17" id="phone" class="validates" onkeyup="phoneValid()" value="###-###-####"/><!-- (###-###-####) -->
 						<span class="formcheck" id="spanPhoneNum"> </span><br />
 					
+						<label>Birthday:</label>
+						<input type="date" name="DOB" size="30" id="dob" /><br />
+						
 					
 						<label>Email:</label>
-						<input type="text" name="EMAIL" size="30" id="email" class="validates" onkeyup="emailValid()" /><!-- (mail@example.com) -->
+						<input type="text" name="EMAIL" size="30" id="email" class="validates" onkeyup="emailValid()" value="mail@example.com"/><!-- (mail@example.com) -->
 						<span class="formcheck" id="spanEmail"> </span><br />
 						
 						<label>Username:</label>
@@ -131,7 +138,7 @@
 						<input type="checkbox" name="SUBSCRIPTION" value="Yes" id="mailYes" checked />
 				</fieldset>
 					<div class="buttons">
-						<input type="submit" class="buttons" name="Send" alt="Send" value="Send" />
+						<input type="button" class="buttons" name="Send" alt="Send" value="Send" id="submit" />
 						<input type="reset" class="buttons" name="Reset" value="Reset" />
 					</div>				
 			</form>

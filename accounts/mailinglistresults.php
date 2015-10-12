@@ -19,8 +19,29 @@
 ?>
 
 <?php 
+
+    //USERS table data
+    $firstName = $_POST['FIRST'];
+    $lastName = $_POST['LAST'];
+    $date = $_POST['DATE'];
+    $email = $_POST['EMAIL'];
+    $dob = $_POST['DOB'];
+    $address = $_POST['ADDRESS'];
+    $city = $_POST['LOCALITY'];
+    $state = $_POST['REGION'];
+    $zip = $_POST['POSTAL'];
+    $phone = $_POST['PHONE'];
     
+    //CREDENTIALS table data
+    $username = $_POST['USERNAME'];
+    $password = $_POST['PASSWORD'];
+   
+    
+<<<<<<< HEAD
     echo "<div class=\"mainContent\"><h1>" . $_POST['FIRST'] . "</h1>";
+=======
+    //echo "<div class=\"mainContent\"><h1>" . $_POST['FIRST'] . "</h1></div>";
+>>>>>>> origin/master
     
     @ $db = mysqli_connect('localhost', 'user1', 'abc123', 'music_electric');
     
@@ -29,15 +50,33 @@
                 exit;
             }
     
-    $query = "insert into users (first_name, last_name) values ('" . $_POST['FIRST'] . "', '" . 
-    $_POST['LAST'] . "')";
+    $query = "insert into users (first_name, last_name, date, email, dob, address, city, state, 
+    zip, phone ) values ('" . $firstName . "', '" . $lastName . "', '" . $date . "', '" . $email . "', '" . $dob 
+    . "', '" . $address . "', '" . $city . "', '" . $state . "', '" . $zip . "', '" . $phone . "')";
     
+    if (mysqli_query($db, $query)) {
+        
+    $last_id = mysqli_insert_id($db);
+        
+    echo "New record created successfully. Last inserted ID is: " . $last_id;
+    
+    } else {
+        
+    echo "Error: could not complete query.";
+    
+    }
+    
+<<<<<<< HEAD
  //   $result = 
     mysqli_query($db, $query);
 	
 	echo "</div>";
     
 //    mysqli_free_result($result);
+=======
+    echo $last_id;
+    
+>>>>>>> origin/master
     mysqli_close($db);
 	
 	

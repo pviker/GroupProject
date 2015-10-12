@@ -37,11 +37,7 @@
     $password = $_POST['PASSWORD'];
    
     
-<<<<<<< HEAD
-    echo "<div class=\"mainContent\"><h1>" . $_POST['FIRST'] . "</h1>";
-=======
     //echo "<div class=\"mainContent\"><h1>" . $_POST['FIRST'] . "</h1></div>";
->>>>>>> origin/master
     
     @ $db = mysqli_connect('localhost', 'user1', 'abc123', 'music_electric');
     
@@ -57,8 +53,11 @@
     if (mysqli_query($db, $query)) {
         
     $last_id = mysqli_insert_id($db);
-        
+       
+	   
+	echo "<div class=\"mainContent\">"; 
     echo "New record created successfully. Last inserted ID is: " . $last_id;
+
     
     } else {
         
@@ -66,17 +65,9 @@
     
     }
     
-<<<<<<< HEAD
- //   $result = 
-    mysqli_query($db, $query);
-	
-	echo "</div>";
-    
-//    mysqli_free_result($result);
-=======
     echo $last_id;
-    
->>>>>>> origin/master
+   	echo "</div>";
+	
     mysqli_close($db);
 	
 	

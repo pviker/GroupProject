@@ -35,9 +35,6 @@
     //CREDENTIALS table data
     $username = $_POST['USERNAME'];
     $password = $_POST['PASSWORD'];
-   
-    
-    //echo "<div class=\"mainContent\"><h1>" . $_POST['FIRST'] . "</h1></div>";
     
     @ $db = mysqli_connect('localhost', 'user1', 'abc123', 'music_electric');
     
@@ -49,15 +46,14 @@
     $query = "insert into users (first_name, last_name, date, email, dob, address, city, state, 
     zip, phone ) values ('" . $firstName . "', '" . $lastName . "', '" . $date . "', '" . $email . "', '" . $dob 
     . "', '" . $address . "', '" . $city . "', '" . $state . "', '" . $zip . "', '" . $phone . "')";
+ 
+ 	echo "<div class=\"mainContent\">"; 
     
     if (mysqli_query($db, $query)) {
         
     $last_id = mysqli_insert_id($db);
-       
-	   
-	echo "<div class=\"mainContent\">"; 
+	
     echo "New record created successfully. Last inserted ID is: " . $last_id;
-
     
     } else {
         
@@ -65,7 +61,7 @@
     
     }
     
-    echo $last_id;
+//    echo $last_id;
    	echo "</div>";
 	
     mysqli_close($db);

@@ -20,7 +20,7 @@
 
 <?php 
     
-    echo "<div class=\"mainContent\"><h1>" . $_POST['FIRST'] . "</h1></div>";
+    echo "<div class=\"mainContent\"><h1>" . $_POST['FIRST'] . "</h1>";
     
     @ $db = mysqli_connect('localhost', 'user1', 'abc123', 'music_electric');
     
@@ -32,9 +32,12 @@
     $query = "insert into users (first_name, last_name) values ('" . $_POST['FIRST'] . "', '" . 
     $_POST['LAST'] . "')";
     
-    $result = mysqli_query($db, $query);
+ //   $result = 
+    mysqli_query($db, $query);
+	
+	echo "</div>";
     
-    mysqli_free_result($result);
+//    mysqli_free_result($result);
     mysqli_close($db);
 	
 	

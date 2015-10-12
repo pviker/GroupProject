@@ -30,8 +30,8 @@
 						<!-- <span><?php echo date("m/d/Y") ?></span><br /> -->
 					
 						<label>Name:</label>
-						<input type="text" name="FIRST" value="First" size="15" id="firstName" />
-						<input type="text" name="LAST" value="Last" size="15" id="lastName" /><br />
+						<input type="text" name="FIRST" value="First" size="15" id="firstName" onfocus="if(this.value == "value") { this.value = ""; }" />
+						<input type="text" name="LAST" value="Last" size="15" id="lastName" onfocus="if(this.value == "value") { this.value = ""; }" /><br />
 					
 					
 						<label>Address:</label>
@@ -131,14 +131,17 @@
 				</fieldset>
 				<fieldset id="fieldYN">
 					Gender:
-						<input type="radio" name="SUBSCRIPTION" value="Yes" id="mailYes" /><label class="noLabel" for="mailYes">Male </label>
-						<input type="radio" name="SUBSCRIPTION" value="No" id="mailNo" /><label class="noLabel" for="mailNo">Female </label><br />
+						<input type="radio" name="GENDER" value="male" id="maleRadio" /><label class="noLabel" for="maleRadio">Male </label>
+						<input type="radio" name="GENDER" value="female" id="femaleRadio" /><label class="noLabel" for="femaleRadio">Female </label><br />
 						
-					Subscribe to our mailing list:
-						<input type="checkbox" name="SUBSCRIPTION" value="Yes" id="mailYes" checked />
+					<label for="mailYes" id="mailList">Subscribe to our mailing list:</label>
+						<input type="checkbox" name="SUBSCRIPTION" value="Yes" id="mailYes" checked /><br />
+						
+					<label for="comments" class="noLabel">Comments:</label><br />
+						<textarea id="comments" name="comments" rows="3" cols="55"></textarea>
 				</fieldset>
 					<div class="buttons">
-						<input type="button" class="buttons" name="Send" alt="Send" value="Send" id="submit" />
+						<input type="button" class="buttons" name="Submit" alt="Submit" value="Submit" id="submit" />
 						<input type="reset" class="buttons" name="Reset" value="Reset" />
 					</div>				
 			</form>

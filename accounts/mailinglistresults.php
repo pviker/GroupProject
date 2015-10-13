@@ -60,14 +60,17 @@
     
     mysqli_query($db, $credentialsQuery);
     
-    ?>
+?>
     
     <div class="maincontent">
-    <p>Thank you for registering!</p>
+        
+    <p>Thank you for registering!</p><br>
+    <p>Welcome to Music Electric!</p>
+    
     </div>
     
-    
 <?php
+
     mysqli_close($db);
 	
 ?>    

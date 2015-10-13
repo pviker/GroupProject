@@ -60,6 +60,7 @@
     
     mysqli_query($db, $credentialsQuery);
     
+<<<<<<< HEAD
     ?>
     
     <div class="maincontent">
@@ -68,6 +69,19 @@
     
     
 <?php
+=======
+?>
+    
+    <div class="maincontent">
+        
+    <p>Thank you for registering!</p><br>
+    <p>Welcome to Music Electric!</p>
+    
+    </div>
+    
+<?php
+
+>>>>>>> Database
     mysqli_close($db);
 	
 ?>    

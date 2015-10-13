@@ -26,7 +26,7 @@
 					<legend>Account Registration</legend>
 					
 						<label>Todays date is:</label>
-						<input type="text" readonly="true" name="DATE" value="<?php echo date("m/d/Y") ?>" id="date" /><br />
+						<input type="text" readonly="true" name="DATE" value="<?php date_default_timezone_set('America/Chicago'); echo date("m/d/Y") ?>" id="date" /><br />
 						<!-- <span><?php echo date("m/d/Y") ?></span><br /> -->
 					
 						<label>Name:</label>
@@ -131,8 +131,8 @@
 				</fieldset>
 				<fieldset id="fieldYN">
 					Gender:
-						<input type="radio" name="SUBSCRIPTION" value="Yes" id="mailYes" /><label class="noLabel" for="mailYes">Male </label>
-						<input type="radio" name="SUBSCRIPTION" value="No" id="mailNo" /><label class="noLabel" for="mailNo">Female </label><br />
+						<input type="radio" name="GENDER" value="Male" id="mailYes" /><label class="noLabel" for="mailYes">Male </label>
+						<input type="radio" name="GENDER" value="Female" id="mailNo" /><label class="noLabel" for="mailNo">Female </label><br />
 						
 					Subscribe to our mailing list:
 						<input type="checkbox" name="SUBSCRIPTION" value="Yes" id="mailYes" checked />

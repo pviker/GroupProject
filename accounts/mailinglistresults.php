@@ -1,4 +1,4 @@
-<?php 
+// <?php 
     session_start();    
 /* 
  * ICS325 - Group Project
@@ -31,6 +31,7 @@
     $state = $_POST['REGION'];
     $zip = $_POST['POSTAL'];
     $phone = $_POST['PHONE'];
+    $gender = $_POST['GENDER'];
     
     //CREDENTIALS table data
     $username = $_POST['USERNAME'];
@@ -46,23 +47,18 @@
                 exit;
             }
     
-    $query = "insert into users (first_name, last_name, date, email, dob, address, city, state, 
-    zip, phone ) values ('" . $firstName . "', '" . $lastName . "', '" . $date . "', '" . $email . "', '" . $dob 
-    . "', '" . $address . "', '" . $city . "', '" . $state . "', '" . $zip . "', '" . $phone . "')";
+    $usersQuery = "insert into users (first_name, last_name, date, email, dob, address, city, state, 
+    zip, phone, gender) values ('" . $firstName . "', '" . $lastName . "', '" . $date . "', '" . $email . "', '" . $dob 
+    . "', '" . $address . "', '" . $city . "', '" . $state . "', '" . $zip . "', '" . $phone . "', '" . $gender . "')";
     
-    if (mysqli_query($db, $query)) {
-        
+    mysqli_query($db, $usersQuery);
+    
     $last_id = mysqli_insert_id($db);
-        
-    echo "New record created successfully. Last inserted ID is: " . $last_id;
     
-    } else {
-        
-    echo "Error: could not complete query.";
+    $credentialsQuery = "insert into credentials (username, password, userid) values ('" . $username . "', '" 
+    . $password . "', '" . $last_id . "')";
     
-    }
-    
-    echo $last_id;
+    mysqli_query($db, $credentialsQuery);
     
     mysqli_close($db);
 	

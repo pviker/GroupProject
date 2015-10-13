@@ -1,4 +1,4 @@
-// <?php 
+<?php 
     session_start();    
 /* 
  * ICS325 - Group Project
@@ -15,8 +15,10 @@
     $navigation = new Navigation();
 
     echo $navigation;
+    
  
 ?>
+
 
 <?php 
 
@@ -44,41 +46,30 @@
                 exit;
             }
     
-<<<<<<< HEAD
+
     $usersQuery = "insert into users (first_name, last_name, date, email, dob, address, city, state, 
     zip, phone, gender) values ('" . $firstName . "', '" . $lastName . "', '" . $date . "', '" . $email . "', '" . $dob 
     . "', '" . $address . "', '" . $city . "', '" . $state . "', '" . $zip . "', '" . $phone . "', '" . $gender . "')";
     
     mysqli_query($db, $usersQuery);
-=======
-    $query = "insert into users (first_name, last_name, date, email, dob, address, city, state, 
-    zip, phone ) values ('" . $firstName . "', '" . $lastName . "', '" . $date . "', '" . $email . "', '" . $dob 
-    . "', '" . $address . "', '" . $city . "', '" . $state . "', '" . $zip . "', '" . $phone . "')";
- 
- 	echo "<div class=\"mainContent\">"; 
-    
-    if (mysqli_query($db, $query)) {
-        
-    $last_id = mysqli_insert_id($db);
-	
-    echo "New record created successfully. Last inserted ID is: " . $last_id;
->>>>>>> origin/master
-    
+
     $last_id = mysqli_insert_id($db);
     
-    $credentialsQuery = "insert into credentials (username, password, userid) values ('" . $username . "', '" 
-    . $password . "', '" . $last_id . "')";
+    $credentialsQuery = "insert into credentials (userid, username, password) values ('" . $last_id . "', '" 
+    . $username . "', '" . $password . "')";
     
-<<<<<<< HEAD
     mysqli_query($db, $credentialsQuery);
     
-=======
-//    echo $last_id;
-   	echo "</div>";
-	
->>>>>>> origin/master
+    ?>
+    
+    <div class="maincontent">
+    <p>Thank you for registering!</p>
+    </div>
+    
+    
+<?php
     mysqli_close($db);
 	
+?>    
 	
     
-?>

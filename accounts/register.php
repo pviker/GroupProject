@@ -131,13 +131,10 @@
 				</fieldset>
 				<fieldset id="fieldYN">
 					Gender:
-<<<<<<< HEAD
-						<input type="radio" name="GENDER" value="Male" id="mailYes" /><label class="noLabel" for="mailYes">Male </label>
-						<input type="radio" name="GENDER" value="Female" id="mailNo" /><label class="noLabel" for="mailNo">Female </label><br />
-=======
+						
 						<input type="radio" name="GENDER" value="male" id="maleRadio" /><label class="noLabel" for="maleRadio">Male </label>
 						<input type="radio" name="GENDER" value="female" id="femaleRadio" /><label class="noLabel" for="femaleRadio">Female </label><br />
->>>>>>> origin/master
+
 						
 					<label for="mailYes" id="mailList">Subscribe to our mailing list:</label>
 						<input type="checkbox" name="SUBSCRIPTION" value="Yes" id="mailYes" checked /><br />

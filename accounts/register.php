@@ -24,6 +24,9 @@
 				
 				<fieldset id="field1">
 					<legend>Account Registration</legend>
+						<div class="formHeader">
+							(*)required field
+						</div>
 					
 						<label>Todays date is:</label>
 						<input type="text" readonly="true" name="DATE" value="<?php date_default_timezone_set('America/Chicago'); echo date("m/d/Y") ?>" id="date" /><br />
@@ -100,12 +103,12 @@
 								</select><br />
 						
 					
-						<label>ZIP/Postal Code:</label>
+						<label>*ZIP/Postal Code:</label>
 						<input type="text" name="POSTAL" size="10" id="postalcode" class="validates" onkeyup="zipValid()" value="#####"/><!-- (#####) -->
 						<span class="formcheck" id="spanZip"></span><br />
 					
 					
-						<label>Phone:</label>
+						<label>*Phone:</label>
 						<input type="text" name="PHONE" size="17" id="phone" class="validates" onkeyup="phoneValid()" value="###-###-####"/><!-- (###-###-####) -->
 						<span class="formcheck" id="spanPhoneNum"> </span><br />
 					
@@ -113,15 +116,15 @@
 						<input type="date" name="DOB" size="30" id="dob" /><br />
 						
 					
-						<label>Email:</label>
+						<label>*Email:</label>
 						<input type="text" name="EMAIL" size="30" id="email" class="validates" onkeyup="emailValid()" value="mail@example.com"/><!-- (mail@example.com) -->
 						<span class="formcheck" id="spanEmail"> </span><br />
 						
-						<label>Username:</label>
+						<label>*Username:</label>
 						<input type="text" name="USERNAME" size="30" id="email" />
 						<span class="formcheck" id="spanEmail"> </span><br />
 						
-						<label>Password:</label>
+						<label>*Password:</label>
 						<input type="password" name="PASSWORD" size="30" id="passwd" class="validates" /><br />
 						
 						<label>Confirm Password:</label>
@@ -131,13 +134,8 @@
 				</fieldset>
 				<fieldset id="fieldYN">
 					Gender:
-<<<<<<< HEAD
-						<input type="radio" name="GENDER" value="Male" id="mailYes" /><label class="noLabel" for="mailYes">Male </label>
-						<input type="radio" name="GENDER" value="Female" id="mailNo" /><label class="noLabel" for="mailNo">Female </label><br />
-=======
 						<input type="radio" name="GENDER" value="male" id="maleRadio" /><label class="noLabel" for="maleRadio">Male </label>
 						<input type="radio" name="GENDER" value="female" id="femaleRadio" /><label class="noLabel" for="femaleRadio">Female </label><br />
->>>>>>> origin/master
 						
 					<label for="mailYes" id="mailList">Subscribe to our mailing list:</label>
 						<input type="checkbox" name="SUBSCRIPTION" value="Yes" id="mailYes" checked /><br />
@@ -146,7 +144,7 @@
 						<textarea id="comments" name="comments" rows="3" cols="55"></textarea>
 				</fieldset>
 					<div class="buttons">
-						<input type="button" class="buttons" name="Submit" alt="Submit" value="Submit" id="submit" />
+						<input type="button" class="buttons" name="Submit" alt="Submit" value="Submit" id="submit" class="formSubmit"/>
 						<input type="reset" class="buttons" name="Reset" value="Reset" />
 					</div>				
 			</form>

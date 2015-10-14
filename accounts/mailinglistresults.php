@@ -22,7 +22,6 @@
 
 <?php
 
-<<<<<<< HEAD
     //USERS table data from form
     $firstName = $_SESSION["fname"];
     $lastName = $_SESSION["lname"];
@@ -39,24 +38,6 @@
     //CREDENTIALS table data form
     $username = $_SESSION["uname"];
     $password = $_SESSION["pwd"];
-=======
-    //USERS table data
-    $firstName = $_SESSION['fname'];
-    $lastName = $_SESSION['lname'];
-/*    $date = $_POST['DATE'];
-    $email = $_POST['EMAIL'];
-    $dob = $_POST['DOB'];
-    $address = $_POST['ADDRESS'];
-    $city = $_POST['LOCALITY'];
-    $state = $_POST['REGION'];
-    $zip = $_POST['POSTAL'];
-    $phone = $_POST['PHONE'];
-    $gender = $_POST['GENDER'];
-    
-    //CREDENTIALS table data
-*/    $username = $_SESSION['uname'];
-/*    $password = $_POST['PASSWORD'];
->>>>>>> master
     
     //Database connection
     @ $db = mysqli_connect('localhost', 'user1', 'abc123', 'music_electric');
@@ -83,30 +64,20 @@
     
     //Insert into 'credentials'
     mysqli_query($db, $credentialsQuery);
-*/    
+   
     ?>
     
     <div class="maincontent">
-<<<<<<< HEAD
-        
-    
-    
-=======
+
     	<h1>Thank you <?php echo $firstName; ?>, for registering! <br />Account created for, <?php echo $username; ?></h1>
->>>>>>> master
+
     </div>
     
     
         
 <?php
-
-<<<<<<< HEAD
     //Close database connection
     mysqli_close($db);
-=======
-//    mysqli_close($db);
->>>>>>> master
-	
 ?>    
 	
     

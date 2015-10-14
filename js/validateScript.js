@@ -1,3 +1,14 @@
+/* 
+ * ICS325 - Group Project
+ * Iteration: 2
+ * Group: D for Dolphins
+ * File: validateScript.js
+ * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
+ * Description: This script holds all validation functions for the user registration form.
+ *   
+ * */
+
+
 /** Validates zip code **/
 function zipValid() {
 	zip = document.getElementById( "postalcode" ).value;

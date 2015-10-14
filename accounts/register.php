@@ -1,5 +1,15 @@
 <?php
 
+	/* 
+ * ICS325 - Group Project
+ * Iteration: 2
+ * Group: D for Dolphins
+ * File: register.php
+ * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
+ * Description: This is the registration page for users to register an account.
+ *   
+ * */
+
 	session_start();
 	
 	require("../navigation.inc");

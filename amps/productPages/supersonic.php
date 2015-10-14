@@ -3,7 +3,7 @@
 /* 
  * ICS325 - Group Project
  * Iteration: 1
- * Group: D for Dolphins
+ * Group: D fo2 Dolphins
  * File: supersonic.php
  * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
  * Description: Product page for Super Sonic amp.

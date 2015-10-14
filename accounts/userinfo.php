@@ -2,11 +2,11 @@
     session_start();    
 /* 
  * ICS325 - Group Project
- * Iteration: 1
+ * Iteration: 2
  * Group: D for Dolphins
- * File: electrics.php
+ * File: userinfo.php
  * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
- * Description: Electric guitar product listing page.
+ * Description: This page echoes all current users in the database.
  *   
  * */
 

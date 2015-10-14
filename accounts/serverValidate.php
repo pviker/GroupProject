@@ -5,6 +5,15 @@
  * Date: 10/11/2015
  * Time: 9:01 PM
  */
+ /* 
+ * ICS325 - Group Project
+ * Iteration: 2
+ * Group: D for Dolphins
+ * File: serverValidate.php
+ * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
+ * Description: This php script is used for server-side validation of the registration form.
+ *   
+ * */
 
 
 function validateName($str)

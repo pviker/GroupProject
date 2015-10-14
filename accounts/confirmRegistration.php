@@ -5,6 +5,16 @@
  * Date: 10/12/2015
  * Time: 10:51 PM
  *
+ * 
+ * 
+ * ICS325 - Group Project
+ * Iteration: 2
+ * Group: D for Dolphins
+ * File: confirmRegistration.php
+ * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
+ * Description: Confirmation page for user registration.
+ *   
+ * 
  *
  *
  */

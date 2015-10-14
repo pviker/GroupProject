@@ -2,20 +2,17 @@
     session_start();    
 /* 
  * ICS325 - Group Project
- * Iteration: 1
+ * Iteration: 2
  * Group: D for Dolphins
- * File: electrics.php
+ * File: mailinglistresults.php
  * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
- * Description: Electric guitar product listing page.
+ * Description: This is an account creation confirmation.
  *   
  * */
 
     require("../navigation.inc");
- 
     $navigation = new Navigation();
-
     echo $navigation;
-    
  
 ?>
 
@@ -73,8 +70,6 @@
 
     </div>
     
-    
-        
 <?php
     //Close database connection
     mysqli_close($db);

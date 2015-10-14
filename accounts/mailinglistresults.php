@@ -27,7 +27,7 @@
     $lastName = $_SESSION["lname"];
     $date = $_SESSION["date"];
     $email = $_SESSION["email"];
-    $dob = $_SESSION["dob"] = $dob;
+    $dob = $_SESSION["dob"];
     $address = $_SESSION["add"];
     $city = $_SESSION["cty"];
     $state = $_SESSION["state"];

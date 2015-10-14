@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 class Navigation {
   // class Page's attributes
   protected $title = "Music Electric Inc.";
@@ -58,6 +60,10 @@ class Navigation {
 //	$filePath .= "/ics325/GroupProject";
 //	$filePath = $_SERVER['PHP_SELF'];
 //	$filePath = $_SERVER['PATH'];
+	$currentUser = "";
+	if(isset($_SESSION['uname'])){
+		$currentUser = "Logged in as: " . $_SESSION['uname'] . " | ";
+	}
 
     return "<!--START MENU-->
 		<div>
@@ -102,8 +108,11 @@ class Navigation {
 		</div>
 <!--END MENU-->\n
 		<div class=\"head\">Music Electric Inc.</div>
-		<div class=\"users\"><a href=\"$this->server/ics325/GroupProject/accounts/login.php\">login</a> | 
-			<a href=\"$this->server/ics325/GroupProject/accounts/register.php\">register</a></div>";    
+		<div class=\"users\">"
+			. $currentUser .
+			"<a href=\"$this->server/ics325/GroupProject/accounts/login.php\">login</a> | 
+			<a href=\"$this->server/ics325/GroupProject/accounts/register.php\">register</a>
+		</div>";    
   }
 }
 ?>

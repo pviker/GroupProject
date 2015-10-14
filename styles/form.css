@@ -103,6 +103,16 @@ div.buttons {
 		
 }
 
+div.formHeader {
+	margin: auto;
+	font-size: 9px;
+	width: 80%;
+	color: gray;
+}
+span.asterisk{
+	color: #990000;
+}
+
 input.buttons {
 	border-radius: 10px;
 	font-size: 16px;
@@ -111,6 +121,10 @@ input.buttons {
 	height: 2em;
 	cursor: pointer;
 	
+}
+
+input#submit {
+	opacity: .5;	
 }
 
 input.buttons:active {

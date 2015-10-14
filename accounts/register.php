@@ -17,7 +17,7 @@
 	echo $navigation;
 
 	include ("serverValidate.php");
-	$message = "*Please follow formatting rules on examples. All fields are required!";
+	$message = "*Please follow formatting rules on examples. Highlighted fields are required!";
 	$firstName = $lastName = $email = $phone = $gender = $subscription = $zip = "";
 	$address = $dob = $city = $state = $password1 =$password2 =$username = $comments ="";
 	$styleInvalid = "style=background-color:#A6A6B4";
@@ -260,13 +260,16 @@
 	            					<span class="formcheck" id="spanEmail"> </span><br />
 	
 	            <label>Username:</label>
-	            	<input type="text" name="USERNAME" size="30" id="email" 
-	            		value="<?php if(isset($_POST['USERNAME'])) {echo $username;} ?>" 
-	            			<?php if ($username == ""){echo $styleInvalid;}?> />
-	            				<span class="formcheck" id="spanEmail"> </span><br />
+	            	<input type="text" name="USERNAME" size="30" id="user" 
+	            		onfocus="usernameValid()" 
+		            		value="<?php if(isset($_POST['USERNAME'])) {echo $username;} ?>" 
+		            			<?php if ($username == ""){echo $styleInvalid;}?> />
+		            				<span class="formcheck" id="spanUsername"> </span><br />
 	
 	            <label>Password:</label>
-	            	<input type="password" name="PASSWORD" size="30" id="passwd" class="validates" /><br />
+	            	<input type="password" name="PASSWORD" size="30" id="passwd" class="validates" 
+	            		onfocus="pValid()" />
+	            			<span class="formcheck" id="spanP"></span><br />
 	
 	            <label>Confirm Password:</label>
 	           		<input type="password" name="CONFIRMPASSWORD" size="30" id="confirmPasswd" class="validates" 

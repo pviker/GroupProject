@@ -20,7 +20,7 @@ function zipValid() {
 	}
 	
 	if (zipPattern.test(zip) == true){
-		formValid(true);
+		
 		document.getElementById( "spanZip" ).innerHTML = "";
 	}
 	
@@ -37,7 +37,7 @@ function phoneValid() {
 	}
 	
 	if (phonePatt.test(phoneNum) == true){
-		formValid(true);
+		
 		document.getElementById( "spanPhoneNum" ).innerHTML = "";
 	}
 	
@@ -54,7 +54,7 @@ function emailValid() {
 	}
 	
 	if (emailPatt.test(email) == true){
-		formValid(true);
+		
 		document.getElementById( "spanEmail" ).innerHTML = "";
 	}
 	
@@ -74,6 +74,25 @@ function passwdValid() {
 	}
 }
 
+function pValid() {
+	passwd = document.getElementById( "passwd" ).value;
+	
+	if (passwd == ""){
+		formValid(false);
+		document.getElementById( "spanP" ).innerHTML = "<-- Required!";		
+	}
+}
+
+function usernameValid() {
+	username = document.getElementById( "user" ).value;
+	
+	if (username == ""){
+		formValid(false);
+		document.getElementById( "spanUsername" ).innerHTML = "<-- Required!";
+	} 
+}
+
+/** Flags submit button if fields are invald **/
 function formValid(flag) {
 	if (flag == true){
 		document.getElementById( "submit" ).type = "submit";

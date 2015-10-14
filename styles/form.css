@@ -109,6 +109,9 @@ div.formHeader {
 	width: 80%;
 	color: gray;
 }
+span.asterisk{
+	color: #990000;
+}
 
 input.buttons {
 	border-radius: 10px;

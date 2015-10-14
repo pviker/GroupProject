@@ -21,7 +21,8 @@
 	<!--START MAIN CONTENT-->
 	<div class="mainContent">		
 
-		<form onsubmit="<!-- return submitForm() -->" action="<!-- mailinglistresults.html -->">
+		<!-- <form onsubmit="return submitForm()" action="mailinglistresults.html" method="post"> -->
+		<form>
 			
 			<fieldset id="field1">
 				<legend>Credentials</legend>
@@ -30,7 +31,7 @@
 			</fieldset>
 
 			<div class="buttons">
-				<input type="submit" class="buttons" name="Send" alt="Send" value="Send" />
+				<input type="button" class="buttons" name="Send" alt="Send" value="Send" />
 				<input type="reset" class="buttons" name="Reset" value="Reset" />
 			</div> 
 

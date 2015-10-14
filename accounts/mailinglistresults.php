@@ -20,7 +20,7 @@
 ?>
 
 
-<?php 
+<?php
 
     //USERS table data
     $firstName = $_POST['FIRST'];
@@ -60,28 +60,19 @@
     
     mysqli_query($db, $credentialsQuery);
     
-<<<<<<< HEAD
     ?>
     
     <div class="maincontent">
-    	<p>Thank you for registering!</p>
+    	<h1>Thank you <?php echo $firstName; ?>, for registering! <br />Account created for, <?php echo $username; ?></h1>
     </div>
     
-    
-<?php
-=======
-?>
-    
-    <div class="maincontent">
-        
-    <p>Thank you for registering!</p><br>
-    <p>Welcome to Music Electric!</p>
-    
-    </div>
     
 <?php
 
->>>>>>> Database
+?>
+        
+<?php
+
     mysqli_close($db);
 	
 ?>    

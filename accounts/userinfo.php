@@ -24,8 +24,19 @@
     <body>
     
 <?php 
-    //Connect to database
-    @ $db = mysqli_connect('localhost', 'user1', 'abc123', 'music_electric');
+
+/* UNCOMMENT FOR LOCAL DB CREDENTIALS */
+	$dbUser = "user1";			
+	$dbPass = "abc123";				
+	$db = "music_electric";			
+
+/* UNCOMMENT FOR SERVER DB CREDENTIALS */
+//	$dbUser = "ics325fa1528";		
+//	$dbPass = "983278";				
+//	$db = "ics325fa1528";	
+	
+    //Database connection
+    @ $db = mysqli_connect('localhost', $dbUser, $dbPass, $db);
     
     if(mysqli_connect_errno() ) {
                 echo "Error: could not connect to database. Please try again later.";

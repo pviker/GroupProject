@@ -141,7 +141,7 @@
 	
 	<!--START MAIN CONTENT-->
 	<div class="mainContent">
-			<form action="mailinglistresults.php" method="post">
+			<form action="testregister.php" method="post">
 				
 				<fieldset id="field1">
 					<legend>Account Registration</legend>

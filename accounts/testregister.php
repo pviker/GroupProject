@@ -2,6 +2,15 @@
 session_start();
 
 	require("../navigation.inc");
+<<<<<<< HEAD
+	$navigation = new Navigation();
+ 	echo $navigation;
+
+	include ("serverValidate.php");
+	$message = "*Please follow formatting rules on examples. All fields are required";
+	$firstName = $lastName = $email = $phone = $gender = $subscription = $zip = "";
+	$address = $dob = $city = $state = $password1 =$password2 =$username = $comments ="";
+=======
  
 	$navigation = new Navigation();
 
@@ -12,6 +21,7 @@ session_start();
 	$firstName = $lastName = $email = $phone = $gender = $subscription = $zip = "";
 	$address = $dob = $city = $state = $password1 =$password2 =$username = $comments ="";
 	$styleInvalid = "style=background-color:red";
+>>>>>>> master
 
 
     if (isset($_POST['FIRST'])) {
@@ -89,6 +99,10 @@ session_start();
                                                     $_SESSION["fname"] = $firstName;
                                                     $_SESSION["lname"] = $lastName;
                                                     $_SESSION["add"] = $address;
+<<<<<<< HEAD
+                                                    $_SESSION["date"] = $date;
+=======
+>>>>>>> master
                                                     $_SESSION["cty"] = $city;
                                                     $_SESSION["state"] = $state;
                                                     $_SESSION["zip"] = $zip;
@@ -101,17 +115,30 @@ session_start();
                                                     $_SESSION["dob"] = $dob;
                                                     $_SESSION["comments"] = $comments;
                                                     $firstName = cleanInput($firstName);
+<<<<<<< HEAD
+                                                    $lastName = cleanInput($lastName);
+=======
+>>>>>>> master
                                                     $address = cleanInput($address);
                                                     $city = cleanInput($city);
                                                     $state = cleanInput($state);
                                                     $zip = cleanInput($zip);
                                                     $email = cleanInput($email);
                                                     $phone = cleanInput($phone);
+<<<<<<< HEAD
+                                                    $gender = cleanInput($gender);
+                                                    $dob = cleanInput($dob);
+                                                    $comments = cleanInput($comments);
+                                                    
+    
+                                                   
+=======
 
                                                     $gender = cleanInput($gender);
                                                     $dob = cleanInput($dob);
                                                     $comments = cleanInput($comments);
                                                     $address =
+>>>>>>> master
                                                     header("Location: mailinglistresults.php");
                                                 }
 
@@ -141,8 +168,13 @@ session_start();
             <!-- <span><?php echo date("m/d/Y") ?></span><br /> -->
 
             <label>Name:</label>
+<<<<<<< HEAD
+            <input type="text" name="FIRST"placeholder="First" value="<?php if(isset($_POST['FIRST'])) {echo $firstName;}; ?>" size="15" id="firstName" /><?php if (!validateName($firstName)){echo "*";}?>
+            <input type="text" name="LAST" placeholder="Last"value="<?php if(isset($_POST['LAST'])) {echo $lastName;} ?>" size="15" id="lastName" ><?php if (!validateName($firstName)){echo "*";}?><br />
+=======
             <input type="text" name="FIRST" placeholder="First" value="<?php if(isset($_POST['FIRST'])) {echo $firstName;}; ?>" size="15" id="firstName" /><?php if (!validateName($firstName)){echo "*";}?>
             <input type="text" name="LAST" placeholder="Last" value="<?php if(isset($_POST['LAST'])) {echo $lastName;} ?>" size="15" id="lastName" ><?php if (!validateName($firstName)){echo "*";}?><br />
+>>>>>>> master
 
 
             <label>Address:</label>
@@ -150,10 +182,14 @@ session_start();
 
 
             <label>City:</label>
+<<<<<<< HEAD
+            <input type="text" name="LOCALITY" size="37" value="<?php if(isset($_POST['LOCALITY'])) {echo $city;} ?>" id="city" /><?php if (!validateCity($city)){echo "*";}?><br />
+=======
             <input type="text" name="LOCALITY" size="37" 
             	value="<?php if(isset($_POST['LOCALITY'])) {echo $city;} ?>" id="city" 
             	<?php if (!validateCity($city)){echo $styleInvalid;}?> />
             	<?php if (!validateCity($city)){echo "*";}?><br />
+>>>>>>> master
 
 
             <label>State/Province:</label>
@@ -211,7 +247,11 @@ session_start();
                     <option value="WI">Wisconsin (WI)</option>
                     <option value="WY">Wyoming (WY)</option>
                 </optgroup>
+<<<<<<< HEAD
+            </select><?php if (!validateState($state)){echo "*";}?><br />
+=======
             </select><?if (!validateState($state)){echo "*";}?><br />
+>>>>>>> master
 
 
             <label>ZIP/Postal Code:</label>
@@ -264,4 +304,9 @@ session_start();
 <!--END MAIN CONTENT-->
 
 </body>
+<<<<<<< HEAD
 </html>
+
+=======
+</html>
+>>>>>>> master

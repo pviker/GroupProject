@@ -1,16 +1,14 @@
 <?php
 session_start();
 
-// require("../navigation.inc");
-//  
-    // $navigation = new Navigation();
-// 
-    // echo $navigation;
+	require("../navigation.inc");
+	$navigation = new Navigation();
+ 	echo $navigation;
 
-include ("serverValidate.php");
-$message = "*Please follow formatting rules on examples. All fields are required";
-$firstName = $lastName = $email = $phone = $gender = $subscription = $zip = "";
-$address = $dob = $city = $state = $password1 =$password2 =$username = $comments ="";
+	include ("serverValidate.php");
+	$message = "*Please follow formatting rules on examples. All fields are required";
+	$firstName = $lastName = $email = $phone = $gender = $subscription = $zip = "";
+	$address = $dob = $city = $state = $password1 =$password2 =$username = $comments ="";
 
 
     if (isset($_POST['FIRST'])) {

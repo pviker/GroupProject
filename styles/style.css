@@ -172,6 +172,15 @@ span.spanHeader {
 	width: 50%;
 }
 
+.mainContentTable {
+	/*position:absolute;*/
+	margin-top: 15%;
+	/*white-space: nowrap;*/
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+
 .productContent {
 		/*position:absolute;*/
 	margin-top: 15%;

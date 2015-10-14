@@ -11,7 +11,7 @@ session_start();
 	$message = "*Please follow formatting rules on examples. All fields are required!";
 	$firstName = $lastName = $email = $phone = $gender = $subscription = $zip = "";
 	$address = $dob = $city = $state = $password1 =$password2 =$username = $comments ="";
-	$styleInvalid = "style=background-color:red";
+	$styleInvalid = "style=background-color:#4C4C6A";
 
     if (isset($_POST['FIRST'])) {
         $firstName = $_POST["FIRST"];
@@ -158,8 +158,8 @@ session_start();
 	
 	            <input type="text" name="LOCALITY" size="37" 
 	            	value="<?php if(isset($_POST['LOCALITY'])) {echo $city;} ?>" id="city" 
-	            	<?php if (!validateCity($city)){echo $styleInvalid;}?> />
-	            	<?php if (!validateCity($city)){echo "*";}?><br />
+	            		<?php if (!validateCity($city)){echo $styleInvalid;}?> />
+	            			<?php if (!validateCity($city)){echo "*";}?><br />
 	
 	            <label>State/Province:</label>
 	            <select name="REGION" size="1" id="region">

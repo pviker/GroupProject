@@ -23,9 +23,9 @@
 <?php
 
     //USERS table data
-    $firstName = $_POST['FIRST'];
-    $lastName = $_POST['LAST'];
-    $date = $_POST['DATE'];
+    $firstName = $_SESSION['fname'];
+    $lastName = $_SESSION['lname'];
+/*    $date = $_POST['DATE'];
     $email = $_POST['EMAIL'];
     $dob = $_POST['DOB'];
     $address = $_POST['ADDRESS'];
@@ -36,8 +36,8 @@
     $gender = $_POST['GENDER'];
     
     //CREDENTIALS table data
-    $username = $_POST['USERNAME'];
-    $password = $_POST['PASSWORD'];
+*/    $username = $_SESSION['uname'];
+/*    $password = $_POST['PASSWORD'];
     
     @ $db = mysqli_connect('localhost', 'user1', 'abc123', 'music_electric');
     
@@ -59,7 +59,7 @@
     . $username . "', '" . $password . "')";
     
     mysqli_query($db, $credentialsQuery);
-    
+*/    
     ?>
     
     <div class="maincontent">
@@ -67,13 +67,10 @@
     </div>
     
     
-<?php
-
-?>
         
 <?php
 
-    mysqli_close($db);
+//    mysqli_close($db);
 	
 ?>    
 	

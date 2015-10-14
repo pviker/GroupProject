@@ -19,7 +19,8 @@
 ?>	
 	
 	<!--START MAIN CONTENT-->
-	<div class="mainContent">		
+	<div class="mainContent">	
+		<h1 class="indexH1"><a href="userinfo.php">View all users!</a></h1>	
 
 		<!-- <form onsubmit="return submitForm()" action="mailinglistresults.html" method="post"> -->
 		<form>

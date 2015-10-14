@@ -23,21 +23,21 @@
 <?php 
 
     //USERS table data from form
-    $firstName = $_POST['FIRST'];
-    $lastName = $_POST['LAST'];
-    $date = $_POST['DATE'];
-    $email = $_POST['EMAIL'];
-    $dob = $_POST['DOB'];
-    $address = $_POST['ADDRESS'];
-    $city = $_POST['LOCALITY'];
-    $state = $_POST['REGION'];
-    $zip = $_POST['POSTAL'];
-    $phone = $_POST['PHONE'];
-    $gender = $_POST['GENDER'];
+    $firstName = $_SESSION["fname"];
+    $lastName = $_SESSION["lname"];
+    $date = $_SESSION["date"];
+    $email = $_SESSION["email"];
+    $dob = $_SESSION["dob"] = $dob;
+    $address = $_SESSION["add"];
+    $city = $_SESSION["cty"];
+    $state = $_SESSION["state"];
+    $zip = $_SESSION["zip"];
+    $phone = $_SESSION["phone"];
+    $gender = $_SESSION["sex"];
     
     //CREDENTIALS table data form
-    $username = $_POST['USERNAME'];
-    $password = $_POST['PASSWORD'];
+    $username = $_SESSION["uname"];
+    $password = $_SESSION["pwd"];
     
     //Database connection
     @ $db = mysqli_connect('localhost', 'user1', 'abc123', 'music_electric');
@@ -69,8 +69,7 @@
     
     <div class="maincontent">
         
-    <p>Thank you for registering!</p><br>
-    <p>Welcome to Music Electric!</p>
+    
     
     </div>
     

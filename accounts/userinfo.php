@@ -15,7 +15,15 @@
     $navigation = new Navigation();
 
     echo $navigation;
+?>
+
+<!DOCTYPE html>
+
+<html>
     
+    <body>
+    
+<?php 
     //Connect to database
     @ $db = mysqli_connect('localhost', 'user1', 'abc123', 'music_electric');
     
@@ -34,21 +42,23 @@
      
      <div class = "maincontent">
          
-         <table style = "border: 1px solid white">
+        
+         
+         <table class = "usersTable">
              <tr>
-                 <th>ID</th>
-                 <th>First Name</th>
-                 <th>Last Name</th>
-                 <th>Date Entered</th>
-                 <th>Email</th>
-                 <th>Date of Birth</th>
-                 <th>Address</th>
-                 <th>City</th>
-                 <th>State</th>
-                 <th>Zip Code</th>
-                 <th>Phone Number</th>
-                 <th>Gender</th>
-                 <th>Username</th>
+                 <td>ID</td>
+                 <td>First Name</td>
+                 <td>Last Name</td>
+                 <td>Date Entered</td>
+                 <td>Email</td>
+                 <td>Date of Birth</td>
+                 <td>Address</td>
+                 <td>City</td>
+                 <td>State</td>
+                 <td>Zip Code</td>
+                 <td>Phone Number</td>
+                 <td>Gender</td>
+                 <td>Username</td>
              </tr>
              
              <?php 
@@ -67,6 +77,8 @@
              ?>
              
              </table>
+             
+         
          
        </div>
      
@@ -78,3 +90,7 @@
     mysqli_close($db);
  
 ?>
+
+</body>
+
+</html>

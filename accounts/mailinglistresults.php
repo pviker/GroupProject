@@ -47,7 +47,7 @@
 //	$db = "ics325fa1528";			
 	
     //Database connection
-    @ $db = mysqli_connect('localhost', $dbUser, $dbPass, $db);
+    @ $dbc = mysqli_connect('localhost', $dbUser, $dbPass, $db);
     
     if(mysqli_connect_errno() ) {
                 echo "Error: could not connect to database. Please try again later.";
@@ -60,17 +60,17 @@
     . "', '" . $address . "', '" . $city . "', '" . $state . "', '" . $zip . "', '" . $phone . "', '" . $gender . "')";
     
     //Insert into 'users'
-    mysqli_query($db, $usersQuery);
+    mysqli_query($dbc, $usersQuery);
 
     //Get id from last insert
-    $last_id = mysqli_insert_id($db);
+    $last_id = mysqli_insert_id($dbc);
     
     //Insert query for 'credentials' table
     $credentialsQuery = "insert into credentials (userid, username, password) values ('" . $last_id . "', '" 
     . $username . "', '" . $password . "')";
     
     //Insert into 'credentials'
-    mysqli_query($db, $credentialsQuery);
+    mysqli_query($dbc, $credentialsQuery);
    
     ?>
     
@@ -82,7 +82,7 @@
     
 <?php
     //Close database connection
-    mysqli_close($db);
+    mysqli_close($dbc);
 ?>    
 	
     

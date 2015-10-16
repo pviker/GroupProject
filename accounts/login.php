@@ -20,6 +20,7 @@ $username = $_POST['userName'] ;
 $password = $_POST['password'];
 $admin = "administrator";
 $adminPass = "password";
+$_SESSION['uname'] = $username;
 
 /* UNCOMMENT FOR LOCAL DB CREDENTIALS */
     $dbUser = "user1";          
@@ -62,7 +63,7 @@ if((!isset($username)) || (!isset($password))) {
 
 } else {
             
-    if($username == $admin && $password == $adminPass) {
+    if(($username == $admin) && ($password == $adminPass)) {
            
            
         echo "<div class = \"mainContent\"> Welcome Administrator! </div>";

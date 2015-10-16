@@ -73,7 +73,7 @@ class Navigation {
 //	$filePath = $_SERVER['PATH'];
 	$loggedIn = "<a href=\"$this->server/ics325/GroupProject/accounts/login.php\">login</a>";
 	if(isset($_SESSION['uname'])){
-		$loggedIn = "Logged in as: " . $_SESSION['uname'] . " | <a href=\"$this->server/ics325/GroupProject/index.php\">logout</a>";
+		$loggedIn = "Logged in as: " . $_SESSION['uname'] . " | <a href=\"$this->server/ics325/GroupProject/index.php\”>logout</a>";
 	}
 
     return "<!--START MENU-->

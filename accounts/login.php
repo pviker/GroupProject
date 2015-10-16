@@ -67,9 +67,7 @@ if((!isset($username)) || (!isset($password))) {
     if(($username == $admin) && ($password == $adminPass)) {
            
            
-        $_SESSION['confirmMessage'] = "Welcome Administrator!";
-        
-        // echo "<div class = \"mainContent\"> Welcome Administrator! </div>";
+        $_SESSION['confirmMessage'] = "Welcome " . $_SESSION['uname'];
         
         header("Location: userinfo.php");
         
@@ -99,8 +97,8 @@ if((!isset($username)) || (!isset($password))) {
     $count = $row[0];
     
     if($count > 0) {
-            
-        echo "<div class = \"mainContent\"> Welcome " . $username . "! </div>";
+        
+        $_SESSION['confirmMessage'] = "Welcome " . $_SESSION['uname'];
         
         header("Location: ../index.php");
     }

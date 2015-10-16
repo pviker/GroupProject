@@ -53,8 +53,6 @@
      
      <div class = "mainContentTable">
          
-        
-         
          <table class = "usersTable">
              <tr>
                  <td>ID</td>
@@ -88,9 +86,7 @@
              ?>
              
              </table>
-             
-         
-         
+
        </div>
      
 <?php     

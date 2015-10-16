@@ -35,6 +35,8 @@
 //	$dbPass = "983278";				
 //	$db = "ics325fa1528";	
 	
+	echo "<div class = \"mainContent\"> " . $_SESSION['confirmMessage'] . "</div>";
+	
     //Database connection
     @ $db = mysqli_connect('localhost', $dbUser, $dbPass, $db);
     

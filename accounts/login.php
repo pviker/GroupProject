@@ -21,6 +21,7 @@ $password = $_POST['password'];
 $admin = "administrator";
 $adminPass = "password";
 $_SESSION['uname'] = $username;
+$_SESSION['confirmMessage'] = "";
 
 /* UNCOMMENT FOR LOCAL DB CREDENTIALS */
     $dbUser = "user1";          
@@ -66,7 +67,9 @@ if((!isset($username)) || (!isset($password))) {
     if(($username == $admin) && ($password == $adminPass)) {
            
            
-        echo "<div class = \"mainContent\"> Welcome Administrator! </div>";
+        $_SESSION['confirmMessage'] = "Welcome Administrator!";
+        
+        // echo "<div class = \"mainContent\"> Welcome Administrator! </div>";
         
         header("Location: userinfo.php");
         

@@ -21,7 +21,7 @@ $password = $_POST['password'];
 $admin = "administrator";
 $adminPass = "password";
 $_SESSION['uname'] = $username;
-$_SESSION['confirmMessage'] = "";
+
 
 /* UNCOMMENT FOR LOCAL DB CREDENTIALS */
     $dbUser = "user1";          

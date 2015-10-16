@@ -109,6 +109,7 @@
                                                     $_SESSION["sex"] = $gender;
                                                     $_SESSION["dob"] = $dob;
                                                     $_SESSION["comments"] = $comments;
+                                                    $_SESSION['confirmMessage'] = "Welcome " . $_SESSION['uname'];
                                                     
                                                     $firstName = cleanInput($firstName);
                                                     $lastName = cleanInput($lastName);

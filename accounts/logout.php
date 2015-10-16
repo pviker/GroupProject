@@ -15,6 +15,10 @@
  
  header("Location: ../index.php");
  
+ session_start();
+ 
+ $_SESSION['logoutMessage'] = "You have succesfully logged out.";
+ 
  
  
  ?>

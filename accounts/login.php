@@ -20,7 +20,7 @@ $username = $_POST['userName'] ;
 $password = $_POST['password'];
 $admin = "administrator";
 $adminPass = "password";
-$_SESSION['uname'] = $username;
+
 
 
 /* UNCOMMENT FOR LOCAL DB CREDENTIALS */
@@ -66,7 +66,8 @@ if((!isset($username)) || (!isset($password))) {
             
     if(($username == $admin) && ($password == $adminPass)) {
            
-           
+        $_SESSION['uname'] = $username;
+        
         $_SESSION['confirmMessage'] = "Welcome " . $_SESSION['uname'];
         
         header("Location: userinfo.php");
@@ -98,6 +99,8 @@ if((!isset($username)) || (!isset($password))) {
     
     if($count > 0) {
         
+        $_SESSION['uname'] = $username;
+        
         $_SESSION['confirmMessage'] = "Welcome " . $_SESSION['uname'];
         
         header("Location: ../index.php");
@@ -107,7 +110,18 @@ if((!isset($username)) || (!isset($password))) {
             
         echo "<div class = \"mainContent\"> Your username or password are not correct. Please try again. </div>";
         
-    }
+        ?>
+        
+        <div class ="mainContent">
+            
+        <a href = "login.php">Back to Login</a>
+       
+        </div>
+       
+   <?php 
+       
+         }
+    
     
     
 }

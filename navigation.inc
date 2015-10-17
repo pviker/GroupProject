@@ -76,6 +76,7 @@ class Navigation {
         $loggedIn = "Logged in as: " . $_SESSION['uname'] . " | <a href=\"$this->server/ics325/GroupProject/accounts/logout.php\">logout</a>";
     }
     return "<!--START MENU-->
+
 		<div>
 			<ul id=\"mainNav\">
 				<li><a href=\"$this->server/ics325/GroupProject/index.php\">home</a></li>
@@ -116,12 +117,12 @@ class Navigation {
 				
 			</ul>
 		</div>
-<!--END MENU-->\n
+		<!--END MENU-->\n
 		<div class=\"head\">Music Electric Inc.</div>
 		<div class=\"users\">"
 			. $loggedIn .
 			" | <a href=\"$this->server/ics325/GroupProject/accounts/register.php\">register</a>
-		</div>";    
+		</div>";  // end return  
   }
 }
 ?>

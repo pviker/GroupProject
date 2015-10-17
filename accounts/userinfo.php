@@ -35,7 +35,7 @@
 //	$dbPass = "983278";				
 //	$db = "ics325fa1528";	
 	
-	echo "<div class = \"mainContent\"> " . $_SESSION['confirmMessage'] . "</div>";
+//	echo "<div class = \"mainContent\"> " . $_SESSION['confirmMessage'] . "</div>";
 	
     //Database connection
     @ $db = mysqli_connect('localhost', $dbUser, $dbPass, $db);
@@ -54,6 +54,7 @@
 ?>
      
      <div class = "mainContentTable">
+     	<h1 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h1>
          
          <table class = "usersTable">
              <tr>

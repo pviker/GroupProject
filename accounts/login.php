@@ -1,5 +1,7 @@
 <?php 
-	session_start();	
+	if(null === session_id()){
+		session_start();
+	}	
 /* 
  * ICS325 - Group Project
  * Iteration: 2
@@ -38,6 +40,14 @@
 	if((!isset($username)) || (!isset($password)) || $username == "" || $password == "") {
   
 ?>	
+
+	<div class="breadcrumb">	
+		  <ul>
+		    <li><a href="../index.php">home</a></li>
+		   	<li><a href="">login</a></li>		    
+		  </ul>
+	</div>
+
 	<!--START MAIN CONTENT-->
 	<div class="mainContent">	
 		<form name="login" action="login.php" method="post">
@@ -61,7 +71,6 @@
     if(($username == $admin) && ($password == $adminPass)) {
            
         $_SESSION['uname'] = $username;
-        
         $_SESSION['confirmMessage'] = "Welcome " . $_SESSION['uname'];
         
         header("Location: userinfo.php");

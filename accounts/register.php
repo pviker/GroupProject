@@ -10,7 +10,11 @@
  *   
  * */
 
-	session_start();
+	//session_start();
+	
+	if(null === session_id()){
+		session_start();
+	}
 	
 	require("../navigation.inc");
 	$navigation = new Navigation();
@@ -148,6 +152,13 @@
  * 
  */
 ?>
+
+	<div class="breadcrumb">	
+		  <ul>
+		    <li><a href="../index.php">home</a></li>
+		   	<li><a href="">register</a></li>		    
+		  </ul>
+	</div>
 
 	<!--START MAIN CONTENT-->
 	<div class="mainContent">

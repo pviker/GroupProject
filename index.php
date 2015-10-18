@@ -1,5 +1,6 @@
 <?php 
-			session_start();
+	
+	// session_start();
 /* 
  * ICS325 - Group Project
  * Iteration: 2
@@ -9,6 +10,10 @@
  * Description: Main index page when going to the main site
  *   
  * */
+ 
+	if(null === session_id()){
+		session_start();
+	}
 
 	require("navigation.inc");
  
@@ -17,7 +22,7 @@
 	echo $navigation;
 	
 ?>			
-		<div class="mainContent" >
+		<div class="mainContentNoCrumbs" >
 			<img src="images/mainguitar.jpg" id="mainPageImg"/><br />
 			<p id="indexContent">
 				<h1 class="indexH1"><!--<?php echo $navigation->GetFilePath(); ?>-->
@@ -29,6 +34,10 @@
                   			echo $_SESSION['logoutMessage'];
                     		unset($_SESSION['logoutMessage']);
                 		} 
+						else if(isset($_SESSION['emailMessage'])) {
+							echo $_SESSION['emailMessage'];
+							unset($_SESSION['emailMessage']);
+						}
                 		else {
                 			echo "Welcome to Music Electric Inc!";
                 		} 

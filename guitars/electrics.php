@@ -1,5 +1,9 @@
 <?php 
-		session_start();	
+		
+		if(null === session_id()){
+			session_start();
+		}
+			
 /* 
  * ICS325 - Group Project
  * Iteration: 2
@@ -17,6 +21,16 @@
 	echo $navigation;
  
 ?>	
+
+	<div class="breadcrumb">
+		<nav>
+		  <ul>
+		    <li><a href="../index.php">home</a></li>
+		    <li><a href="guitars.php">guitars</a></li>
+		    <li><a href="">electric</a></li>
+		  </ul>
+		</nav>
+	</div>
 	
 	<!--START MAIN CONTENT-->
 	<div class="mainContent">		

@@ -59,6 +59,7 @@ class Navigation {
 		
   	return "<link rel=\"stylesheet\" type=\"text/css\" href=\"$this->server/ics325/GroupProject/styles/style.css\" />\n" .
   		   "<link rel=\"stylesheet\" type=\"text/css\" href=\"$this->server/ics325/GroupProject/styles/form.css\" />\n" .
+  		   "<link rel=\"stylesheet\" type=\"text/css\" href=\"$this->server/ics325/GroupProject/styles/userInfoTable.css\" />\n" .
 	 	   "<link rel=\"stylesheet\" type=\"text/css\" href=\"$this->server/ics325/GroupProject/styles/navigation.css\" />\n";
   }
   
@@ -72,6 +73,7 @@ class Navigation {
 //	$filePath .= "/ics325/GroupProject";
 //	$filePath = $_SERVER['PHP_SELF'];
 //	$filePath = $_SERVER['PATH'];
+
 	$loggedIn = "<a href=\"$this->server/ics325/GroupProject/accounts/login.php\">login</a>";
 	if(isset($_SESSION['uname'])) {
         $loggedIn = "Logged in as: " . $_SESSION['uname'] . " | <a href=\"$this->server/ics325/GroupProject/accounts/logout.php\">logout</a>";
@@ -83,36 +85,36 @@ class Navigation {
 				<li><a href=\"$this->server/ics325/GroupProject/index.php\">home</a></li>
 				
 				<li>
-					<a href=\"#\">guitars</a>
+					<a href=\"$this->server/ics325/GroupProject/guitars/guitars.php\">guitars</a>
 					<ul>
-						<li><a href=\"#\">acoustic</a></li>
+						<li><a href=\"$this->server/ics325/GroupProject/guitars/acoustics.php\">acoustic</a></li>
 						<li><a href=\"$this->server/ics325/GroupProject/guitars/electrics.php\">electric</a></li>
-						<li><a href=\"#\">bass</a></li>
+						<li><a href=\"$this->server/ics325/GroupProject/guitars/basses.php\">bass</a></li>
 					</ul>
 				</li>
 				
 				<li>
-					<a href=\"#\">amps</a>
+					<a href=\"$this->server/ics325/GroupProject/amps/amps.php\">amps</a>
 					<ul>
-						<li><a href=\"#\">acoustic</a></li>
+						<li><a href=\"$this->server/ics325/GroupProject/amps/acoustic.php\">acoustic</a></li>
 						<li><a href=\"$this->server/ics325/GroupProject/amps/electric.php\">electric</a></li>
-						<li><a href=\"#\">bass</a></li>
+						<li><a href=\"$this->server/ics325/GroupProject/amps/bass.php\">bass</a></li>
 					</ul>
 				</li>
 				
 				<li>
-					<a href=\"#\">drums</a>
+					<a href=\"$this->server/ics325/GroupProject/drums/drums.php\">drums</a>
 					<ul>
-						<li><a href=\"#\">acoustic</a></li>
-						<li><a href=\"#\">electric</a></li>
+						<li><a href=\"$this->server/ics325/GroupProject/drums/acoustic.php\">acoustic</a></li>
+						<li><a href=\"$this->server/ics325/GroupProject/drums/electric.php\">electric</a></li>
 					</ul>
 				</li>
 				
 				<li>
-					<a href=\"#\">information</a>
+					<a href=\"$this->server/ics325/GroupProject/info/info.php\">information</a>
 					<ul>
-						<li><a href=\"#\">about</a></li>
-						<li><a href=\"#\">contact</a></li>
+						<li><a href=\"$this->server/ics325/GroupProject/info/about.php\">about</a></li>
+						<li><a href=\"$this->server/ics325/GroupProject/info/contact.php\">contact</a></li>
 					</ul>
 				</li>
 				

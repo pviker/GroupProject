@@ -23,6 +23,7 @@
 	<div class="breadcrumb">	
 		  <ul>
 		    <li><a href="../index.php">home</a></li>
+		    <li><a href="info.php">home</a></li>
 		   	<li><a href="">contact</a></li>		    
 		  </ul>
 	</div>

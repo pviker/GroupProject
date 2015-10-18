@@ -1,5 +1,5 @@
 <?php 
-    session_start();    
+   	session_start();     
 /* 
  * ICS325 - Group Project
  * Iteration: 2

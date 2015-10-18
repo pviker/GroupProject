@@ -1,5 +1,5 @@
 <?php 
-    session_start();    
+	session_start();    
 /* 
  * ICS325 - Group Project
  * Iteration: 2
@@ -10,15 +10,13 @@
  *   
  * */
  
- session_unset();
- session_destroy();
+	session_unset();
+	session_destroy();
  
- header("Location: ../index.php");
+	header("Location: ../index.php");
  
- session_start();
+	session_start();
  
- $_SESSION['logoutMessage'] = "You have succesfully logged out.";
- 
- 
- 
- ?>
+	$_SESSION['logoutMessage'] = "You have succesfully logged out.";
+
+?>

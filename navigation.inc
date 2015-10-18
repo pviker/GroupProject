@@ -33,8 +33,9 @@ class Navigation {
     		$this -> DisplayStyles().
     		$this -> DisplayScripts().
     		"</head>\n<body>\n\n".
-    		$this -> DisplayMenu().
-			$this-> filePath;			
+    		$this -> DisplayMenu()
+    		//. $this-> filePath
+			;			
   }
   
   public function GetServer() {

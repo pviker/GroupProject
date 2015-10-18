@@ -1,6 +1,6 @@
 <?php
 
-	/* 
+/* 
  * ICS325 - Group Project
  * Iteration: 2
  * Group: D for Dolphins
@@ -17,7 +17,10 @@
 	echo $navigation;
 
 	include ("serverValidate.php");
-	$message = "*Please follow formatting rules on examples. Highlighted fields are required!";
+	include ("serverValidateModel.php");
+	
+	/** THE FOLLOWING COMMENTED OUT CODE IS IN serverValidateModel.php, cleans up this page **/
+/*	$message = "*Please follow formatting rules on examples. Highlighted fields are required!";
 	$firstName = $lastName = $email = $phone = $gender = $subscription = $zip = "";
 	$address = $dob = $city = $state = $password1 =$password2 =$username = $comments ="";
 	$styleInvalid = "style=background-color:#A6A6B4";
@@ -142,6 +145,8 @@
             }
         }
     }
+ * 
+ */
 ?>
 
 	<!--START MAIN CONTENT-->

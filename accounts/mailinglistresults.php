@@ -67,7 +67,7 @@
     
     //Insert query for 'credentials' table
     $credentialsQuery = "insert into credentials (userid, username, password) values ('" . $last_id . "', '" 
-    . $username . "', '" . $password . "')";
+    . $username . "', sha1('" . $password . "'))";
     
     //Insert into 'credentials'
     mysqli_query($dbc, $credentialsQuery);

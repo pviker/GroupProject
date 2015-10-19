@@ -15,9 +15,14 @@
 	$navigation = new Navigation();
 
 	echo $navigation;
+  
+if(isset($_POST['Send'])) {
     
-$username = $_POST['userName'] ;
+$username = $_POST['userName'];
 $password = $_POST['password'];
+
+}  
+
 $admin = "administrator";
 $adminPass = "password";
 
@@ -60,10 +65,15 @@ if((!isset($username)) || (!isset($password))) {
 	
 	</div>
 
+
+
 <?php 
 
+
+
 } else {
-            
+           
+          
     if(($username == $admin) && ($password == $adminPass)) {
            
         $_SESSION['uname'] = $username;

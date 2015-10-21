@@ -1,5 +1,4 @@
-<?php 
-	session_start();	
+<?php 	
 /* 
  * ICS325 - Group Project
  * Iteration: 2
@@ -9,38 +8,49 @@
  * Description: This will be the login page for user login and to view all users.
  *   
  * */
+ 
+ 	if(null === session_id()){
+		session_start();
+	}
 
 	require("../navigation.inc");
- 
 	$navigation = new Navigation();
-
 	echo $navigation;
   
-if(isset($_POST['Send'])) {
-    
-$username = $_POST['userName'];
-$password = $_POST['password'];
+	if(isset($_POST['Send'])) {
+	    
+	$username = $_POST['userName'];
+	$password = $_POST['password'];
+	
+	}  
+	
+	$admin = "administrator";
+	$adminPass = "password";
 
-}  
-
-$admin = "administrator";
-$adminPass = "password";
 
 
-
-/* UNCOMMENT FOR LOCAL DB CREDENTIALS */
+	/* UNCOMMENT FOR LOCAL DB CREDENTIALS */
     $dbUser = "user1";          
     $dbPass = "abc123";             
     $db = "music_electric";         
 
-/* UNCOMMENT FOR SERVER DB CREDENTIALS */
+	/* UNCOMMENT FOR SERVER DB CREDENTIALS */
 //  $dbUser = "ics325fa1528";       
 //  $dbPass = "983278";             
 //  $db = "ics325fa1528";
     
-if((!isset($username)) || (!isset($password))) {
+	if((!isset($username)) || (!isset($password))) {
   
 ?>	
+
+	<div class="breadcrumb">
+		<nav>
+		  <ul>
+		    <li><a href="../index.php">home</a></li> <!-- ALWAYS INDEX.php -->
+		    <li><a href="">login</a></li> <!-- ALWAYS SUBCATEGORY -->
+		  </ul>
+		</nav>
+	</div>
 	
 	<!--START MAIN CONTENT-->
 	<div class="mainContent">	
@@ -68,8 +78,6 @@ if((!isset($username)) || (!isset($password))) {
 
 
 <?php 
-
-
 
 } else {
            
@@ -123,17 +131,13 @@ if((!isset($username)) || (!isset($password))) {
         ?>
         
         <div class ="mainContent">
-            
-        <a href = "login.php">Back to Login</a>
-       
+        	<a href = "login.php">Back to Login</a>       
         </div>
        
    <?php 
        
          }
-    
-    
-    
+
 }
 
 }

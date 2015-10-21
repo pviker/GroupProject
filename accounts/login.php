@@ -125,12 +125,21 @@
     }
     
     else {
-            
-        echo "<div class = \"mainContent\"> Your username or password are not correct. Please try again. </div>";
+           
         
         ?>
         
+        	<div class="breadcrumb">
+		<nav>
+		  <ul>
+		    <li><a href="../index.php">home</a></li> <!-- ALWAYS INDEX.php -->
+		    <li><a href="">login</a></li> <!-- ALWAYS SUBCATEGORY -->
+		  </ul>
+		</nav>
+	</div>
+        
         <div class ="mainContent">
+        	Your username or password are not correct. Please try again. <br />
         	<a href = "login.php">Back to Login</a>       
         </div>
        

@@ -88,7 +88,7 @@
         
         $_SESSION['confirmMessage'] = "Welcome " . $_SESSION['uname'];
         
-        header("Location: userinfo.php");
+        header("Location: admin.php");
         
         
     } else {
@@ -129,7 +129,7 @@
         
         ?>
         
-        	<div class="breadcrumb">
+      <div class="breadcrumb">
 		<nav>
 		  <ul>
 		    <li><a href="../index.php">home</a></li> <!-- ALWAYS INDEX.php -->

@@ -9,6 +9,9 @@
  * Description: This page echoes all current users in the database.
  *   
  * */
+	if ($_SESSION['uname'] != 'administrator') {
+		header ('Location: ../index.php'); 
+	}
 
     require("../navigation.inc");
  

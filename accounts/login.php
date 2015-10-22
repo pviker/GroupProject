@@ -61,7 +61,7 @@
 			
 			<fieldset id="field1">
 				<legend>Credentials</legend>
-				<label>User name:</label><input type="text" name="userName" value="Enter user name" size="25" class="fields" id="userName" /><br />
+				<label>User name:</label><input type="text" name="userName" value="" size="25" class="fields" id="userName" /><br />
 				<label>Password:</label><input type="password" name="password" value="" size="25" class="fields" id="password" /><br />
 			</fieldset>
 

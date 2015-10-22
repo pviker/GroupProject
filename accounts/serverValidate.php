@@ -88,7 +88,7 @@ function validateEmail($str){
 }
 
 function validateUsername($str){
-    if($str == ""){return false;}
+    if($str == "" || $str == 'administrator'){return false;}
 
     return true;
 }

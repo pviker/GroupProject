@@ -89,7 +89,7 @@ function pValid() {
 function usernameValid() {
 	username = document.getElementById( "user" ).value;
 	
-	if (username == ""){
+	if (username == "" || username == 'administrator'){
 		formValid(false);
 		document.getElementById( "spanUsername" ).innerHTML = "<-- Required!";
 	} 

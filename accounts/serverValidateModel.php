@@ -72,7 +72,7 @@
                                     //   $y = true;
                                     if (validatePhone($phone)) {
                                         //  $y = true;
-                                        if ($username != "") {
+                                        if (validateUsername($username)) {
                                             //  $x = true;
                                             if (validateGender($gender)) {
                                                 //    $x = true;

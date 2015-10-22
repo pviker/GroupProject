@@ -18,31 +18,15 @@
     echo $navigation;
     
     if ($_SESSION['uname'] !== 'administrator') {
-        
-    ?>
-    
-    <div class="breadcrumb">    
-          <ul>
-            <li><a href="../index.php">home</a></li>
-            <li><a href="">login</a></li>            
-          </ul>
-    </div> 
-    
-    <?php
-        
-        // header ('Location: ../index.php'); 
-        echo "<div class = \"mainContent\">You are not authorized to view this page. <br><br>";
-        echo "<a href = \"login.php\">Please Log In</a></div>";
-        exit;
-        
+        header ('Location: login.php'); 
     }
-?>
-
-<!DOCTYPE html>
+	?>
+  <!DOCTYPE html>
 
 <html>
     
-    <body>
+    <body> 
+    
     
 <?php 
 

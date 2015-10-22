@@ -1,5 +1,5 @@
 <?php 
-   	session_start();     
+
 /* 
  * ICS325 - Group Project
  * Iteration: 2
@@ -9,31 +9,60 @@
  * Description: This page echoes all current users in the database.
  *   
  * */
-
-    require("../navigation.inc");
  
+ 	if(null === session_id()){
+		session_start();
+	}
+	
+    require("../navigation.inc");
     $navigation = new Navigation();
-
     echo $navigation;
-?>
+    
+ ?>
+ 
+ <div class="breadcrumb">    
+          <ul>
+            <li><a href="../index.php">home</a></li>
+            <li><a href="admin.php">admin</a></li> 
+            <li><a href="">view all users</a></li>           
+          </ul>
+    </div>
+    
+    <div class = "mainContent">
+     	<h1><a href='admin.php'> Admin Interface</a> </h1> <br/>			
+    </div>
+    
+    <?php
+    
+    if ($_SESSION['uname'] !== 'administrator') {
 
-<!DOCTYPE html>
+        // echo "<div class = \"mainContent\">You are not authorized to view this page. <br><br>";
+        // echo "<a href = \"login.php\">Back to login</a></div>";
+        // exit;
+        
+
+        header ('Location: login.php'); 
+
+    }
+	?>
+  <!DOCTYPE html>
 
 <html>
     
-    <body>
+    <body> 
+    
     
 <?php 
 
 /* UNCOMMENT FOR LOCAL DB CREDENTIALS */
-	$dbUser = "user1";			
-	$dbPass = "abc123";				
-	$db = "music_electric";			
+	 $dbUser = "user1";			
+	 $dbPass = "abc123";				
+	 $db = "music_electric";			
 
 /* UNCOMMENT FOR SERVER DB CREDENTIALS */
-//	$dbUser = "ics325fa1528";		
-//	$dbPass = "983278";				
-//	$db = "ics325fa1528";	
+	// $dbUser = "ics325fa1528";		
+	// $dbPass = "983278";				
+	// $db = "ics325fa1528";	
 	
 //	echo "<div class = \"mainContent\"> " . $_SESSION['confirmMessage'] . "</div>";
 	

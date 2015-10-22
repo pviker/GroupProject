@@ -280,7 +280,7 @@
 	            	<input type="text" name="USERNAME" size="30" id="user" 
 	            		onfocus="usernameValid()" 
 		            		value="<?php if(isset($_POST['USERNAME'])) {echo $username;} ?>" 
-		            			<?php if ($username == ""){echo $styleInvalid;}?> />
+		            			<?php if (!validateUsername($username)){echo $styleInvalid;}?> />
 		            				<span class="formcheck" id="spanUsername"> </span><br />
 	
 	            <label>Password:</label>

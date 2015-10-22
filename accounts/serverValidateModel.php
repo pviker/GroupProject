@@ -54,29 +54,19 @@
     $comments = $_POST['comments'];
     }
 
-    if (validateName($firstName)) {
-        //$x = true;
-        if (validateName($lastName)) {
-            //  $x = true;
-            if (validateEmail($email)) {
-                //  $y = true;
-                if ($dob != "") {
-                    //   $x = true;
-                    if ($address != "") {
-                        // $x = true;
-                        if ($city != "") {
-                            //  $x = true;
-                            if (validateState($state)) {
-                                //  $x = true;
-                                if (validateZip($zip)) {
-                                    //   $y = true;
-                                    if (validatePhone($phone)) {
-                                        //  $y = true;
-                                        if ($username != "") {
-                                            //  $x = true;
-                                            if (validateGender($gender)) {
-                                                //    $x = true;
+    if (validateName($firstName)) {       
+        if (validateName($lastName)) {            
+            if (validateEmail($email)) {                
+                if ($dob != "") {                    
+                    if ($address != "") {                       
+                        if ($city != "") {                            
+                            if (validateState($state)) {                                
+                                if (validateZip($zip)) {                                   
+                                    if (validatePhone($phone)) {                                       
+                                        if (validateUsername($username)) {                                            
+                                            if (validateGender($gender)) {                                              
                                                 if (validatePassword($password1, $password2)) {
+                                                           
                                                     $_SESSION["fname"] = $firstName;
                                                     $_SESSION["lname"] = $lastName;
                                                     $_SESSION["add"] = $address;
@@ -108,11 +98,9 @@
                                                     $gender = cleanInput($gender);
                                                     $dob = cleanInput($dob);
                                                     $comments = cleanInput($comments);
-                                                    $address =
 
                                                     header("Location: mailinglistresults.php");
                                                 }
-
                                             }
                                         }
                                     }
@@ -121,7 +109,6 @@
                         }
                     }
                 }
-
             }
         }
     }

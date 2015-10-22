@@ -69,9 +69,9 @@ function validatePhone($str){
 
 }
 function validateDOB($str){
-    if($str == ""){return false;}
-
-    return true;
+	if($str == ""){return false;}
+	
+    return true; 
 }
 function validateEmail($str){
     if($str == ""){return false;}
@@ -88,7 +88,7 @@ function validateEmail($str){
 }
 
 function validateUsername($str){
-    if($str == ""){return false;}
+    if($str == "" || $str == 'administrator'){return false;}
 
     return true;
 }

@@ -34,14 +34,14 @@
 	<div class="mainContent">		
 		<table>
 			<tr>
-				<td><a href="productPages/strat.php"><span class="img"><img src="../images/guitars/strat.jpg" height="200" width="200" /></span></a></td>
-				<td><a href="productPages/strat.php">Fender American Standard Stratocaster</a></td>
-				<td>$1299</td>
+				<td><a href="productPages/Roland.php"><span class="img"><img src="../images/drums/Roland-TD-30K.jpg" height="200" width="200" /></span></a></td>
+				<td><a href="productPages/Roland.php">Roland TD-30K</a></td>
+				<td>$5000</td>
 			</tr>
 			<tr>
-				<td><a href="productPages/es335.php"><span class="img"><img src="../images/guitars/Gibson_ES335.jpg" height="200" width="200" /></span></a></td>
-				<td><a href="productPages/es335.php">Gibson Custom Shop VOS ES-335</a></td>
-				<td>$3199</td>
+				<td><a href="productPages/Yamaha.php"><span class="img"><img src="../images/drums/Yamaha.jpg" height="200" width="200" /></span></a></td>
+				<td><a href="productPages/Yamaha.php">Yamaha DTX 450K</a></td>
+				<td>$1500</td>
 			</tr>
 		</table>	
 	</div>

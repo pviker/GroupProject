@@ -81,7 +81,7 @@ span.spanHeader {
 
 .mainContentTable {
 	/*position:absolute;*/
-	margin-top: 15%;
+	margin-top: auto;
 	/*white-space: nowrap;*/
 	margin-left: auto;
 	margin-right: auto;

@@ -30,6 +30,7 @@
 
 
 	/* UNCOMMENT FOR LOCAL DB CREDENTIALS */
+<<<<<<< HEAD
     $dbUser = "user1";          
     $dbPass = "abc123";             
     $db = "music_electric";         
@@ -38,6 +39,16 @@
 //  $dbUser = "ics325fa1528";       
 //  $dbPass = "983278";             
 //  $db = "ics325fa1528";
+=======
+     $dbUser = "user1";          
+     $dbPass = "abc123";             
+     $db = "music_electric";         
+
+	/* UNCOMMENT FOR SERVER DB CREDENTIALS */
+  // $dbUser = "ics325fa1528";       
+  // $dbPass = "983278";             
+  // $db = "ics325fa1528";
+>>>>>>> master
     
 	if((!isset($username)) || (!isset($password))) {
   
@@ -61,8 +72,8 @@
 			
 			<fieldset id="field1">
 				<legend>Credentials</legend>
-				<label>User name:</label><input type="text" name="userName" value="Enter user name" size="25" class="fields" id="userName" /><br />
-				<label>Password:</label><input type="password" name="password" value="" size="25" class="fields" id="password" /><br />
+				<label>User name:</label><input type="text" name="userName" placeholder="Enter username" size="25" class="fields" id="userName" /><br />
+				<label>Password:</label><input type="password" name="password" placeholder="Enter password" size="25" class="fields" id="password" /><br />
 			</fieldset>
 
 			<div class="buttons">
@@ -125,12 +136,24 @@
     }
     
     else {
-            
-        echo "<div class = \"mainContent\"> Your username or password are not correct. Please try again. </div>";
+           
         
         ?>
         
+      <div class="breadcrumb">
+		<nav>
+		  <ul>
+		    <li><a href="../index.php">home</a></li> <!-- ALWAYS INDEX.php -->
+		    <li><a href="">login</a></li> <!-- ALWAYS SUBCATEGORY -->
+		  </ul>
+		</nav>
+	</div>
+        
         <div class ="mainContent">
+<<<<<<< HEAD
+=======
+        	Your username or password are not correct. Please try again. <br /><br>
+>>>>>>> master
         	<a href = "login.php">Back to Login</a>       
         </div>
        

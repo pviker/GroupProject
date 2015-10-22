@@ -16,9 +16,9 @@
  
 ?>
 
-
 <?php
 
+  
     //USERS table data from form
     $firstName = $_SESSION["fname"];
     $lastName = $_SESSION["lname"];
@@ -37,14 +37,14 @@
     $password = $_SESSION["pwd"];
     
 /* UNCOMMENT FOR LOCAL DB CREDENTIALS */
-	$dbUser = "user1";			
-	$dbPass = "abc123";				
-	$db = "music_electric";			
+	 $dbUser = "user1";			
+	 $dbPass = "abc123";				
+	 $db = "music_electric";			
 
 /* UNCOMMENT FOR SERVER DB CREDENTIALS */
-//	$dbUser = "ics325fa1528";		
-//	$dbPass = "983278";				
-//	$db = "ics325fa1528";			
+	// $dbUser = "ics325fa1528";		
+	// $dbPass = "983278";				
+	// $db = "ics325fa1528";			
 	
     //Database connection
     @ $dbc = mysqli_connect('localhost', $dbUser, $dbPass, $db);
@@ -74,9 +74,16 @@
    
     ?>
     
-    <div class="maincontent">
+    <div class="breadcrumb">    
+          <ul>
+            <li><a href="../index.php">home</a></li>
+            <li><a href="">register</a></li>            
+          </ul>
+    </div>
+    
+    <div class="maincontent">     
 
-    	<h1>Thank you <?php echo $firstName; ?>, for registering! <br />Account created for, <?php echo $username; ?></h1>
+    	<h1>Thank you <?php echo $firstName; ?> for registering! <br />Account created for: <?php echo $username; ?></h1>
 
     </div>
     

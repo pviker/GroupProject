@@ -17,28 +17,27 @@
 
     echo $navigation;
     
-    if ($_SESSION['uname'] !== 'administrator') {
-<<<<<<< HEAD
-        
-    ?>
-    
-    <div class="breadcrumb">    
+ ?>
+ 
+ <div class="breadcrumb">    
           <ul>
             <li><a href="../index.php">home</a></li>
-            <li><a href="">login</a></li>            
+            <li><a href="admin.php">admin</a></li> 
+            <li><a href="">view all users</a></li>           
           </ul>
-    </div> 
+    </div>
     
     <?php
+    
+    if ($_SESSION['uname'] !== 'administrator') {
+
+        // echo "<div class = \"mainContent\">You are not authorized to view this page. <br><br>";
+        // echo "<a href = \"login.php\">Back to login</a></div>";
+        // exit;
         
-        
-        echo "<div class = \"mainContent\">You are not authorized to view this page. <br><br>";
-        echo "<a href = \"login.php\">Back to login</a></div>";
-        exit;
-        
-=======
+
         header ('Location: login.php'); 
->>>>>>> origin/master
+
     }
 	?>
   <!DOCTYPE html>

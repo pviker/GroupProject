@@ -20,16 +20,19 @@
 
 	<!--START MAIN CONTENT-->
 	<div class="productContent">		
-			<p><h2>Yamaha F335 Acoustic Guitar  </h2></p>
-			<span class="productImg"><img src="../../images/guitars/YamahaF335.jpg" height="500" width="300" /></span>
+			<p><h2>Ibanez SRFF806 Fanned-Fret Six-String Electric Bass Guitar</h2></p>
+			<span class="productImg"><img src="../../images/guitars/Ibanez_Bass.jpg" height="500" width="300" /></span>
 		    <span>
-			    <p>$129</p>
+			    <p>$1059</p>
 			    <p>FEATURES:</p>
 			       <ul>
-				       <li>Body shape: Dreadnought acoustic</li>
-				       <li>Body wood: Rosewood</li>
-				       <li>Scale length: 25.5"</li>
-	                   <li>Finish: Gloss</li>
+				       <li>Body: Ash</li>
+				       <li>Fingerboard: Rosewood</li>
+				       <li>Medium frets</li>
+				       <li>EQ: Ibanez Custom Electronics 3-band EQ</li>
+				       <li>Bridge: Mono-rail V bridge</li>
+	                   <li>Bridge: Ebony</li>
+	                   <li>Hardware color: Cosmo black</li>
 	              </ul>
 			</span>    
 			

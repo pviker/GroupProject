@@ -20,16 +20,18 @@
 
 	<!--START MAIN CONTENT-->
 	<div class="productContent">		
-			<p><h2>Yamaha F335 Acoustic Guitar  </h2></p>
-			<span class="productImg"><img src="../../images/guitars/YamahaF335.jpg" height="500" width="300" /></span>
+			<p><h2>Fender Deluxe PJ Bass Sea Foam Pearl</h2></p>
+			<span class="productImg"><img src="../../images/guitars/Fender_Deluxe.jpg" height="500" width="300" /></span>
 		    <span>
-			    <p>$129</p>
+			    <p>$700</p>
 			    <p>FEATURES:</p>
 			       <ul>
-				       <li>Body shape: Dreadnought acoustic</li>
-				       <li>Body wood: Rosewood</li>
-				       <li>Scale length: 25.5"</li>
-	                   <li>Finish: Gloss</li>
+				       <li>Precision Bass body with Maple 70’s Jazz Bass neck</li>
+				       <li>Sea Foam Pearl color</li>
+				       <li>20 Frets</li>
+				       <li>34” Scale</li>
+				       <li>Neck wood: Sapele</li>
+				       <li>Chrome hardware</li>
 	              </ul>
 			</span>    
 			

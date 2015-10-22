@@ -20,8 +20,8 @@
 
 	<!--START MAIN CONTENT-->
 	<div class="productContent">		
-			<p><h2>Taylor GS Mini Koa Acoustic-Electric Guitar Natural/h2></p>
-			<span class="productImg"><img src="../../images/guitars/Taylor.jpg" height="450" width="450" /></span>
+			<p><h2>Taylor GS Mini Koa Acoustic-Electric Guitar Natural</h2></p>
+			<span class="productImg"><img src="../../images/guitars/Taylor.jpg" height="500" width="300" /></span>
 		    <span>
 			    <p>$619</p>
 			    <p>FEATURES:</p>

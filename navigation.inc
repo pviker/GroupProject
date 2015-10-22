@@ -125,7 +125,6 @@ class Navigation {
 		<div class=\"users\">"
 			. $loggedIn .
 			" | <a href=\"$this->server/ics325/GroupProject/accounts/register.php\">register</a>
-		    | <a href=\"$this->server/ics325/GroupProject/accounts/admin.php\"> admin </a>
 		</div>";  // end return  
   }
 }

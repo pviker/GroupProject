@@ -77,6 +77,8 @@
                                             if (validateGender($gender)) {
                                                 //    $x = true;
                                                 if (validatePassword($password1, $password2)) {
+                                                    
+        
                                                     $_SESSION["fname"] = $firstName;
                                                     $_SESSION["lname"] = $lastName;
                                                     $_SESSION["add"] = $address;

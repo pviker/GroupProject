@@ -13,10 +13,10 @@
 	session_unset();
 	session_destroy();
  
-	header("Location: ../index.php");
- 
 	session_start();
  
 	$_SESSION['logoutMessage'] = "You have succesfully logged out.";
+    
+    header("Location: ../index.php");
 
 ?>

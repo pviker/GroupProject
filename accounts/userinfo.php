@@ -9,15 +9,33 @@
  * Description: This page echoes all current users in the database.
  *   
  * */
-	if ($_SESSION['uname'] != 'administrator') {
-		header ('Location: ../index.php'); 
-	}
+	
 
     require("../navigation.inc");
  
     $navigation = new Navigation();
 
     echo $navigation;
+    
+    if ($_SESSION['uname'] !== 'administrator') {
+        
+    ?>
+    
+    <div class="breadcrumb">    
+          <ul>
+            <li><a href="../index.php">home</a></li>
+            <li><a href="">login</a></li>            
+          </ul>
+    </div> 
+    
+    <?php
+        
+        // header ('Location: ../index.php'); 
+        echo "<div class = \"mainContent\">You are not authorized to view this page. <br><br>";
+        echo "<a href = \"../index.php\">Back to home</a></div>";
+        exit;
+        
+    }
 ?>
 
 <!DOCTYPE html>

@@ -16,9 +16,9 @@
  
 ?>
 
-
 <?php
 
+  
     //USERS table data from form
     $firstName = $_SESSION["fname"];
     $lastName = $_SESSION["lname"];
@@ -74,9 +74,16 @@
    
     ?>
     
-    <div class="maincontent">
+    <div class="breadcrumb">    
+          <ul>
+            <li><a href="../index.php">home</a></li>
+            <li><a href="">register</a></li>            
+          </ul>
+    </div>
+    
+    <div class="maincontent">     
 
-    	<h1>Thank you <?php echo $firstName; ?>, for registering! <br />Account created for, <?php echo $username; ?></h1>
+    	<h1>Thank you <?php echo $firstName; ?> for registering! <br />Account created for: <?php echo $username; ?></h1>
 
     </div>
     

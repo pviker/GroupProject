@@ -14,10 +14,29 @@
     $navigation = new Navigation();
 
     echo $navigation; 
-	if ($_SESSION['uname'] != 'administrator') {
-		header ('Location: ../index.php'); 
-	}
-?>
+    
+	if ($_SESSION['uname'] !== 'administrator') {
+        
+    ?>
+    
+    <div class="breadcrumb">    
+          <ul>
+            <li><a href="../index.php">home</a></li>
+            <li><a href="">login</a></li>            
+          </ul>
+    </div> 
+    
+    <?php
+        
+        // header ('Location: ../index.php'); 
+        echo "<div class = \"mainContent\">You are not authorized to view this page. <br><br>";
+        echo "<a href = \"../index.php\">Back to home</a></div>";
+        exit;
+        
+    }
+    
+    ?>
+    
 <!DOCTYPE html>
 
 <html>
@@ -25,7 +44,7 @@
 		<div class = "mainContentTable">
      	<h1 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h1>
          
-			<a href='userinfo.php'> show the users from the database </a> 
+			<a href='userinfo.php'> View all users </a> 
 
        </div>
      

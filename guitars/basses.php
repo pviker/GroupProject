@@ -36,14 +36,14 @@
 	<div class="mainContent">		
 		<table>
 			<tr>
-				<td><a href="productPages/strat.php"><span class="img"><img src="../images/guitars/strat.jpg" height="200" width="200" /></span></a></td>
-				<td><a href="productPages/strat.php">Fender American Standard Stratocaster</a></td>
-				<td>$1299</td>
+				<td><a href="productPages/Ibanez.php"><span class="img"><img src="../images/guitars/Ibanez_bass.jpg" height="300" width="200" /></span></a></td>
+				<td><a href="productPages/Ibanez.php">Ibanez SRFF806 Six-String Electric Bass Guitar Black Stained</a></td>
+				<td>$1059</td>
 			</tr>
 			<tr>
-				<td><a href="productPages/es335.php"><span class="img"><img src="../images/guitars/Gibson_ES335.jpg" height="200" width="200" /></span></a></td>
-				<td><a href="productPages/es335.php">Gibson Custom Shop VOS ES-335</a></td>
-				<td>$3199</td>
+				<td><a href="productPages/Fender.php"><span class="img"><img src="../images/guitars/Fender_Deluxe.jpg" height="300" width="200" /></span></a></td>
+				<td><a href="productPages/Fender.php">Fender Deluxe DJ Bass Sea Foam Pearl</a></td>
+				<td>$700</td>
 			</tr>
 		</table>	
 	</div>

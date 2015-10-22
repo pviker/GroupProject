@@ -36,14 +36,14 @@
 	<div class="mainContent">		
 		<table>
 			<tr>
-				<td><a href="productPages/strat.php"><span class="img"><img src="../images/guitars/strat.jpg" height="200" width="200" /></span></a></td>
-				<td><a href="productPages/strat.php">Fender American Standard Stratocaster</a></td>
-				<td>$1299</td>
+				<td><a href="productPages/YamahaF335.php"><span class="img"><img src="../images/guitars/YamahaF335.jpg" height="300" width="200" /></span></a></td>
+				<td><a href="productPages/YamahaF335.php">Yamaha F335</a></td>
+				<td>$129</td>
 			</tr>
 			<tr>
-				<td><a href="productPages/es335.php"><span class="img"><img src="../images/guitars/Gibson_ES335.jpg" height="200" width="200" /></span></a></td>
-				<td><a href="productPages/es335.php">Gibson Custom Shop VOS ES-335</a></td>
-				<td>$3199</td>
+				<td><a href="productPages/Taylor.php"><span class="img"><img src="../images/guitars/Taylor.jpg" height="300" width="200" /></span></a></td>
+				<td><a href="productPages/Taylor.php">Taylor GS Mini Koa</a></td>
+				<td>$619</td>
 			</tr>
 		</table>	
 	</div>

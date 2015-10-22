@@ -1,5 +1,5 @@
 <?php 
-   	session_start();     
+      
 /* 
  * ICS325 - Group Project
  * Iteration: 2
@@ -9,12 +9,13 @@
  * Description: This page echoes all current users in the database.
  *   
  * */
-	
-
-    require("../navigation.inc");
  
+ 	if(null === session_id()){
+		session_start();
+	}
+	
+    require("../navigation.inc");
     $navigation = new Navigation();
-
     echo $navigation;
     
  ?>

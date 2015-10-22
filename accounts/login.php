@@ -16,6 +16,8 @@
 	require("../navigation.inc");
 	$navigation = new Navigation();
 	echo $navigation;
+	
+	require("../controllers/database.php");
   
 	if(isset($_POST['Send'])) {
 	    
@@ -26,29 +28,6 @@
 	
 	$admin = "administrator";
 	$adminPass = "password";
-
-
-
-	/* UNCOMMENT FOR LOCAL DB CREDENTIALS */
-<<<<<<< HEAD
-    $dbUser = "user1";          
-    $dbPass = "abc123";             
-    $db = "music_electric";         
-
-	/* UNCOMMENT FOR SERVER DB CREDENTIALS */
-//  $dbUser = "ics325fa1528";       
-//  $dbPass = "983278";             
-//  $db = "ics325fa1528";
-=======
-     $dbUser = "user1";          
-     $dbPass = "abc123";             
-     $db = "music_electric";         
-
-	/* UNCOMMENT FOR SERVER DB CREDENTIALS */
-  // $dbUser = "ics325fa1528";       
-  // $dbPass = "983278";             
-  // $db = "ics325fa1528";
->>>>>>> master
     
 	if((!isset($username)) || (!isset($password))) {
   
@@ -104,13 +83,6 @@
         
     } else {
     
-    @ $dbc = mysqli_connect('localhost', $dbUser, $dbPass, $db);
-    
-    if(mysqli_connect_errno() ) {
-                echo "Error: could not connect to database. Please try again later.";
-                exit;
-    }
-    
     $query = "select count(*) from credentials where username = '" . $username . "' and 
     password = sha1('" . $password . "')";
     
@@ -150,10 +122,7 @@
 	</div>
         
         <div class ="mainContent">
-<<<<<<< HEAD
-=======
         	Your username or password are not correct. Please try again. <br /><br>
->>>>>>> master
         	<a href = "login.php">Back to Login</a>       
         </div>
        

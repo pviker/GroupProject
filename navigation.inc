@@ -27,7 +27,7 @@ class Navigation {
   }
  
   public function __toString() {
-    return  "<!DOCTYPE html>\n" .
+    return  //"<!DOCTYPE html>\n" .
     		$this -> DisplayHeader() .
 			$this -> DisplayTitle() .
     		$this -> DisplayKeywords() .

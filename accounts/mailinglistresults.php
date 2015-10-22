@@ -13,6 +13,8 @@
     require("../navigation.inc");
     $navigation = new Navigation();
     echo $navigation;
+	
+	require("../controllers/database.php");
  
 ?>
 
@@ -35,24 +37,6 @@
     //CREDENTIALS table data form
     $username = $_SESSION["uname"];
     $password = $_SESSION["pwd"];
-    
-/* UNCOMMENT FOR LOCAL DB CREDENTIALS */
-	 $dbUser = "user1";			
-	 $dbPass = "abc123";				
-	 $db = "music_electric";			
-
-/* UNCOMMENT FOR SERVER DB CREDENTIALS */
-	// $dbUser = "ics325fa1528";		
-	// $dbPass = "983278";				
-	// $db = "ics325fa1528";			
-	
-    //Database connection
-    @ $dbc = mysqli_connect('localhost', $dbUser, $dbPass, $db);
-    
-    if(mysqli_connect_errno() ) {
-                echo "Error: could not connect to database. Please try again later.";
-                exit;
-            }
 
     //Insert query for 'users' table
     $usersQuery = "insert into users (first_name, last_name, date, email, dob, address, city, state, 

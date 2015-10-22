@@ -16,6 +16,7 @@
     echo $navigation; 
     
 	if ($_SESSION['uname'] !== 'administrator') {
+<<<<<<< HEAD
         
     ?>
     
@@ -33,19 +34,25 @@
         echo "<a href = \"login.php\">Back to login</a></div>";
         exit;
         
+=======
+        header ('Location: login.php'); 
+>>>>>>> origin/master
     }
-    
-    ?>
-    
-<!DOCTYPE html>
-
-<html>
-    <body>
+	?>
+ <!DOCTYPE html>
+   <html>
+      <body>
+		
+		<div class="breadcrumb">    
+			  <ul>
+				<li><a href="../index.php">home</a></li>
+				<li><a href="">login</a></li>            
+			  </ul>
+		</div> 
+		
 		<div class = "mainContentTable">
-     	<h1 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h1>
-         
+     	<h1 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h1> 
 			<a href='userinfo.php'> View all users </a> 
-
        </div>
      
 	 </body> 

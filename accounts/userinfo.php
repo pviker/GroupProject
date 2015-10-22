@@ -18,6 +18,7 @@
     echo $navigation;
     
     if ($_SESSION['uname'] !== 'administrator') {
+<<<<<<< HEAD
         
     ?>
     
@@ -35,14 +36,17 @@
         echo "<a href = \"login.php\">Back to login</a></div>";
         exit;
         
+=======
+        header ('Location: login.php'); 
+>>>>>>> origin/master
     }
-?>
-
-<!DOCTYPE html>
+	?>
+  <!DOCTYPE html>
 
 <html>
     
-    <body>
+    <body> 
+    
     
 <?php 
 

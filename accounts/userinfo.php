@@ -28,6 +28,10 @@
           </ul>
     </div>
     
+    <div class = "mainContent">
+     	<h1><a href='admin.php'> Admin Interface</a> </h1> <br/>			
+    </div>
+    
     <?php
     
     if ($_SESSION['uname'] !== 'administrator') {
@@ -51,14 +55,14 @@
 <?php 
 
 /* UNCOMMENT FOR LOCAL DB CREDENTIALS */
-	$dbUser = "user1";			
-	$dbPass = "abc123";				
-	$db = "music_electric";			
+	 $dbUser = "user1";			
+	 $dbPass = "abc123";				
+	 $db = "music_electric";			
 
 /* UNCOMMENT FOR SERVER DB CREDENTIALS */
-//	$dbUser = "ics325fa1528";		
-//	$dbPass = "983278";				
-//	$db = "ics325fa1528";	
+	// $dbUser = "ics325fa1528";		
+	// $dbPass = "983278";				
+	// $db = "ics325fa1528";	
 	
 //	echo "<div class = \"mainContent\"> " . $_SESSION['confirmMessage'] . "</div>";
 	

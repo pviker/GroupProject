@@ -37,14 +37,14 @@
     $password = $_SESSION["pwd"];
     
 /* UNCOMMENT FOR LOCAL DB CREDENTIALS */
-	$dbUser = "user1";			
-	$dbPass = "abc123";				
-	$db = "music_electric";			
+	 $dbUser = "user1";			
+	 $dbPass = "abc123";				
+	 $db = "music_electric";			
 
 /* UNCOMMENT FOR SERVER DB CREDENTIALS */
-//	$dbUser = "ics325fa1528";		
-//	$dbPass = "983278";				
-//	$db = "ics325fa1528";			
+	// $dbUser = "ics325fa1528";		
+	// $dbPass = "983278";				
+	// $db = "ics325fa1528";			
 	
     //Database connection
     @ $dbc = mysqli_connect('localhost', $dbUser, $dbPass, $db);

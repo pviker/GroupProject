@@ -1,5 +1,4 @@
-<?php 
-   	session_start();     
+<?php    
 /* 
  * ICS325 - Group Project
  * Iteration: 2
@@ -9,10 +8,12 @@
  * Description: This page is only accessible by administrator. 
  *   
  * */
-   require("../navigation.inc");
  
+  	if(null === session_id()){
+		session_start();
+	}
+	require("../navigation.inc");
     $navigation = new Navigation();
-
     echo $navigation; 
     
 ?>
@@ -50,7 +51,7 @@
 		
 		<div class = "mainContent">
      	<h1 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h1> 
-			<a href='userinfo.php'> View all users </a> 
+			<h2 class="indexH1"><a href='userinfo.php'>View all users</a></h1> 
        </div>
      
 	 </body> 

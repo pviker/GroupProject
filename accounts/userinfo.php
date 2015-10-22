@@ -32,7 +32,7 @@
         
         
         echo "<div class = \"mainContent\">You are not authorized to view this page. <br><br>";
-        echo "<a href = \"../index.php\">Back to home</a></div>";
+        echo "<a href = \"login.php\">Please Log In</a></div>";
         exit;
         
     }

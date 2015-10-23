@@ -97,28 +97,28 @@ class Navigation {
 				<li><a href=\"$this->server/ics325/GroupProject/index.php\">home</a></li>
 				
 				<li>
-					<a href=\"products.php?cat=Guitars\">guitars</a>
+					<a href=\"$this->server/ics325/GroupProject/products.php?cat=Guitars\">guitars</a>
 					<ul>" 
 					. $this->getGuitarNav() . 
 					"</ul>
 				</li>
 				
 				<li>
-					<a href=\"products.php?cat=Amps\">amps</a>
+					<a href=\"$this->server/ics325/GroupProject/products.php?cat=Amps\">amps</a>
 					<ul>" 
 					. $this->getAmpsNav() . 
 					"</ul>
 				</li>
 				
 				<li>
-					<a href=\"products.php?cat=Drums\">drums</a>
+					<a href=\"$this->server/ics325/GroupProject/products.php?cat=Drums\">drums</a>
 					<ul>" 
 					. $this->getDrumsNav() . 
 					"</ul>
 				</li>
 				
 				<li>
-					<a href=\"#\">information</a>
+					<a href=\"$this->server/ics325/GroupProject/info/about.php\">information</a>
 					<ul>
 						<li><a href=\"$this->server/ics325/GroupProject/info/about.php\">about</a></li>
 						<li><a href=\"$this->server/ics325/GroupProject/info/contact.php\">contact</a></li>

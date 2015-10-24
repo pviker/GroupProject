@@ -28,6 +28,37 @@ CREATE TABLE `credentials` (
   PRIMARY KEY (`userid`),
   FOREIGN KEY (`userid`) REFERENCES users(`userid`));
   
+  CREATE TABLE `categories` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `category` VARCHAR(45) NULL,
+  `subcategory` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+CREATE TABLE `products` (
+  `prod_id` INT NOT NULL AUTO_INCREMENT,
+  `cat_id` INT NULL,
+  `title` VARCHAR(70) NULL,
+  `desc` MEDIUMTEXT NULL,
+  `price` INT NULL,
+  `photo_loc` VARCHAR(100) NULL,
+  PRIMARY KEY (`prod_id`),
+  INDEX `cat_id_idx` (`cat_id` ASC),
+  CONSTRAINT `cat_id`
+    FOREIGN KEY (`cat_id`)
+    REFERENCES `music_electric`.`categories` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+insert into categories (category, subcategory) values
+    ("Guitars", "Electric"),
+    ("Guitars", "Acoustic"),
+    ("Guitars", "Bass"),
+    ("Amps", "Electric"),
+  	("Amps", "Acoustic"),
+  	("Amps", "Bass"),
+  	("Drums", "Electric"),
+  	("Drums", "Acoustic");
+  
   grant all (enter)
  -> on * (enter) 
  -> to user1 identified by 'abc123'; 

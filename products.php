@@ -19,6 +19,25 @@
     echo $navigation;
 
 	require("controllers/database.php");
+	
+	$id = "";
+	$cat = "";
+	$subcat = "";
+	
+	if (isset($_GET["id"])){
+		$id = $_GET["id"];
+	}
+	
+	if (isset($_GET["cat"])){
+		$cat = $_GET["cat"];
+	}
+	
+	if (isset($_GET["subcat"])){
+		$subcat = $_GET["subcat"];
+	}
+	
+	$query = "select * from products where cat_id = " . $id;
+	$result = mysqli_query($dbc, $query);
     
  ?>
  
@@ -33,7 +52,27 @@
     </div>
     
     <div class = "mainContent">
-     	<h1>PRODUCT PAGE ---- IN PROGRESS</h1> <br/>			
+    	
+     	<h1>Products page in progess... ?></h1> <br/>
+     	
+     	<table>
+<!--     	<?php 
+     	
+			while($row = mysqli_fetch_assoc($results)) {    
+	        	echo "<tr>
+	        			<td><a href=\"$this->server/ics325/GroupProject/products.php?cat=" . $row["category"] . "&subcat=" . $row["subcategory"] . "\">" . $row["subcategory"] . "</a></li>    
+       				  </tr>";
+			} 
+			
+        ?>
+-->
+			<tr>
+				<td><a href="productPages/strat.php"><span class="img"><img src="../images/guitars/strat.jpg" height="200" width="200" /></span></a></td>
+				<td><a href="productPages/strat.php">Fender American Standard Stratocaster</a></td>
+				<td>$1299</td>
+			</tr>
+		</table>
+				
     </div>
     
 	</body>

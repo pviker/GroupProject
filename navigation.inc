@@ -85,7 +85,8 @@ class Navigation {
 
 	$loggedIn = "<a href=\"$this->server/ics325/GroupProject/accounts/login.php\">login</a>";
 	if(isset($_SESSION['uname'])) {
-        $loggedIn = "Logged in as: " . $_SESSION['uname'] . " | <a href=\"$this->server/ics325/GroupProject/accounts/logout.php\">logout</a>";
+        $loggedIn = "Logged in as: " . $_SESSION['uname'] . " | 
+        				<a href=\"$this->server/ics325/GroupProject/accounts/logout.php\">logout</a>";
     }
 	
 	// $guitarSubCatList = $this->getGuitarNav();
@@ -140,12 +141,13 @@ class Navigation {
 	public function getGuitarNav(){
 		require("controllers/database.php");
 		
-	    $query = "select category, subcategory from categories where category = \"Guitars\"";
+	    $query = "select id, category, subcategory from categories where category = \"Guitars\"";
 	    $results = mysqli_query($dbc, $query);
 		
 		$guitar = "";
 		while($row = mysqli_fetch_assoc($results)) {    
-        	$guitar .= "<li><a href=\"$this->server/ics325/GroupProject/products.php?cat=" . $row["category"] . "&subcat=" . $row["subcategory"] . "\">" . $row["subcategory"] . "</a></li>";    
+        	$guitar .= "<li><a href=\"$this->server/ics325/GroupProject/products.php?id=" . $row["id"] . "&cat=" . $row["category"] . 
+        					"&subcat=" . $row["subcategory"] . "\">" . $row["subcategory"] . "</a></li>";    
         }
 		
 		return $guitar;
@@ -159,7 +161,8 @@ class Navigation {
 		
 		$amps = "";
 		while($row = mysqli_fetch_assoc($results)) {    
-        	$amps .= "<li><a href=\"$this->server/ics325/GroupProject/products.php?cat=" . $row["category"] . "&subcat=" . $row["subcategory"] . "\">" . $row["subcategory"] . "</a></li>";    
+        	$amps .= "<li><a href=\"$this->server/ics325/GroupProject/products.php?cat=" . $row["category"] . 
+        					"&subcat=" . $row["subcategory"] . "\">" . $row["subcategory"] . "</a></li>";    
         }
 		
 		return $amps;
@@ -173,7 +176,8 @@ class Navigation {
 		
 		$drums = "";
 		while($row = mysqli_fetch_assoc($results)) {    
-        	$drums .= "<li><a href=\"$this->server/ics325/GroupProject/products.php?cat=" . $row["category"] . "&subcat=" . $row["subcategory"] . "\">" . $row["subcategory"] . "</a></li>";    
+        	$drums .= "<li><a href=\"$this->server/ics325/GroupProject/products.php?cat=" . $row["category"] . 
+        					"&subcat=" . $row["subcategory"] . "\">" . $row["subcategory"] . "</a></li>";    
         }
 		
 		return $drums;

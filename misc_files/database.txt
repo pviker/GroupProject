@@ -1,3 +1,11 @@
+cmd line - run as administrator 
+
+c:\xampp\mysql\bin\mysql -u root 
+
+create database music_electric;
+
+use music_electric;
+
 CREATE TABLE `users` (
   `userid` INT NOT NULL AUTO_INCREMENT,
   `first_name` VARCHAR(45) NULL,
@@ -19,3 +27,8 @@ CREATE TABLE `credentials` (
   `password` VARCHAR(45) NULL,
   PRIMARY KEY (`userid`),
   FOREIGN KEY (`userid`) REFERENCES users(`userid`));
+  
+  grant all (enter)
+ -> on * (enter) 
+ -> to user1 identified by 'abc123'; 
+ 

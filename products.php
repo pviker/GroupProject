@@ -34,6 +34,8 @@
 	if (isset($_GET["subcat"])){
 		$subcat = $_GET["subcat"];
 	} else $subcat = "";
+	
+	$server = $navigation->GetServer();
     
  ?>
  
@@ -77,19 +79,25 @@
 	
 					
 		        	echo "<tr>
-		        			<td><a href=\"/ics325/GroupProject/productDetails.php?prod_id=" . 
+		        			<td>
+		        				<a href=\"$server/ics325/GroupProject/productDetails.php?prod_id=" . 
 		        						$row["prod_id"] . "&id=" . $row["id"] . "&cat=" . $row["category"] . "&subcat=" . 
 		        							$row["subcategory"] . "\">
 		        					<span class=\"img\">
 		        						<img src=\"" . $row["photo_loc"] . "\" height=\"200\" width=\"200\" />
 		        					</span>
-		        				</a></td>
-		        			<td><a href=\"/ics325/GroupProject/productDetails.php?prod_id=" . 
+		        				</a>
+		        			</td>
+		        			<td>
+		        				<a href=\"$server/ics325/GroupProject/productDetails.php?prod_id=" . 
 		        						$row["prod_id"] . "&id=" . $row["id"] . "&cat=" . $row["category"] . "&subcat=" . 
 		        							$row["subcategory"] . "\">" . 
 		        								$row["title"] . "
-		        				</a></td>
-		        			<td>$" . $row["price"] . "</td>    
+		        				</a>
+		        			</td>
+		        			<td>
+		        				$" . $row["price"] . "
+		        			</td>    
 	       				  </tr>";
 				} // end while
 				

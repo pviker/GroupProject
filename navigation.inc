@@ -13,7 +13,7 @@
  
 session_start();
 
-require("URLpath.inc");
+
 
 class Navigation {
   // class Page's attributes
@@ -23,23 +23,12 @@ class Navigation {
   protected $filePath;
   
   public function __construct(){
-  	
-//	$GLOBALS["server"] = 'http://'.$_SERVER["SERVER_NAME"];
-//	$server = $GLOBALS["server"];
-
-//	 $this->URLpath = new URLpath();
-//	 $this->server = $URLpath->getPath();
-//   $this->server = $URLpath->getPath();
-	
-	// set from URLpath.inc
-//	$this->server = $server;
-	
-	/** NOW IN INCLUDE FILE / NEED ACCESS TO IT LATER ON**/
-//	$this->server = URLpath()->getPath();
 
 	$this->server = 'http://'.$_SERVER["SERVER_NAME"];    					// domain name for localhost
 //	$this->server = 'http://'.$_SERVER["SERVER_NAME"].'/~ics325fa1528';		// domain name for school server
-//	$this->filePath = $_SERVER["DOCUMENT_ROOT"]."/ics325/GroupProject/\n";	// testing purposes
+  	
+  	$this -> SetServer($this->server);
+  
   }
  
   public function __toString() {
@@ -61,6 +50,10 @@ class Navigation {
   
   public function GetFilePath() {
   	return $this->filePath;
+  }
+  
+  public function SetServer($server){
+  	$this->server = $server;
   }
   
   public function DisplayHeader(){

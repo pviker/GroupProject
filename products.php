@@ -49,45 +49,51 @@
     
     <div class = "mainContent">
     	
-     	<h1>Products page in progress...</h1> <br/>
+     	<h1 class="indexH1"><?php echo $subcat . " " . $cat; ?></h1>
      	
      	<table>
-     	<?php 
-     		// Need to query that will grab all products that have a 
-     		// cat_id referenced to category table matching a specific category 
-     		// (ie. category table for guitars has a id= 1,2,3,9)
-     		// SELECT * FROM products where cat_id in (select categories.id where category = "Guitars");
-     		
-     		//$this->server = $server;
-     		
-     		if($cat == "Guitars" && $subcat == ""){
-     			$query = "select * from products where cat_id in (1, 2, 3, 9)";
-     		} else if($cat == "Amps" && $subcat == ""){
-     				$query = "select * from products where cat_id in (4, 5, 6)";
-     		  } else if($cat == "Drums" && $subcat == ""){
-     					$query = "select * from products where cat_id in (7, 8)";		
-     			} else {
-     					$query = "select * from products where cat_id = " . $id;
-				  }
-			$results = mysqli_query($dbc, $query);	
-     	
-			// echo all products matching category ID
-			while($row = mysqli_fetch_assoc($results)) {    
-	        	echo "<tr>
-	        			<td><a href=\"/ics325/GroupProject/productDetails.php?prod_id=" . 
-	        						$row["prod_id"] . "&id=" . $id . "&cat=" . $cat . "&subcat=" . $subcat . "\">
-	        					<span class=\"img\">
-	        						<img src=\"" . $row["photo_loc"] . "\" height=\"200\" width=\"200\" />
-	        					</span>
-	        				</a></td>
-	        			<td><a href=\"/ics325/GroupProject/products.php?prod_id=" . 
-	        						$row["prod_id"] . "&id=" . $id . "&cat=" . $cat . "&subcat=" . $subcat . "\">" . $row["title"] . "
-	        				</a></td>
-	        			<td>" . $row["price"] . "</td>    
-       				  </tr>";
-			} // end while
-			
-        ?>
+	     	<?php 
+	     		// Need to query that will grab all products that have a 
+	     		// cat_id referenced to category table matching a specific category 
+	     		// (ie. category table for guitars has a id= 1,2,3,9)
+	     		// SELECT * FROM products where cat_id in (select categories.id where category = "Guitars");
+	     		
+	     		//$this->server = $server;
+	     		
+	     		if($cat == "Guitars" && $subcat == ""){
+	     			$query = "select * from products, categories where cat_id in (1, 2, 3, 9) and id=cat_id";
+	     		} else if($cat == "Amps" && $subcat == ""){
+	     				$query = "select * from products, categories where cat_id in (4, 5, 6) and id=cat_id";
+	     		  } else if($cat == "Drums" && $subcat == ""){
+	     					$query = "select * from products, categories where cat_id in (7, 8) and id=cat_id";		
+	     			} else {
+	     					$query = "select * from products, categories where cat_id = " . $id . " and id=cat_id";
+					  }
+					
+				$results = mysqli_query($dbc, $query);	
+	     	
+				// echo all products matching category ID
+				while($row = mysqli_fetch_assoc($results)) {
+	
+					
+		        	echo "<tr>
+		        			<td><a href=\"/ics325/GroupProject/productDetails.php?prod_id=" . 
+		        						$row["prod_id"] . "&id=" . $row["id"] . "&cat=" . $row["category"] . "&subcat=" . 
+		        							$row["subcategory"] . "\">
+		        					<span class=\"img\">
+		        						<img src=\"" . $row["photo_loc"] . "\" height=\"200\" width=\"200\" />
+		        					</span>
+		        				</a></td>
+		        			<td><a href=\"/ics325/GroupProject/productDetails.php?prod_id=" . 
+		        						$row["prod_id"] . "&id=" . $row["id"] . "&cat=" . $row["category"] . "&subcat=" . 
+		        							$row["subcategory"] . "\">" . 
+		        								$row["title"] . "
+		        				</a></td>
+		        			<td>$" . $row["price"] . "</td>    
+	       				  </tr>";
+				} // end while
+				
+	        ?>
 		</table>
 				
     </div>

@@ -13,16 +13,31 @@
  
 session_start();
 
+require("URLpath.inc");
 
 class Navigation {
   // class Page's attributes
   protected $title = "Music Electric Inc.";
   protected $keywords = "Music, Electric, Inc, Instruments, Gear, Guitars, Drums";
-  protected	$server;
+//  protected	$server;  
   protected $filePath;
   
   public function __construct(){
-  	$this->server = 'http://'.$_SERVER["SERVER_NAME"];    					// domain name for localhost
+  	
+//	$GLOBALS["server"] = 'http://'.$_SERVER["SERVER_NAME"];
+//	$server = $GLOBALS["server"];
+
+//	 $this->URLpath = new URLpath();
+//	 $this->server = $URLpath->getPath();
+//   $this->server = $URLpath->getPath();
+	
+	// set from URLpath.inc
+//	$this->server = $server;
+	
+	/** NOW IN INCLUDE FILE / NEED ACCESS TO IT LATER ON**/
+//	$this->server = URLpath()->getPath();
+
+	$this->server = 'http://'.$_SERVER["SERVER_NAME"];    					// domain name for localhost
 //	$this->server = 'http://'.$_SERVER["SERVER_NAME"].'/~ics325fa1528';		// domain name for school server
 //	$this->filePath = $_SERVER["DOCUMENT_ROOT"]."/ics325/GroupProject/\n";	// testing purposes
   }

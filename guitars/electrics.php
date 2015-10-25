@@ -1,9 +1,4 @@
-<?php 
-		
-		if(null === session_id()){
-			session_start();
-		}
-			
+<?php 		
 /* 
  * ICS325 - Group Project
  * Iteration: 2
@@ -13,7 +8,11 @@
  * Description: Electric guitar product listing page.
  *   
  * */
-
+ 
+	if(null === session_id()){
+		session_start();
+	}
+	
 	require("../navigation.inc");
 	$navigation = new Navigation();
 	echo $navigation;

@@ -19,6 +19,9 @@
     echo $navigation;
 
 	require("controllers/database.php");
+//	require("URLpath.inc");
+	// $URLpath = new URLpath();
+	// $this->server = $server;
 	
 	$id = "";
 	$cat = "";
@@ -36,8 +39,8 @@
 		$subcat = $_GET["subcat"];
 	}
 	
-	$query = "select * from products where cat_id = " . $id;
-	$result = mysqli_query($dbc, $query);
+//	$query = "select * from products where cat_id = " . $id;
+//	$results = mysqli_query($dbc, $query);
     
  ?>
  
@@ -53,24 +56,27 @@
     
     <div class = "mainContent">
     	
-     	<h1>Products page in progess... ?></h1> <br/>
+     	<h1>Products page in progress...</h1> <br/>
      	
      	<table>
-<!--     	<?php 
+     	<?php 
+     		
+     		//$this->server = $server;
      	
+     		$query = "select * from products where cat_id = " . $id;
+			$results = mysqli_query($dbc, $query);	
+     	
+			// echo all products matching category ID
 			while($row = mysqli_fetch_assoc($results)) {    
 	        	echo "<tr>
-	        			<td><a href=\"$this->server/ics325/GroupProject/products.php?cat=" . $row["category"] . "&subcat=" . $row["subcategory"] . "\">" . $row["subcategory"] . "</a></li>    
+	        			<td><a href=\"/ics325/GroupProject/products.php?prod_id=" . $row["prod_id"] . "\">
+	        					<span class=\"img\"><img src=\"" . $row["photo_loc"] . "\" height=\"200\" width=\"200\" /></span</a></td>
+	        			<td><a href=\"/ics325/GroupProject/products.php?prod_id=" . $row["prod_id"] . "\">" . $row["title"] . "</a></td>
+	        			<td>" . $row["price"] . "</td>    
        				  </tr>";
-			} 
+			} // end while
 			
         ?>
--->
-			<tr>
-				<td><a href="productPages/strat.php"><span class="img"><img src="../images/guitars/strat.jpg" height="200" width="200" /></span></a></td>
-				<td><a href="productPages/strat.php">Fender American Standard Stratocaster</a></td>
-				<td>$1299</td>
-			</tr>
 		</table>
 				
     </div>

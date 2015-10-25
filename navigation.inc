@@ -171,12 +171,12 @@ class Navigation {
 	public function getAmpsNav(){
 		require("controllers/database.php");
 		
-	    $query = "select category, subcategory from categories where category = \"Amps\"";
+	    $query = "select id, category, subcategory from categories where category = \"Amps\"";
 	    $results = mysqli_query($dbc, $query);
 		
 		$amps = "";
 		while($row = mysqli_fetch_assoc($results)) {    
-        	$amps .= "<li><a href=\"$this->server/ics325/GroupProject/products.php?cat=" . $row["category"] . 
+        	$amps .= "<li><a href=\"$this->server/ics325/GroupProject/products.php?id=" . $row["id"] . "&cat=" . $row["category"] . 
         					"&subcat=" . $row["subcategory"] . "\">" . $row["subcategory"] . "</a></li>";    
         }
 		
@@ -186,12 +186,12 @@ class Navigation {
 	public function getDrumsNav(){
 		require("controllers/database.php");
 		
-	    $query = "select category, subcategory from categories where category = \"Drums\"";
+	    $query = "select id, category, subcategory from categories where category = \"Drums\"";
 	    $results = mysqli_query($dbc, $query);
 		
 		$drums = "";
 		while($row = mysqli_fetch_assoc($results)) {    
-        	$drums .= "<li><a href=\"$this->server/ics325/GroupProject/products.php?cat=" . $row["category"] . 
+        	$drums .= "<li><a href=\"$this->server/ics325/GroupProject/products.php?id=" . $row["id"] . "&cat=" . $row["category"] . 
         					"&subcat=" . $row["subcategory"] . "\">" . $row["subcategory"] . "</a></li>";    
         }
 		

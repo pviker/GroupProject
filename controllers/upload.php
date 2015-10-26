@@ -1,16 +1,25 @@
 <?php
+
+require("database.php");
+
+//Directory to insert into
 $target_dir = "../images/";
+//Retrieve file name and append to directory for full filepath
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+//Counter
 $uploadOk = 1;
+//Retrieve filetype
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
     if($check !== false) {
-        // echo "File is an image - " . $check["mime"] . ".";
+        
         $uploadOk = 1;
+        
     } else {
-        // echo "File is not an image.";
+        
         $uploadOk = 0;
     }
 }
@@ -41,24 +50,6 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 }
-
-//* UNCOMMENT FOR LOCAL DB CREDENTIALS */
-    $dbUser = "user1";          
-    $dbPass = "abc123";             
-    $db = "music_electric";         
-
-/* UNCOMMENT FOR SERVER DB CREDENTIALS */
-//  $dbUser = "ics325fa1528";       
-//  $dbPass = "983278";             
-//  $db = "ics325fa1528";           
-    
-    //Database connection
-    @ $dbc = mysqli_connect('localhost', $dbUser, $dbPass, $db);
-    
-    if(mysqli_connect_errno() ) {
-                echo "Error: could not connect to database. Please try again later.";
-                exit;
-            }
     
     $insertQuery = "insert into products (photo_loc) values ('" . $target_file . "')";
     

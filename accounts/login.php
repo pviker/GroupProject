@@ -51,8 +51,10 @@
 			
 			<fieldset id="field1">
 				<legend>Credentials</legend>
+
 				<label>User name:</label><input type="text" name="userName" placeholder="Enter username" size="25" class="fields" id="userName" /><br />
 				<label>Password:</label><input type="password" name="password" placeholder="Enter password" size="25" class="fields" id="password" /><br />
+
 			</fieldset>
 
 			<div class="buttons">

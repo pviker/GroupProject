@@ -4,6 +4,9 @@ LIMIT 0, 1000
 
 -- Date: 2015-10-25 16:14
 */
+
+use music_electric;
+
 INSERT INTO `products` (`prod_id`,`cat_id`,`title`,`desc`,`price`,`photo_loc`) VALUES (1,1,'Fender American Stratocaster','This is a strat',1299,'images/guitars/strat.jpg');
 INSERT INTO `products` (`prod_id`,`cat_id`,`title`,`desc`,`price`,`photo_loc`) VALUES (2,1,'Gibson Custom Shop VOS ES-335','Gibson',3199,'images/guitars/Gibson_ES335.jpg');
 INSERT INTO `products` (`prod_id`,`cat_id`,`title`,`desc`,`price`,`photo_loc`) VALUES (3,1,'Rickenbacker 330 Fireglo','Rickenbacker',3499,'images/guitars/rick.jpg');

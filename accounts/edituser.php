@@ -18,7 +18,6 @@
     echo $navigation;
     
     require("../controllers/database.php");
-<<<<<<< HEAD
     
     if(isset($_POST['submitSearch'])) {
         
@@ -28,9 +27,9 @@
     zip, phone, gender, credentials.admin from users, credentials where users.userid = credentials.userid and 
     username = '" . $usernameSearch . "'";
     
-    $result = mysqli_query($dbc, $userQuery);
+    $result = mysqli_query($dbc, $userQuery); 
     
-    while($row = mysqli_fetch_assoc($result)) {
+    $row = mysqli_fetch_assoc($result);
         
         $username = $row['username'];
         $fname = $row['first_name'];
@@ -45,16 +44,41 @@
         $gender = $row['gender'];
         $admin = $row['admin'];
         
-    }
+    
+    
+    if($username !== $usernameSearch) {
+        
+        echo 
+        
+        "<div class=\"breadcrumb\">
+        <nav>
+          <ul>
+            <li><a href=\"../index.php\">home</a></li>
+            <li><a href=\"admin.php\">admin</a></li> 
+            <li><a href=\"\">edit user</a></li> 
+          </ul>
+        </nav>
+    </div>
+        
+        <div class = \"mainContent\"> Username " . $usernameSearch . " does not exist. Please try again. <br><br>
+        <a href=\"edituser.php\">Back to edit user</a>";
+        
+        exit;
+        
+     }
+    
+    
+    mysqli_free_result($result);
+  
+    mysqli_close($dbc);
 
   }
+  
+  
     
 ?>
 
-=======
 
-?>
->>>>>>> origin/iteration4
         
 	<div class="breadcrumb">
         <nav>
@@ -131,7 +155,11 @@
             
         </form>
         
-        <?php } ?>
+        <?php 
+
+           }
+
+        ?>
         
      </div>
         

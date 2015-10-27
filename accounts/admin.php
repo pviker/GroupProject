@@ -27,27 +27,16 @@
     
     <?php
     
-	if ($_SESSION['uname'] !== 'administrator') {
+	if ($_SESSION['adminFlag'] !== 1) {
  
-        // echo "<div class = \"mainContent\">You are not authorized to view this page. <br><br>";
-        // echo "<a href = \"login.php\">Back to login</a></div>";
-        // exit;
-        
-
-        header ('Location: login.php'); 
+     header ('Location: login.php'); 
 
     }
+    
 	?>
  <!DOCTYPE html>
    <html>
       <body>
-		
-		<!-- <div class="breadcrumb">    
-			  <ul>
-				<li><a href="../index.php">home</a></li>
-				<li><a href="">admin</a></li>            
-			  </ul>
-		</div>  -->
 		
 		<div class = "mainContent">
      	<h1 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h1> 

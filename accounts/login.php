@@ -26,9 +26,9 @@
 	
 	}  
 	
-	$admin = "administrator";
-	$adminPass = "password";
-    
+	// $admin = "administrator";
+	// $adminPass = "password";
+//     
 	if((!isset($username)) || (!isset($password))) {
   
 ?>	
@@ -72,18 +72,38 @@
 <?php 
 
 } else {
+    
+    $adminQuery = "select count(*) from credentials where username = '" . $username . "' and 
+    password = sha1('" . $password . "') and admin = '1'";
+    
+    $result = mysqli_query($dbc, $adminQuery);
            
           
-    if(($username == $admin) && ($password == $adminPass)) {
-           
+    if(!$result) {
+        
+        echo "Cannot run query.";
+        exit;
+        
+    }
+    
+    $row = mysqli_fetch_row($result);
+    $count = $row[0];
+    
+    if($count > 0) {
+        
         $_SESSION['uname'] = $username;
         
         $_SESSION['confirmMessage'] = "Welcome " . $_SESSION['uname'];
         
+        $_SESSION['adminFlag'] = 1;
+        
         header("Location: userinfo.php");
+    }
+        
+     
         
         
-    } else {
+     else {
     
     $query = "select count(*) from credentials where username = '" . $username . "' and 
     password = sha1('" . $password . "')";
@@ -106,10 +126,14 @@
         
         $_SESSION['confirmMessage'] = "Welcome " . $_SESSION['uname'];
         
+        $_SESSION['adminFlag'] = 0;
+        
         header("Location: ../index.php");
+        
     }
     
-    else {
+   
+      else {
            
         
         ?>
@@ -131,10 +155,10 @@
    <?php 
        
          }
-
+    }
 }
 
-}
+
 
 
 ?>

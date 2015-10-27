@@ -36,8 +36,10 @@
     
     <?php
     
-    if ($_SESSION['uname'] !== 'administrator') {
+    if ($_SESSION['adminFlag'] !== 1) {
+        
 		header ('Location: login.php'); 
+        
     }
 	
 	?>    
@@ -46,7 +48,7 @@
     
     //Query for user info
     $userInfoQuery = "select users.userid, first_name, last_name, date, email, dob, address, city, 
-    state, zip, phone, gender, username from users, credentials where users.userid = credentials.userid";
+    state, zip, phone, gender, username, admin from users, credentials where users.userid = credentials.userid";
      
     $results = mysqli_query($dbc, $userInfoQuery);
      
@@ -70,6 +72,7 @@
                  <td>Phone Number</td>
                  <td>Gender</td>
                  <td>Username</td>
+                 <td>Admin</td>
              </tr>
              
              <?php 
@@ -80,7 +83,7 @@
                  $row["last_name"] . "</td><td>" . $row["date"] . "</td><td>" . $row["email"] . "</td><td>" .
                  $row["dob"] . "</td><td>" . $row["address"] . "</td><td>" . $row["city"] . "</td><td>" . 
                  $row["state"] . "</td><td>" . $row["zip"] . "</td><td>" . $row["phone"] . "</td><td>" . 
-                 $row["gender"] . "</td><td>" . $row["username"] . "</td></tr>";    
+                 $row["gender"] . "</td><td>" . $row["username"] . "</td><td>" . $row["admin"] . "</td></tr>";    
              }
              
              ?>

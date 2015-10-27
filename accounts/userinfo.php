@@ -55,7 +55,8 @@
 ?>
      
      <div class = "mainContentTable">
-     	<h1 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h1>
+     	<h2 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h2><br />
+     	<h1 class="indexH1">Registered Users:</h1>
          
          <table class = "usersTable">
              <tr>

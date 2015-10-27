@@ -1,11 +1,11 @@
 <?php   
 /* 
  * ICS325 - Group Project
- * Iteration: 2
+ * Iteration: 4
  * Group: D for Dolphins
- * File: login.php
+ * File: edituser.php
  * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
- * Description: This will be the login page for user login and to view all users.
+ * Description: Admin page for editing registered user information.
  *   
  * */
  
@@ -18,6 +18,7 @@
     echo $navigation;
     
     require("../controllers/database.php");
+<<<<<<< HEAD
     
     if(isset($_POST['submitSearch'])) {
         
@@ -50,8 +51,12 @@
     
 ?>
 
+=======
+
+?>
+>>>>>>> origin/iteration4
         
-        <div class="breadcrumb">
+	<div class="breadcrumb">
         <nav>
           <ul>
             <li><a href="../index.php">home</a></li><!-- ALWAYS INDEX.php -->

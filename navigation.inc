@@ -93,7 +93,7 @@ class Navigation {
 
 	$loggedIn = "<a href=\"$this->server/ics325/GroupProject/accounts/login.php\">login</a>";
 	if(isset($_SESSION['uname'])) {
-        $loggedIn = "Logged in as: " . $_SESSION['uname'] . " | 
+        $loggedIn = "Welcome, " . $_SESSION['uname'] . " | 
         				<a href=\"$this->server/ics325/GroupProject/accounts/logout.php\">logout</a>";
     }
 	

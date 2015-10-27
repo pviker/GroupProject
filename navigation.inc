@@ -97,6 +97,12 @@ class Navigation {
         				<a href=\"$this->server/ics325/GroupProject/accounts/logout.php\">logout</a>";
     }
 	
+	if(isset($_SESSION['adminFlag'])){
+		if ($_SESSION['adminFlag'] == 1) {
+			$adminLink =  "| <a href=\"$this->server/ics325/GroupProject/accounts/admin.php\"> admin </a>"; 
+		} 
+	}else $adminLink = "";
+	
 	// $guitarSubCatList = $this->getGuitarNav();
 	
     return "<!--START MENU-->
@@ -140,9 +146,9 @@ class Navigation {
 		<div class=\"head\">Music Electric Inc.</div>
 		<div class=\"users\">"
 			. $loggedIn .
-			" | <a href=\"$this->server/ics325/GroupProject/accounts/register.php\">register</a>
-			| <a href=\"$this->server/ics325/GroupProject/accounts/admin.php\"> admin </a>
-		</div>";  // end return 
+			" | <a href=\"$this->server/ics325/GroupProject/accounts/register.php\">register</a>"
+			. $adminLink .
+		"</div>";  // end return 
 		 
 	} // end display menu function
 	

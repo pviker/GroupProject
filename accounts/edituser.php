@@ -18,7 +18,6 @@
     echo $navigation;
     
     require("../controllers/database.php");
-<<<<<<< HEAD
     
     if(isset($_POST['submitSearch'])) {
         
@@ -49,13 +48,7 @@
 
   }
     
-?>
-
-=======
-
-?>
->>>>>>> origin/iteration4
-        
+?>        
 	<div class="breadcrumb">
         <nav>
           <ul>
@@ -66,9 +59,9 @@
         </nav>
     </div>
     
-    <br><br>
-    
     <div class = "mainContent">
+    	
+    	<h1 class="indexH1">Edit User</h1>
         
         <form name="searchUser" action="<?php echo $_SERVER['PHP_SELF'];  ?>" method="post">
             
@@ -89,7 +82,7 @@
             
         <form name="editUser" action="<?php echo $_SERVER['PHP_SELF'];  ?>" method="post">
             
-            <fieldset id = "field1">
+            <fieldset id = "fieldYN">
                 
                <label>Username:</label>
                    <input type="text" name="userName" readonly="true" value = "<?php echo $username ?>" size="40"><br>

@@ -1,4 +1,4 @@
-<?php     
+<!--<?php     
 /* 
  * ICS325 - Group Project
  * Iteration: 2
@@ -48,14 +48,14 @@
 	<div class="breadcrumb">
 		<nav>
 		  <ul>
-		    <li><a href="../index.php">home</a></li> <!-- ALWAYS INDEX.php -->
-		    <li><a href="guitars.php">guitars</a></li> <!-- ALWAYS CATEGORY.php -->
-		    <li><a href="">electric</a></li> <!-- ALWAYS SUBCATEGORY -->
+		    <li><a href="../index.php">home</a></li> 
+		    <li><a href="guitars.php">guitars</a></li> 
+		    <li><a href="">electric</a></li> 
 		  </ul>
 		</nav>
 	</div>
 	
-	<!--START MAIN CONTENT-->
+	<!--START MAIN CONTENT
 	<div class="mainContent">		
 		<table>
 			<tr>
@@ -70,7 +70,7 @@
 			</tr>
 		</table>	
 	</div>
-	<!--END MAIN CONTENT-->
+	<!--END MAIN CONTENT
      
      <div class = "mainContentTable">
      	<h1 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h1>

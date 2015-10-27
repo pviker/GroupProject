@@ -4,9 +4,9 @@
  * ICS325 - Group Project
  * Iteration: 2
  * Group: D for Dolphins
- * File: userinfo.php
+ * File: products.php
  * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
- * Description: This page echoes all current users in the database.
+ * Description: This page dynamically populates given DB query terms passed through the URL
  *   
  * */
  

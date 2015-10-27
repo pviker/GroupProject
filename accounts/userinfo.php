@@ -31,18 +31,14 @@
     </div>
     
     <div class = "mainContent">
-     	<h1><a href="admin.php">Admin Interface</a> </h1> <br/>			
+     	<!-- <h1><a href="admin.php">Admin Interface</a> </h1> <br/>	 -->		
     </div>
     
-    <?php
-    
+<?php   
     if ($_SESSION['adminFlag'] !== 1) {
-        
-		header ('Location: login.php'); 
-        
-    }
-	
-	?>    
+		header ('Location: login.php');  
+    }	
+?>    
     
 <?php 
     
@@ -55,8 +51,8 @@
 ?>
      
      <div class = "mainContentTable">
-     	<h2 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h2><br />
-     	<h1 class="indexH1">Registered Users:</h1>
+     	<!-- <h2 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h2><br /> -->
+     	<h1 class="indexH1">Registered Users</h1>
          
          <table class = "usersTable">
              <tr>

@@ -19,12 +19,10 @@
     
     require("../controllers/database.php");
     
-    if(isset($_POST['search'])) {
+    if(isset($_POST['submitSearch'])) {
         
-        $usernameSearch = $_POST['search'];
+    $usernameSearch = $_POST['search'];
         
-    }
-    
     $userQuery = "select credentials.username, first_name, last_name, email, dob, address, city, state, 
     zip, phone, gender, credentials.admin from users, credentials where users.userid = credentials.userid and 
     username = '" . $usernameSearch . "'";
@@ -47,7 +45,8 @@
         $admin = $row['admin'];
         
     }
-    
+
+  }
     
 ?>
 
@@ -66,7 +65,7 @@
     
     <div class = "mainContent">
         
-        <form name="searchUser" action="edituser.php" method="post">
+        <form name="searchUser" action="<?php echo $_SERVER['PHP_SELF'];  ?>" method="post">
             
             <fieldset id="field1">
                 
@@ -81,8 +80,9 @@
         </form>
         
         
-        
-        <form name="editUser" action="edituser.php" method="post">
+        <?php if(isset($_POST['submitSearch'])) { ?>
+            
+        <form name="editUser" action="<?php echo $_SERVER['PHP_SELF'];  ?>" method="post">
             
             <fieldset id = "field1">
                 
@@ -126,6 +126,7 @@
             
         </form>
         
+        <?php } ?>
         
      </div>
         

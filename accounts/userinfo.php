@@ -17,10 +17,12 @@
     require("../navigation.inc");
     $navigation = new Navigation();
     echo $navigation;
+
+	require("../controllers/database.php");
     
  ?>
  
- <div class="breadcrumb">    
+	<div class="breadcrumb">    
           <ul>
             <li><a href="../index.php">home</a></li>
             <li><a href="admin.php">admin</a></li> 
@@ -29,61 +31,28 @@
     </div>
     
     <div class = "mainContent">
-     	<h1><a href='admin.php'> Admin Interface</a> </h1> <br/>			
+     	<!-- <h1><a href="admin.php">Admin Interface</a> </h1> <br/>	 -->		
     </div>
     
-    <?php
-    
-    if ($_SESSION['uname'] !== 'administrator') {
-
-        // echo "<div class = \"mainContent\">You are not authorized to view this page. <br><br>";
-        // echo "<a href = \"login.php\">Back to login</a></div>";
-        // exit;
-        
-
-        header ('Location: login.php'); 
-
-    }
-	?>
-  <!DOCTYPE html>
-
-<html>
-    
-    <body> 
-    
+<?php   
+    if ($_SESSION['adminFlag'] !== 1) {
+		header ('Location: login.php');  
+    }	
+?>    
     
 <?php 
-
-/* UNCOMMENT FOR LOCAL DB CREDENTIALS */
-	 $dbUser = "user1";			
-	 $dbPass = "abc123";				
-	 $db = "music_electric";			
-
-/* UNCOMMENT FOR SERVER DB CREDENTIALS */
-	// $dbUser = "ics325fa1528";		
-	// $dbPass = "983278";				
-	// $db = "ics325fa1528";	
-	
-//	echo "<div class = \"mainContent\"> " . $_SESSION['confirmMessage'] . "</div>";
-	
-    //Database connection
-    @ $db = mysqli_connect('localhost', $dbUser, $dbPass, $db);
-    
-    if(mysqli_connect_errno() ) {
-                echo "Error: could not connect to database. Please try again later.";
-                exit;
-            }
     
     //Query for user info
     $userInfoQuery = "select users.userid, first_name, last_name, date, email, dob, address, city, 
-    state, zip, phone, gender, username from users, credentials where users.userid = credentials.userid";
+    state, zip, phone, gender, username, admin from users, credentials where users.userid = credentials.userid";
      
-     $results = mysqli_query($db, $userInfoQuery);
+    $results = mysqli_query($dbc, $userInfoQuery);
      
 ?>
      
      <div class = "mainContentTable">
-     	<h1 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h1>
+     	<!-- <h2 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h2><br /> -->
+     	<h1 class="indexH1">Registered Users</h1>
          
          <table class = "usersTable">
              <tr>
@@ -100,36 +69,34 @@
                  <td>Phone Number</td>
                  <td>Gender</td>
                  <td>Username</td>
+                 <td>Admin</td>
              </tr>
              
              <?php 
              
              //Print rows from database records into table
-             while($row = mysqli_fetch_assoc($results)) {
-                     
+             while($row = mysqli_fetch_assoc($results)) {    
                  echo "<tr><td>" . $row["userid"] . "</td><td>" . $row["first_name"] . "</td><td>" . 
                  $row["last_name"] . "</td><td>" . $row["date"] . "</td><td>" . $row["email"] . "</td><td>" .
                  $row["dob"] . "</td><td>" . $row["address"] . "</td><td>" . $row["city"] . "</td><td>" . 
                  $row["state"] . "</td><td>" . $row["zip"] . "</td><td>" . $row["phone"] . "</td><td>" . 
-                 $row["gender"] . "</td><td>" . $row["username"] . "</td></tr>";
-                 
+                 $row["gender"] . "</td><td>" . $row["username"] . "</td><td>" . $row["admin"] . "</td></tr>";    
              }
              
              ?>
              
-             </table>
-
-       </div>
+        	</table>
+		</div>
      
-<?php     
-     
-    //Free results from memory
-    mysqli_free_result($results);
-    //Close database connection
-    mysqli_close($db);
- 
-?>
+		<?php     
+		  
+		    //Free results from memory
+		    mysqli_free_result($results);
+		    //Close database connection
+		    mysqli_close($dbc);
+		 
+		?>
 
-</body>
+	</body>
 
 </html>

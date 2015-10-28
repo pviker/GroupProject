@@ -27,6 +27,7 @@ CREATE TABLE `credentials` (
   `password` VARCHAR(45) NULL,
   PRIMARY KEY (`userid`),
   FOREIGN KEY (`userid`) REFERENCES users(`userid`));
+<<<<<<< Updated upstream
   
   CREATE TABLE `categories` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -63,3 +64,9 @@ insert into categories (category, subcategory) values
  -> on * (enter) 
  -> to user1 identified by 'abc123'; 
  
+=======
+
+
+ALTER TABLE `music_electric`.`credentials` 
+ADD COLUMN `admin` BINARY NULL AFTER `password`;
+>>>>>>> Stashed changes

@@ -16,6 +16,8 @@
 	require("../navigation.inc");
 	$navigation = new Navigation();
 	echo $navigation;
+	
+	require("../controllers/database.php");
   
 	if(isset($_POST['Send'])) {
 	    
@@ -24,21 +26,9 @@
 	
 	}  
 	
-	$admin = "administrator";
-	$adminPass = "password";
-
-
-
-	/* UNCOMMENT FOR LOCAL DB CREDENTIALS */
-     $dbUser = "user1";          
-     $dbPass = "abc123";             
-     $db = "music_electric";         
-
-	/* UNCOMMENT FOR SERVER DB CREDENTIALS */
-  // $dbUser = "ics325fa1528";       
-  // $dbPass = "983278";             
-  // $db = "ics325fa1528";
-    
+	// $admin = "administrator";
+	// $adminPass = "password";
+//     
 	if((!isset($username)) || (!isset($password))) {
   
 ?>	
@@ -61,8 +51,10 @@
 			
 			<fieldset id="field1">
 				<legend>Credentials</legend>
+
 				<label>User name:</label><input type="text" name="userName" placeholder="Enter username" size="25" class="fields" id="userName" /><br />
 				<label>Password:</label><input type="password" name="password" placeholder="Enter password" size="25" class="fields" id="password" /><br />
+
 			</fieldset>
 
 			<div class="buttons">
@@ -80,25 +72,38 @@
 <?php 
 
 } else {
+    
+    $adminQuery = "select count(*) from credentials where username = '" . $username . "' and 
+    password = sha1('" . $password . "') and admin = '1'";
+    
+    $result = mysqli_query($dbc, $adminQuery);
            
           
-    if(($username == $admin) && ($password == $adminPass)) {
-           
+    if(!$result) {
+        
+        echo "Cannot run query.";
+        exit;
+        
+    }
+    
+    $row = mysqli_fetch_row($result);
+    $count = $row[0];
+    
+    if($count > 0) {
+        
         $_SESSION['uname'] = $username;
         
         $_SESSION['confirmMessage'] = "Welcome " . $_SESSION['uname'];
         
+        $_SESSION['adminFlag'] = 1;
+        
         header("Location: userinfo.php");
-        
-        
-    } else {
-    
-    @ $dbc = mysqli_connect('localhost', $dbUser, $dbPass, $db);
-    
-    if(mysqli_connect_errno() ) {
-                echo "Error: could not connect to database. Please try again later.";
-                exit;
     }
+        
+     
+        
+        
+     else {
     
     $query = "select count(*) from credentials where username = '" . $username . "' and 
     password = sha1('" . $password . "')";
@@ -121,10 +126,14 @@
         
         $_SESSION['confirmMessage'] = "Welcome " . $_SESSION['uname'];
         
+        $_SESSION['adminFlag'] = 0;
+        
         header("Location: ../index.php");
+        
     }
     
-    else {
+   
+      else {
            
         
         ?>
@@ -146,10 +155,10 @@
    <?php 
        
          }
-
+    }
 }
 
-}
+
 
 
 ?>

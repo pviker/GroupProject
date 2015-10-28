@@ -1,11 +1,11 @@
 <?php    
 /* 
  * ICS325 - Group Project
- * Iteration: 2
+ * Iteration: 4
  * Group: D for Dolphins
- * File: userinfo.php
+ * File: admin.php
  * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
- * Description: This page is only accessible by administrator. 
+ * Description: Admin homepage 
  *   
  * */
  
@@ -18,7 +18,7 @@
     
 ?>
     
-      <div class="breadcrumb">    
+    <div class="breadcrumb">    
           <ul>
             <li><a href="../index.php">home</a></li>
             <li><a href="">admin</a></li>            
@@ -27,32 +27,25 @@
     
     <?php
     
-	if ($_SESSION['uname'] !== 'administrator') {
- 
-        // echo "<div class = \"mainContent\">You are not authorized to view this page. <br><br>";
-        // echo "<a href = \"login.php\">Back to login</a></div>";
-        // exit;
-        
-
-        header ('Location: login.php'); 
-
+	if ($_SESSION['adminFlag'] !== 1) {
+    	header ('Location: login.php'); 
     }
+    
 	?>
- <!DOCTYPE html>
-   <html>
-      <body>
 		
-		<!-- <div class="breadcrumb">    
-			  <ul>
-				<li><a href="../index.php">home</a></li>
-				<li><a href="">admin</a></li>            
-			  </ul>
-		</div>  -->
+	<div class = "mainContent">
 		
-		<div class = "mainContent">
-     	<h1 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h1> 
-			<h2 class="indexH1"><a href='userinfo.php'>View all users</a></h1> 
-       </div>
+		<h1 class="indexH1">Administration Page </h1><br />
+     	<!-- <h2 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h2> -->
+		<h2 class="indexH1">
+			<span><a href="userinfo.php">View registered users</a></span> | 
+			<span><a href="edituser.php">Edit users</a></span> |
+			<span><a href="newCategory.php">Add new category</a></span><br /> 
+			<span><a href="addProduct.php">Add product</a></span> |
+			<span><a href="editProduct.php">Edit product</a></span>
+		</h2>
+   
+    </div>
      
 	 </body> 
 </html>	 

@@ -90,11 +90,11 @@ span.spanHeader {
 
 .productContent {
 		/*position:absolute;*/
-	margin-top: 15%;
+	margin-top: 1em;
 	white-space: nowrap;
 	margin-left: auto;
 	margin-right: auto;
-	width: 80%;
+	width: 65%;
 }
 
 html, body {
@@ -111,11 +111,11 @@ html, body {
 	float: left;
 }
 
-img:hover {
+.img:hover {
 	opacity: 1;
 }
 
-img {
+.img {
 	opacity: 0.7;
 }
 
@@ -127,6 +127,7 @@ img {
 	float: left;
 	margin-right: 5em;
 }
+
 .productDesc {
 	margin-top: 10%;
 	/*position: absolute;*/

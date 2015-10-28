@@ -72,7 +72,7 @@ if ($_SESSION['adminFlag'] !== 1) {
 		   		<input type="text" name="title" placeholder="" value="" size="15" id="title"/><br />
 		
 		    <label>Description</label>
-		    	<textarea name="desc" value=""  rows ="3" cols = "55" id="desc"> </textarea> <br />
+		    	<textarea name="descr" value=""  rows ="3" cols = "55" id="desc"> </textarea> <br />
 		
 		
 		    <label>Price:</label>

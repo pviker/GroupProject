@@ -17,6 +17,9 @@
 	require("../controllers/database.php");
 	
 	
+	if (isset($_POST['category'])) {
+	    $cat = $_POST['cat'];
+	}
 	if (isset($_POST['subcat'])) {
 	    $subcat = $_POST["subcat"];
 	}
@@ -30,7 +33,7 @@
 	    $price = $_POST['price'];
 	}
 	if (isset($_POST['photo'])) {
-	    $photo = $_POST['photo'];
+	    $photo = "images/" . $_POST['photo'];
 	}
 	
 	$_SESSION["subcat"] = $subcat;
@@ -38,16 +41,8 @@
 	$_SESSION["descr"] = $descr;
 	$_SESSION["price"] = $price;
 	$_SESSION["photo"] = $photo;
-	/* UNCOMMENT FOR LOCAL DB CREDENTIALS */
-	// $dbUser = "user1";
-	// $dbPass = "abc123";
-	// $db = "music_electric";
 	
 	var_dump($_POST);
-	/* UNCOMMENT FOR SERVER DB CREDENTIALS */
-	//	$dbUser = "ics325fa1528";
-	//	$dbPass = "983278";
-	//	$db = "ics325fa1528";
 	
 	//Database connection
 	@ $dbc = mysqli_connect('localhost', $dbUser, $dbPass, $db);
@@ -61,6 +56,8 @@
 	if(mysqli_query($dbc, $productQuery)){
 	    echo "Product Added";
 	};
+	
+	$_SESSION["message"] = "New product upload successful!";
 	
 	header('Location: ../accounts/admin.php');
 

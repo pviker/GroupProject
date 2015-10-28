@@ -31,6 +31,15 @@
 		
 	<div class = "mainContent">
 		
+		<h1 class="indexH1">
+			<?php 
+				if(isset($_SESSION["message"])){
+					echo $_SESSION["message"];
+					unset($_SESSION["message"]);
+				}
+			?>
+		</h1>
+		
 		<h1 class="indexH1">Administration Page</h1><br />
      	<!-- <h2 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h2> -->
 		<h2 class="indexH1">

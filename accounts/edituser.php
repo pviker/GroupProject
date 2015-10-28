@@ -19,6 +19,10 @@
     
     require("../controllers/database.php");
     
+    if ($_SESSION['adminFlag'] != 1) {
+        header ('Location: login.php'); 
+    }
+    
     if(isset($_POST['submitSearch'])) {
         
     $usernameSearch = $_POST['search'];

@@ -20,6 +20,10 @@
 
 	require("../controllers/database.php");
     
+     if ($_SESSION['adminFlag'] !== 1) {
+        header ('Location: login.php');  
+    }   
+    
  ?>
  
 	<div class="breadcrumb">    
@@ -34,11 +38,7 @@
      	<!-- <h1><a href="admin.php">Admin Interface</a> </h1> <br/>	 -->		
     </div>
     
-<?php   
-    if ($_SESSION['adminFlag'] !== 1) {
-		header ('Location: login.php');  
-    }	
-?>    
+   
     
 <?php 
     

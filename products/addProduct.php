@@ -32,11 +32,11 @@ if ($_SESSION['adminFlag'] !== 1) {
 	<!--START MAIN CONTENT-->
 	<div class="mainContent">
 		
-		<p>Add Product</p>
+		<h1 class="indexH1">Add New Product</h1>
 		<form action="addProductDB.php" method="post">
 	
 		<fieldset id="field1">
-	
+			<label>Category: </label>
 	    	<select id="category"  name="subcat">;
 	        <option value="">Select</option>;
 
@@ -67,24 +67,24 @@ if ($_SESSION['adminFlag'] !== 1) {
 		
 		    <input type="hidden" name="category" value="<?php echo "$cat" ?>">
 		    <input type="hidden" name="subcategory" value="<?php echo "$sub" ?>">
+		    
 		    <label>Title</label>
-		    <input type="text" name="title" placeholder="" value="" size="15" id="title"/><br />
+		   		<input type="text" name="title" placeholder="" value="" size="15" id="title"/><br />
 		
 		    <label>Description</label>
-		    <textarea name="desc" value=""  rows ="3" cols = "55" id="desc"> </textarea> <br />
+		    	<textarea name="desc" value=""  rows ="3" cols = "55" id="desc"> </textarea> <br />
 		
 		
 		    <label>Price:</label>
-		    <input type="text" name="price" size="15"
-		           value="" id="price" /><br />
+		    	<input type="text" name="price" size="15" value="" id="price" /><br />
 		
 			<label>Photo Location:</label>
-			Browse your directory for a photo.
-		    <input type="file" name="photo" id="photo" accept="image/*" value="">
+				
+		    	<input type="file" name="photo" id="photo" accept="image/*" value="">
 		
 		</fieldset>
             <div class="buttons">
-                <input type="submit" class="buttons" name="Submit" alt="Submit" value="Submit" id="submit" />
+                <input type="submit" class="buttons" name="Submit" alt="Submit" value="Submit" id="submit" style="opacity: 1" />
                 <input type="reset" class="buttons" name="Reset" value="Reset" />
             </div>
 		</form>

@@ -16,6 +16,10 @@
     $navigation = new Navigation();
     echo $navigation; 
     
+	if ($_SESSION['adminFlag'] !== 1) {
+    	header ('Location: login.php'); 
+    }
+	
 ?>
     
     <div class="breadcrumb">    
@@ -24,18 +28,10 @@
             <li><a href="">admin</a></li>            
           </ul>
     </div> 
-    
-    <?php
-    
-	if ($_SESSION['adminFlag'] !== 1) {
-    	header ('Location: login.php'); 
-    }
-    
-	?>
 		
 	<div class = "mainContent">
 		
-		<h1 class="indexH1">Administration Page </h1><br />
+		<h1 class="indexH1">Administration Page</h1><br />
      	<!-- <h2 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h2> -->
 		<h2 class="indexH1">
 			<span><a href="userinfo.php">View registered users</a></span> | 

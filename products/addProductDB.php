@@ -39,7 +39,7 @@
 	}
 	
 	require("../controllers/upload.php");
-	$photo = "images/" .$target_dir;
+	$photo = "images/" .$photoBase;
 	
 	$_SESSION["subcat"] = $subcat;
 	$_SESSION["title"] = $title;

@@ -6,7 +6,7 @@ require("database.php");
 $target_dir = "../images/";
 //Retrieve file name and append to directory for full filepath
 $target_file = $target_dir . basename($_FILES["photo"]["name"]);
-//echo "Target file: " . basename($_FILES["photo"]["name"]);
+$photoBase = basename($_FILES["photo"]["name"]);
 //Counter
 $uploadOk = 1;
 //Retrieve filetype

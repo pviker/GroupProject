@@ -15,8 +15,6 @@
 	
 	require("../navigation.inc");
 	require("../controllers/database.php");
-
-	
 	
 	if (isset($_POST['category'])) {
 	    $cat = $_POST['category'];

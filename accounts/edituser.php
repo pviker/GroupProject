@@ -60,7 +60,7 @@
         </nav>
     </div>
         
-        <div class = \"mainContent\"> Username " . $usernameSearch . " does not exist. Please try again. <br><br>
+        <div class = \"mainContent\"> Username \"" . $usernameSearch . "\" does not exist. Please try again. <br><br>
         <a href=\"edituser.php\">Back to edit user</a>";
         
         exit;
@@ -70,19 +70,10 @@
     
     mysqli_free_result($result);
   
-    mysqli_close($dbc);
-
-  }
+ }
   
   
-    
-
-?>
-
-
-        
-
-?>        
+?>       
 
 	<div class="breadcrumb">
         <nav>
@@ -153,17 +144,49 @@
                    <input type="text" name="gender" value = "<?php echo $gender ?>" size="10"><br>
                    
                <label>Admin:</label>
-                   <input type="text" name="admin" value = "<?php echo $admin ?>" size="5"><br>
+                   <input type="text" name="admin" value = "<?php echo $admin ?>" size="5"><br><br>
+               
+               <label>Update User:</label>
+                   <input type="submit" name="updateUser" value="Update User">
             
             </fieldset>
             
         </form>
         
-        <?php 
+<?php 
 
            }
 
-        ?>
+           if(isset($_POST['updateUser'])) {
+               
+           $username = $_POST['userName'];
+           $fName_in = $_POST['fName'];
+           $lName_in = $_POST['lName'];
+           $email_in = $_POST['email'];
+           $dob_in = $_POST['dob'];
+           $address_in = $_POST['address'];
+           $city_in = $_POST['city'];
+           $state_in = $_POST['state'];
+           $zip_in = $_POST['zip'];
+           $phone_in = $_POST['phone'];
+           $gender_in = $_POST['gender'];
+           $admin_in = $_POST['admin'];
+           
+           $updateQuery = "update users, credentials set first_name = '" . $fName_in . "', last_name = '" . $lName_in . 
+           "', email = '" . $email_in . "', dob = '" . $dob_in . "', address = '" . $address_in . "', city = '" . 
+           $city_in . "', state = '" . $state_in . "', zip = '" . $zip_in . "', phone = '" . $phone_in . "', gender = '" .
+           $gender_in . "', admin = '" . $admin_in . "' where users.userid = credentials.userid and credentials.username = '" .
+           $username . "'";
+           
+           mysqli_query($dbc, $updateQuery); 
+           
+           echo "<br><div class = \"mainContent\"> You have successfully updated the user \"" . $username . "\".</div>";     
+
+           }
+
+           mysqli_close($dbc);
+
+?>
         
      </div>
         

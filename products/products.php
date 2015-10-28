@@ -14,11 +14,11 @@
 		session_start();
 	}
 	
-    require("navigation.inc");
+    require("../navigation.inc");
     $navigation = new Navigation();
     echo $navigation;
 
-	require("controllers/database.php");
+	require("../controllers/database.php");
 //	require("URLpath.inc");
 	// $URLpath = new URLpath();
 	// $this->server = $server;
@@ -41,7 +41,7 @@
  
 	<div class="breadcrumb">    
           <ul>
-            <li><a href="index.php">home</a></li>
+            <li><a href="../index.php">home</a></li>
             <li><a href="products.php?cat=<?php echo $_GET["cat"]; ?>"><?php echo $_GET["cat"]; ?></a></li>
             <?php if (isset($_GET["subcat"])){ ?>
             	<li><a href=""><?php echo $_GET["subcat"]; ?></a></li> 
@@ -80,16 +80,16 @@
 					
 		        	echo "<tr>
 		        			<td>
-		        				<a href=\"$server/ics325/GroupProject/productDetails.php?prod_id=" . 
+		        				<a href=\"$server/ics325/GroupProject/products/productDetails.php?prod_id=" . 
 		        						$row["prod_id"] . "&id=" . $row["id"] . "&cat=" . $row["category"] . "&subcat=" . 
 		        							$row["subcategory"] . "\">
 		        					<span class=\"img\">
-		        						<img src=\"" . $row["photo_loc"] . "\" height=\"200\" width=\"200\" />
+		        						<img src=\"../" . $row["photo_loc"] . "\" height=\"200\" width=\"200\" />
 		        					</span>
 		        				</a>
 		        			</td>
 		        			<td>
-		        				<a href=\"$server/ics325/GroupProject/productDetails.php?prod_id=" . 
+		        				<a href=\"$server/ics325/GroupProject/products/productDetails.php?prod_id=" . 
 		        						$row["prod_id"] . "&id=" . $row["id"] . "&cat=" . $row["category"] . "&subcat=" . 
 		        							$row["subcategory"] . "\">" . 
 		        								$row["title"] . "

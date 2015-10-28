@@ -13,8 +13,6 @@
  
 session_start();
 
-
-
 class Navigation {
   // class Page's attributes
   protected $title = "Music Electric Inc.";
@@ -112,21 +110,21 @@ class Navigation {
 				<li><a href=\"$this->server/ics325/GroupProject/index.php\">home</a></li>
 				
 				<li>
-					<a href=\"$this->server/ics325/GroupProject/products.php?cat=Guitars\">guitars</a>
+					<a href=\"$this->server/ics325/GroupProject/products/products.php?cat=Guitars\">guitars</a>
 					<ul>" 
 					. $this->getGuitarNav() . 
 					"</ul>
 				</li>
 				
 				<li>
-					<a href=\"$this->server/ics325/GroupProject/products.php?cat=Amps\">amps</a>
+					<a href=\"$this->server/ics325/GroupProject/products/products.php?cat=Amps\">amps</a>
 					<ul>" 
 					. $this->getAmpsNav() . 
 					"</ul>
 				</li>
 				
 				<li>
-					<a href=\"$this->server/ics325/GroupProject/products.php?cat=Drums\">drums</a>
+					<a href=\"$this->server/ics325/GroupProject/products/products.php?cat=Drums\">drums</a>
 					<ul>" 
 					. $this->getDrumsNav() . 
 					"</ul>
@@ -160,7 +158,7 @@ class Navigation {
 		
 		$guitar = "";
 		while($row = mysqli_fetch_assoc($results)) {    
-        	$guitar .= "<li><a href=\"$this->server/ics325/GroupProject/products.php?id=" . $row["id"] . "&cat=" . $row["category"] . 
+        	$guitar .= "<li><a href=\"$this->server/ics325/GroupProject/products/products.php?id=" . $row["id"] . "&cat=" . $row["category"] . 
         					"&subcat=" . $row["subcategory"] . "\">" . $row["subcategory"] . "</a></li>";    
         }
 		
@@ -175,7 +173,7 @@ class Navigation {
 		
 		$amps = "";
 		while($row = mysqli_fetch_assoc($results)) {    
-        	$amps .= "<li><a href=\"$this->server/ics325/GroupProject/products.php?id=" . $row["id"] . "&cat=" . $row["category"] . 
+        	$amps .= "<li><a href=\"$this->server/ics325/GroupProject/products/products.php?id=" . $row["id"] . "&cat=" . $row["category"] . 
         					"&subcat=" . $row["subcategory"] . "\">" . $row["subcategory"] . "</a></li>";    
         }
 		
@@ -190,7 +188,7 @@ class Navigation {
 		
 		$drums = "";
 		while($row = mysqli_fetch_assoc($results)) {    
-        	$drums .= "<li><a href=\"$this->server/ics325/GroupProject/products.php?id=" . $row["id"] . "&cat=" . $row["category"] . 
+        	$drums .= "<li><a href=\"$this->server/ics325/GroupProject/products/products.php?id=" . $row["id"] . "&cat=" . $row["category"] . 
         					"&subcat=" . $row["subcategory"] . "\">" . $row["subcategory"] . "</a></li>";    
         }
 		

@@ -40,9 +40,9 @@
 		<h2 class="indexH1">
 			<span><a href="userinfo.php">View registered users</a></span> | 
 			<span><a href="edituser.php">Edit users</a></span> |
-			<span><a href="newCategory.php">Add new category</a></span><br /> 
-			<span><a href="addProduct.php">Add product</a></span> |
-			<span><a href="editProduct.php">Edit product</a></span>
+			<span><a href="../products/newCategory.php">Add new category</a></span><br /> 
+			<span><a href="../products/addProduct.php">Add product</a></span> |
+			<span><a href="../products/editProduct.php">Edit product</a></span>
 		</h2>
    
     </div>

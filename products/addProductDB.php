@@ -9,9 +9,9 @@
 	    session_start();
 	}
 	
-	// if ($_SESSION['adminFlag'] !== 1) {
-		// header ('Location: login.php');  
-    // }	
+	 if ($_SESSION['adminFlag'] !== 1) {
+		 header ('Location: login.php');  
+     }	
 	
 	require("../navigation.inc");
 	require("../controllers/database.php");
@@ -64,6 +64,6 @@
 		$_SESSION["message"] = "New product upload successful!";
 	};
 	
-//	header('Location: ../accounts/admin.php');
+	header('Location: ../accounts/admin.php');
 
 ?>

@@ -34,10 +34,18 @@
 	?>
 		
 	<div class = "mainContent">
-		<h1 class="indexH1">Administration Page </h1>
-     	<h2 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h2>
-			<h2 class="indexH1"><a href='userinfo.php'>View all users</a></h2> 
-       </div>
+		
+		<h1 class="indexH1">Administration Page </h1><br />
+     	<!-- <h2 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h2> -->
+		<h2 class="indexH1">
+			<span><a href="userinfo.php">View registered users</a></span> | 
+			<span><a href="edituser.php">Edit users</a></span> |
+			<span><a href="newCategory.php">Add new category</a></span><br /> 
+			<span><a href="addProduct.php">Add product</a></span> |
+			<span><a href="editProduct.php">Edit product</a></span>
+		</h2>
+   
+    </div>
      
 	 </body> 
 </html>	 

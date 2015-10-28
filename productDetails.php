@@ -4,9 +4,9 @@
  * ICS325 - Group Project
  * Iteration: 2
  * Group: D for Dolphins
- * File: userinfo.php
+ * File: productDetails.php
  * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
- * Description: This page echoes all current users in the database.
+ * Description: Dynamically populates page for a specific product given a product ID#
  *   
  * */
  
@@ -54,7 +54,9 @@
           <ul>
             <li><a href="index.php">home</a></li>
             <li><a href="products.php?cat=<?php echo $cat; ?>"><?php echo $cat; ?></a></li>
-            <li><a href="products.php?id=<?php echo $cat_id ?>&cat=<?php echo $cat; ?>&subcat=<?php echo $subcat ?>"><?php echo $subcat; ?></a></li> 
+            <li><a href="products.php?id=<?php echo $cat_id ?>&cat=<?php echo $cat; ?>
+            													&subcat=<?php echo $subcat ?>">
+            																<?php echo $subcat; ?></a></li> 
             <li><a href="">Details</a></li>         
           </ul>
     </div>

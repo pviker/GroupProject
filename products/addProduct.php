@@ -33,7 +33,7 @@ if ($_SESSION['adminFlag'] !== 1) {
 	<div class="mainContent">
 		
 		<h1 class="indexH1">Add New Product</h1>
-		<form action="addProductDB.php" method="post">
+		<form action="addProductDB.php" method="post" enctype="multipart/form-data">
 	
 		<fieldset id="field1">
 			<label>Category: </label>

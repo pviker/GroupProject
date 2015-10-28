@@ -5,7 +5,8 @@ require("database.php");
 //Directory to insert into
 $target_dir = "../images/";
 //Retrieve file name and append to directory for full filepath
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$target_file = $target_dir . basename($_FILES["photo"]["name"]);
+//echo "Target file: " . basename($_FILES["photo"]["name"]);
 //Counter
 $uploadOk = 1;
 //Retrieve filetype
@@ -13,7 +14,7 @@ $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
-    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+    $check = getimagesize($_FILES["photo"]["tmp_name"]);
     if($check !== false) {
         
         $uploadOk = 1;
@@ -29,7 +30,7 @@ if (file_exists($target_file)) {
     $uploadOk = 0;
 }
 // Check file size
-if ($_FILES["fileToUpload"]["size"] > 500000) {
+if ($_FILES["photo"]["size"] > 500000) {
     echo "Sorry, your file is too large.";
     $uploadOk = 0;
 }
@@ -44,16 +45,16 @@ if ($uploadOk == 0) {
     echo "Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
 } else {
-    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+    if (move_uploaded_file($_FILES["photo"]["tmp_name"], $target_file)) {
+        echo "The file ". basename( $_FILES["photo"]["name"]). " has been uploaded.";
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
 }
     
-    $insertQuery = "insert into products (photo_loc) values ('" . $target_file . "')";
-    
-    mysqli_query($dbc, $insertQuery);
-    mysqli_close($dbc);
+    // $insertQuery = "insert into products (photo_loc) values ('" . $target_file . "')";
+//     
+    // mysqli_query($dbc, $insertQuery);
+    // mysqli_close($dbc);
     
 ?>

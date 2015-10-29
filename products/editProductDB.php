@@ -36,7 +36,7 @@
 
 	<!--START MAIN CONTENT-->
 	<div class="mainContent">
-	    <form action="confirmEditProduct.php" method="post">
+	    <form action="confirmEditProduct.php" method="post" enctype="multipart/form-data">
 	
 	<?php //var_dump($_SESSION); var_dump($_GET); var_dump($_POST);?>
 	        <fieldset id="field1">

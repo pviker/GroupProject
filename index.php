@@ -16,9 +16,7 @@
 	}
 
 	require("navigation.inc");
- 
 	$navigation = new Navigation();
-
 	echo $navigation;
 	
 ?>			

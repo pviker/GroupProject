@@ -1,6 +1,5 @@
 <?php
 
-
 	//if(null === session_id()){
 	    session_start();
 	//}

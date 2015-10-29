@@ -42,7 +42,7 @@ require("../controllers/database.php");
 //Query for user info
 $productQuery = "select products.prod_id,products.cat_id,products.title,products.descr,products.price,
 					products.photo_loc,categories.category,categories.subcategory from products ,categories  
-						where products.cat_id = categories.id";
+						where products.cat_id = categories.id order by categories.category, categories.subcategory";
 
 $results = mysqli_query($dbc, $productQuery);
 

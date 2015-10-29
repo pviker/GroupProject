@@ -1,11 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Crunk_Baller
- * Date: 10/26/2015
- * Time: 9:55 AM
- */
-
+/* 
+ * ICS325 - Group Project
+ * Iteration: 2
+ * Group: D for Dolphins
+ * File: userinfo.php
+ * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
+ * Description: This page echoes all current users in the database.
+ *   
+ * */
 require("../navigation.inc");
 $navigation = new Navigation();
 echo $navigation;

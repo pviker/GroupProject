@@ -25,6 +25,7 @@ if ($_SESSION['adminFlag'] !== 1) {
 	<div class="breadcrumb">
 		<ul>
 			<li><a href="../index.php">home</a></li>
+			<li><a href="../accounts/admin.php">admin</a></li>
 			<li><a href="">Add Product</a></li>
 		</ul>
 	</div>

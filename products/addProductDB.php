@@ -10,7 +10,7 @@
 	}
 	
 	 if ($_SESSION['adminFlag'] !== 1) {
-		 header ('Location: login.php');  
+		 header ('Location: ../accounts/login.php');  
      }	
 	
 	require("../navigation.inc");

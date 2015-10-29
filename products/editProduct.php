@@ -13,9 +13,6 @@
 if(null === session_id()){
     session_start();
 }
-//if ($_SESSION['uname'] !== 'administrator') {
- //   header ('Location: login.php');
-//}
 
 require("../navigation.inc");
 $navigation = new Navigation();
@@ -23,19 +20,20 @@ echo $navigation;
 
 require("../controllers/database.php");
 
+if ($_SESSION['adminFlag'] != 1) {
+        header ('Location: login.php'); 
+    }
+
 ?>
 
 <div class="breadcrumb">
     <ul>
         <li><a href="../index.php">home</a></li>
-        <li><a href="admin.php">admin</a></li>
+        <li><a href="../accounts/admin.php">admin</a></li>
         <li><a href="">products</a></li>
     </ul>
 </div>
 
-<!-- <div class = "mainContent">
-    <h1><a href="admin.php">Admin Interface</a> </h1> <br/>
-</div> -->
 
 <?php
 

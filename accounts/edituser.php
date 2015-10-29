@@ -151,7 +151,7 @@
                    <input type="text" name="admin" value = "<?php echo $admin ?>" size="5"><br><br>
                
                <label>Update User:</label>
-                   <input type="submit" name="updateUser" value="Update User">
+                   <input type="submit" name="updateUser" value="Update">
             
             </fieldset>
             

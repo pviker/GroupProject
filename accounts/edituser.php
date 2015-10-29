@@ -110,7 +110,7 @@
         
         <?php if(isset($_POST['submitSearch'])) { ?>
             
-        <form name="editUser" action="<?php echo $_SERVER['PHP_SELF'];  ?>" method="post">
+        <form class="form2" name="editUser" action="<?php echo $_SERVER['PHP_SELF'];  ?>" method="post">
             
             <fieldset id = "fieldYN">
                 

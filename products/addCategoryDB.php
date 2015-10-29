@@ -45,6 +45,8 @@ if ($_SESSION['adminFlag'] !== 1) {
           $newSubcat = $_POST['newSubcat'];
       }
 
+      if($_POST['submit'] == "Add" ) { 
+
       $addQuery = "insert into categories (category, subcategory) values ('". $category . "', '" . $newSubcat . "')";
 
       if(mysqli_query($dbc, $addQuery)) {
@@ -54,6 +56,21 @@ if ($_SESSION['adminFlag'] !== 1) {
       }
       
      header('Location: ../accounts/admin.php');
+     
+      } else {
+          
+          $deleteQuery = "delete from categories where subcategory = '" . $newSubcat . "'";
+          
+          if(mysqli_query($dbc, $deleteQuery)) {
+          
+          $_SESSION["message"] = "New sub-category deleted successfully!";
+          
+      }
+          
+    header('Location: ../accounts/admin.php');
+          
+          
+      }
 
 ?>
 

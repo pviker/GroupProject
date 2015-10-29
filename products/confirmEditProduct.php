@@ -52,9 +52,9 @@
 	if (isset($_POST['photo'])) {
 	    $photo = $_POST['photo'];
 	}
-	// if (isset($_POST['newPhoto'])) {
-	    // $photo= $_POST['newPhoto'];
-	// }
+	if (isset($_POST['newPhoto'])) {
+	     $photo= $_POST['newPhoto'];
+	}
 	
 //	var_dump($photo);
 	$_SESSION['catid'] = $catID;

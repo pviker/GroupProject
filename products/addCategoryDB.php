@@ -34,3 +34,27 @@ if ($_SESSION['adminFlag'] !== 1) {
         <li><a href="">products</a></li>
     </ul>
 </div>
+
+<?php
+
+      if(isset($_POST['category'])) {
+          $category = $_POST['category'];
+      }
+      
+      if(isset($_POST['newSubcat'])) {
+          $newSubcat = $_POST['newSubcat'];
+      }
+
+      $addQuery = "insert into categories (category, subcategory) values ('". $category . "', '" . $newSubcat . "')";
+
+      if(mysqli_query($dbc, $addQuery)) {
+          
+          echo "<div class=\"mainContent\"> New Sub-Category added successfully!</div>";
+          
+      }
+
+?>
+
+
+
+

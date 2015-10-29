@@ -48,9 +48,9 @@ if ($_SESSION['adminFlag'] !== 1) {
                    <select name="category">
                        
                        <option value="">Select:</option>
-                       <option value="guitars">Guitars</option>
-                       <option value="amps">Amps</option>
-                       <option value="drums">Drums</option>
+                       <option value="Guitars">Guitars</option>
+                       <option value="Amps">Amps</option>
+                       <option value="Drums">Drums</option>
                        
                    </select><br>
                    

@@ -6,11 +6,7 @@
  * Group: D for Dolphins
  * File: userinfo.php
  * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
-<<<<<<< HEAD
  * Description: This page echoes all current products in a category in the database.
-=======
- * 
->>>>>>> origin/iteration4
  *   
  * */
 

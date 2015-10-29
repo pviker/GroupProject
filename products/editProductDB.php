@@ -123,7 +123,7 @@
 	            <input type ="hidden" name ="photo" value="<?php echo $photo;?>">
 	            <label>Upload new Photo: </label>
 	
-	            <input type="file" name="newPhoto" id="photo" accept="image/*" >
+	            <input type="file" name="photo" id="photo" accept="image/*" >
 	
 	
 	        </fieldset>

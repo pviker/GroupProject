@@ -1,8 +1,8 @@
 <?php
 
-	//if(null === session_id()){
+	if(null === session_id()){
 	    session_start();
-	//}
+	}
 	//if ($_SESSION['uname'] !== 'administrator') {
 	  //  header ('Location: login.php');
 	//}
@@ -14,7 +14,7 @@
 	
 	require("../navigation.inc");
 	require("../controllers/database.php");
-	var_dump($_POST);
+//	var_dump($_POST);
 	
 	if ($_SESSION['adminFlag'] !== 1) {
 		header ('Location: ../accounts/login.php');  
@@ -52,11 +52,11 @@
 	if (isset($_POST['photo'])) {
 	    $photo = $_POST['photo'];
 	}
-	if (isset($_POST['newPhoto'])) {
-	    $photo= $_POST['newPhoto'];
-	}
+	// if (isset($_POST['newPhoto'])) {
+	    // $photo= $_POST['newPhoto'];
+	// }
 	
-	var_dump($photo);
+//	var_dump($photo);
 	$_SESSION['catid'] = $catID;
 	$id = $_SESSION['id'];
 	

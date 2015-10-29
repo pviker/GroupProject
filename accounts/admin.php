@@ -44,11 +44,11 @@
 		<h1 class="indexH1">Administration Page</h1><br />
      	<!-- <h2 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h2> -->
 		<h2 class="indexH1">
-			<span><a href="userinfo.php">View registered users</a></span> | 
-			<span><a href="edituser.php">Edit users</a></span> |
-			<span><a href="../products/addCategory.php">Add new category</a></span><br /> 
-			<span><a href="../products/addProduct.php">Add product</a></span> |
-			<span><a href="../products/editProduct.php">Edit product</a></span>
+			<span><a href="userinfo.php">View Registered Users</a></span> | 
+			<span><a href="edituser.php">Edit Users</a></span> |
+			<span><a href="../products/addCategory.php">Add New Category</a></span><br /> 
+			<span><a href="../products/addProduct.php">Add Product</a></span> |
+			<span><a href="../products/editProduct.php">Manage Product</a></span>
 		</h2>
    
     </div>

@@ -47,18 +47,17 @@ if ($_SESSION['adminFlag'] !== 1) {
               
                    <select name="category">
                        
-                       <option value="">Select:</option>
                        <option value="Guitars">Guitars</option>
                        <option value="Amps">Amps</option>
                        <option value="Drums">Drums</option>
                        
                    </select><br>
                    
-               <label>New Sub-Category:</label>
+               <label>Sub-Category:</label>
                
                     <input type="text" name="newSubcat" size="40"><br>
                     
-                    <label>Add Sub-Category</label>
+                    <label>Add/Delete Sub-Category</label>
                     <input type="submit" name="submit" value="Add">
                     <input type="submit" name="submit" value="Delete">
               

@@ -128,7 +128,7 @@
 	
 	        </fieldset>
 	        <div class="buttons">
-	            <input type="submit" class="buttons" name="Submit" alt="Submit" value="Submit" id="submit" />
+	            <input type="submit" class="buttons" name="Submit" alt="Submit" value="Submit" id="submit" style="opacity: 1" />
 	            <input type="reset" class="buttons" name="Reset" value="Reset" />
 	        </div>
 	

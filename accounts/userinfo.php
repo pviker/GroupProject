@@ -70,6 +70,7 @@
                  <td>Gender</td>
                  <td>Username</td>
                  <td>Admin</td>
+                 <!-- <td>ID</td> -->
      
              </tr>
              
@@ -78,11 +79,23 @@
              //Print rows from database records into table
              while($row = mysqli_fetch_assoc($results)) {
                      
-                 echo "<tr><td>" . $row["userid"] . "</td><td>" . $row["first_name"] . "</td><td>" . 
-                 $row["last_name"] . "</td><td>" . $row["date"] . "</td><td>" . $row["email"] . "</td><td>" .
-                 $row["dob"] . "</td><td>" . $row["address"] . "</td><td>" . $row["city"] . "</td><td>" . 
-                 $row["state"] . "</td><td>" . $row["zip"] . "</td><td>" . $row["phone"] . "</td><td>" . 
-                 $row["gender"] . "</td><td>" . $row["username"] . "</td><td>" . $row["admin"] . "</td></tr>";    
+                 echo "<tr>
+                 		<td>" . $row["userid"] . "</td>
+                 		<td>" . $row["first_name"] . "</td>
+                 		<td>" . $row["last_name"] . "</td>
+                 		<td>" . $row["date"] . "</td>
+                 		<td>" . $row["email"] . "</td>
+                 		<td>" . $row["dob"] . "</td>
+                 		<td>" . $row["address"] . "</td>
+                 		<td>" . $row["city"] . "</td>
+                 		<td>" . $row["state"] . "</td>
+                 		<td>" . $row["zip"] . "</td>
+                 		<td>" . $row["phone"] . "</td>
+                 		<td>" . $row["gender"] . "</td>
+                 		<td>" . $row["username"] . "</td>
+                 		<td>" . $row["admin"] . "</td>" .
+                 		//<td><a href=\"edituser.php?id=" . $row["userid"] . "\" style=\"color:black\" >EDIT</a></td>
+                 	"</tr>";    
              }
              
              ?>

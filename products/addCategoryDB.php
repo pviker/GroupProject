@@ -49,9 +49,11 @@ if ($_SESSION['adminFlag'] !== 1) {
 
       if(mysqli_query($dbc, $addQuery)) {
           
-          echo "<div class=\"mainContent\"> New Sub-Category added successfully!</div>";
+          $_SESSION["message"] = "New sub-category added successfully!";
           
       }
+      
+     header('Location: ../accounts/admin.php');
 
 ?>
 

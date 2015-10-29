@@ -74,7 +74,7 @@
     
     mysqli_free_result($result);
   
- }
+  }
   
   
 ?>       
@@ -88,7 +88,7 @@
           </ul>
         </nav>
     </div>
-    
+
     <div class = "mainContent">
     	
     	<h1 class="indexH1">Edit User</h1>
@@ -105,10 +105,10 @@
             
             </fieldset>
                  
-        </form>
+        </form> 
         
         
-        <?php if(isset($_POST['submitSearch'])) { ?>
+         <?php if(isset($_POST['submitSearch'])) { ?>
             
         <form class="form2" name="editUser" action="<?php echo $_SERVER['PHP_SELF'];  ?>" method="post">
             
@@ -179,7 +179,7 @@
         
 <?php 
 
-           }
+}
 
            if(isset($_POST['updateUser'])) {
                
@@ -209,11 +209,12 @@
            }
 
            mysqli_close($dbc);
-
+           
 ?>
-        
+       
      </div>
         
     </body>
     
 </html>
+

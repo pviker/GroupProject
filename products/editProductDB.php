@@ -4,6 +4,10 @@
 	    session_start();
 	}
 	
+	if ($_SESSION['adminFlag'] !== 1) {
+		 header ('Location: ../accounts/login.php');  
+    }
+	
 	//product id
 	$id = $_GET['id'];
 	$cat1 = $_GET['cat'];

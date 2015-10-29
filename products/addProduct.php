@@ -6,19 +6,19 @@
  * Time: 9:55 AM
  */
 
-require("../navigation.inc");
-$navigation = new Navigation();
-echo $navigation;
-
-require("../controllers/database.php");
-
-if(null === session_id()){
-    session_start();
-}
-
-if ($_SESSION['adminFlag'] !== 1) {
-		header ('Location: login.php');  
-}	
+	require("../navigation.inc");
+	$navigation = new Navigation();
+	echo $navigation;
+	
+	require("../controllers/database.php");
+	
+	if(null === session_id()){
+	    session_start();
+	}
+	
+	if ($_SESSION['adminFlag'] !== 1) {
+			header ('Location: login.php');  
+	}	
 
 ?>
 

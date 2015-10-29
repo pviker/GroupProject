@@ -63,11 +63,11 @@
 	     		//$this->server = $server;
 	     		
 	     		if($cat == "Guitars" && $subcat == ""){
-	     			$query = "select * from products, categories where cat_id in (1, 2, 3, 9) and id=cat_id";
+	     			$query = "select * from products, categories where categories.category = \"Guitars\" and id=cat_id";
 	     		} else if($cat == "Amps" && $subcat == ""){
-	     				$query = "select * from products, categories where cat_id in (4, 5, 6) and id=cat_id";
+	     				$query = "select * from products, categories where categories.category = \"Amps\" and id=cat_id";
 	     		  } else if($cat == "Drums" && $subcat == ""){
-	     					$query = "select * from products, categories where cat_id in (7, 8) and id=cat_id";		
+	     					$query = "select * from products, categories where categories.category = \"Drums\" and id=cat_id";		
 	     			} else {
 	     					$query = "select * from products, categories where cat_id = " . $id . " and id=cat_id";
 					  }

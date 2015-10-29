@@ -19,7 +19,7 @@
     
     require("../controllers/database.php");
     
-    if ($_SESSION['adminFlag'] != 1) {
+    if ($_SESSION['adminFlag'] !== 1) {
         header ('Location: login.php'); 
     }
     
@@ -110,7 +110,7 @@
         
         <?php if(isset($_POST['submitSearch'])) { ?>
             
-        <form name="editUser" action="<?php echo $_SERVER['PHP_SELF'];  ?>" method="post">
+        <form class="form2" name="editUser" action="<?php echo $_SERVER['PHP_SELF'];  ?>" method="post">
             
             <fieldset id = "fieldYN">
                 
@@ -148,10 +148,30 @@
                    <input type="text" name="gender" value = "<?php echo $gender ?>" size="10"><br>
                    
                <label>Admin:</label>
-                   <input type="text" name="admin" value = "<?php echo $admin ?>" size="5"><br><br>
+                   <!-- <input type="text" name="admin" value = "<?php echo $admin ?>" size="5"><br><br> -->
+                   <select name="admin">
+                       
+                      <option value="1" <?php if($admin == 1) {
+                          
+                          echo "selected";
+                          
+                      } ?>
+                      
+                      >Yes</option>
+                      
+                      
+                      <option value="0" <?php if($admin == 0) {
+                          
+                          echo "selected";
+                          
+                      } ?>
+                      
+                      >No</option>
+                       
+                   </select><br><br>
                
                <label>Update User:</label>
-                   <input type="submit" name="updateUser" value="Update User">
+                   <input type="submit" name="updateUser" value="Update">
             
             </fieldset>
             

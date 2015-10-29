@@ -16,6 +16,10 @@
 	require("../controllers/database.php");
 	var_dump($_POST);
 	
+	if ($_SESSION['adminFlag'] !== 1) {
+		header ('Location: ../accounts/login.php');  
+	}	
+	
 	if (isset($_POST['category'])){
 	    $cat = $_POST["category"];
 	    $cat = strtolower($cat);

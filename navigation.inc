@@ -144,7 +144,7 @@ class Navigation {
 		<div class=\"head\">Music Electric Inc.</div>
 		<div class=\"users\">"
 			. $loggedIn .
-			" | <a href=\"$this->server/ics325/GroupProject/accounts/register.php\">register</a>"
+			" | <a href=\"$this->server/ics325/GroupProject/accounts/register.php\">register </a>"
 			. $adminLink .
 		"</div>";  // end return 
 		 

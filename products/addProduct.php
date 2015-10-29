@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 /* 
  * ICS325 - Group Project
  * Iteration: 2
@@ -21,12 +22,35 @@ if(null === session_id()){
 if ($_SESSION['adminFlag'] !== 1) {
 		header ('Location: login.php');  
 }	
+=======
+/**
+ * Created by PhpStorm.
+ * User: Crunk_Baller
+ * Date: 10/26/2015
+ * Time: 9:55 AM
+ */
+
+	require("../navigation.inc");
+	$navigation = new Navigation();
+	echo $navigation;
+	
+	require("../controllers/database.php");
+	
+	if(null === session_id()){
+	    session_start();
+	}
+	
+	if ($_SESSION['adminFlag'] !== 1) {
+			header ('Location: login.php');  
+	}	
+>>>>>>> origin/iteration4
 
 ?>
 
 	<div class="breadcrumb">
 		<ul>
 			<li><a href="../index.php">home</a></li>
+			<li><a href="../accounts/admin.php">admin</a></li>
 			<li><a href="">Add Product</a></li>
 		</ul>
 	</div>

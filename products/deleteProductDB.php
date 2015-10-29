@@ -8,6 +8,10 @@
 	}
 	//product id
 	
+	 if ($_SESSION['adminFlag'] !== 1) {
+		 header ('Location: ../accounts/login.php');  
+     }
+	
 	require("../navigation.inc");
 	$navigation = new Navigation();
 	echo $navigation;

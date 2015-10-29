@@ -13,6 +13,10 @@
 	$id = $_GET['id'];
 	$_SESSION['id'] = $id;
 	
+	if ($_SESSION['adminFlag'] !== 1) {
+		header ('Location: ../accounts/login.php');  
+    }
+	
 ?>
 
 	<div class="breadcrumb">

@@ -57,9 +57,14 @@ if ($_SESSION['adminFlag'] !== 1) {
                
                     <input type="text" name="newSubcat" size="40"><br>
                     
-                    <label>Add/Delete Sub-Category</label>
-                    <input type="submit" name="submit" value="Add">
-                    <input type="submit" name="submit" value="Delete">
+               <label>Sub-Category Description:</label> 
+                   
+                    <textarea name="description" rows="4"></textarea><br>
+                    
+                    <label>Add Sub-Category</label>
+                    
+                         <input type="submit" name="submit" value="Add">
+                    
               
               </fieldset>
               

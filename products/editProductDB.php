@@ -3,6 +3,12 @@
 	if(null === session_id()){
 	    session_start();
 	}
+    
+    require("../navigation.inc");
+    $navigation = new Navigation();
+    echo $navigation;
+    
+    require("../controllers/database.php");
 	
 	if ($_SESSION['adminFlag'] !== 1) {
 		 header ('Location: ../accounts/login.php');  
@@ -14,11 +20,7 @@
 	$sub1 = $_GET['sub'];
 	$cID = $_GET['cid'];
 	
-	require("../navigation.inc");
-	$navigation = new Navigation();
-	echo $navigation;
 	
-	require("../controllers/database.php");
 	
 	// //product id to session
 	$_SESSION["id"] = $id;

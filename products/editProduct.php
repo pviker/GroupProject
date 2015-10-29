@@ -6,7 +6,7 @@
  * Group: D for Dolphins
  * File: userinfo.php
  * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
- * Description: This page echoes all current users in the database.
+ * 
  *   
  * */
 
@@ -20,7 +20,7 @@
 	
 	require("../controllers/database.php");
 	
-	if ($_SESSION['adminFlag'] != 1) {
+	if ($_SESSION['adminFlag'] !== 1) {
 	        header ('Location: login.php'); 
 	}
 

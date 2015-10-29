@@ -4,9 +4,9 @@
  * ICS325 - Group Project
  * Iteration: 2
  * Group: D for Dolphins
- * File: userinfo.php
+ * File: addCategoryDB.php
  * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
- * Description: This page echoes all current users in the database.
+ * Description: This page adds a new sub-category to the DB
  *   
  * */
 
@@ -44,10 +44,15 @@
       if(isset($_POST['newSubcat'])) {
           $newSubcat = $_POST['newSubcat'];
       }
+      
+      if(isset($_POST['description'])) {
+          $description = $_POST['description'];
+      }
 
-      if($_POST['submit'] == "Add" ) { 
+      
 
-      $addQuery = "insert into categories (category, subcategory) values ('". $category . "', '" . $newSubcat . "')";
+      $addQuery = "insert into categories (category, subcategory, description) values ('". $category . "', '" . $newSubcat . 
+      "', '" . $description . "')";
 
       if(mysqli_query($dbc, $addQuery)) {
           
@@ -57,23 +62,11 @@
       
      header('Location: ../accounts/admin.php');
      
-      } else {
-          
-          $deleteQuery = "delete from categories where subcategory = '" . $newSubcat . "'";
-          
-          if(mysqli_query($dbc, $deleteQuery)) {
-          
-          $_SESSION["message"] = "New sub-category deleted successfully!";
-          
-      }
-          
-    header('Location: ../accounts/admin.php');
-          
-          
-      }
 
 ?>
 
+</body>
 
+</html>
 
 

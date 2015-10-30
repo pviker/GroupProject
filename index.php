@@ -10,7 +10,7 @@
  * Description: Main index page when going to the main site
  *   
  * */
- //wrgwnr
+ 
 	if(null === session_id()){
 		session_start();
 	}

@@ -70,7 +70,12 @@
                  <td>Gender</td>
                  <td>Username</td>
                  <td>Admin</td>
-                 <!-- <td>ID</td> -->
+                 <td>Edit User</td>
+
+                 
+
+                
+
      
              </tr>
              
@@ -94,8 +99,8 @@
                  		<td>" . $row["gender"] . "</td>
                  		<td>" . $row["username"] . "</td>
                  		<td>" . $row["admin"] . "</td>" .
-                 		//<td><a href=\"edituser.php?id=" . $row["userid"] . "\" style=\"color:black\" >EDIT</a></td>
-                 	"</tr>";    
+                 		"<td><a href=\"edituser.php?id=" . $row["userid"] . "\" style=\"color:black\" >EDIT</a></td>
+                 	</tr>";    
              }
              
              ?>

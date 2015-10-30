@@ -23,13 +23,20 @@
         header ('Location: login.php'); 
     }
     
-    if(isset($_POST['submitSearch'])) {
+    // if(isset($_POST['submitSearch'])) {
+//         
+    // $usernameSearch = $_POST['search'];
+    
+    if(isset($_GET['id'])) {
         
-    $usernameSearch = $_POST['search'];
+        $userId = $_GET['id'];
+        
+    
+    
         
     $userQuery = "select credentials.username, first_name, last_name, email, dob, address, city, state, 
     zip, phone, gender, credentials.admin from users, credentials where users.userid = credentials.userid and 
-    username = '" . $usernameSearch . "'";
+    users.userid = '" . $userId . "'";
     
     $result = mysqli_query($dbc, $userQuery); 
     
@@ -50,27 +57,27 @@
         
     
     
-    if($username !== $usernameSearch) {
-        
-        echo 
-        
-        "<div class=\"breadcrumb\">
-        <nav>
-          <ul>
-            <li><a href=\"../index.php\">home</a></li>
-            <li><a href=\"admin.php\">admin</a></li> 
-            <li><a href=\"\">edit user</a></li> 
-          </ul>
-        </nav>
-    </div>
-        
-        <div class = \"mainContent\"> Username \"" . $usernameSearch . "\" does not exist. Please try again. <br><br>
-        <a href=\"edituser.php\">Back to edit user</a>";
-        
-        exit;
-        
-     }
-    
+    // if($username !== $usernameSearch) {
+//         
+        // echo 
+//         
+        // "<div class=\"breadcrumb\">
+        // <nav>
+          // <ul>
+            // <li><a href=\"../index.php\">home</a></li>
+            // <li><a href=\"admin.php\">admin</a></li> 
+            // <li><a href=\"\">edit user</a></li> 
+          // </ul>
+        // </nav>
+    // </div>
+//         
+        // <div class = \"mainContent\"> Username \"" . $usernameSearch . "\" does not exist. Please try again. <br><br>
+        // <a href=\"edituser.php\">Back to edit user</a>";
+//         
+        // exit;
+//         
+     // }
+//     
     
     mysqli_free_result($result);
   
@@ -89,7 +96,7 @@
         </nav>
     </div>
 
-    <div class = "mainContent">
+    <!-- <div class = "mainContent">
     	
     	<h1 class="indexH1">Edit User</h1>
         
@@ -105,12 +112,14 @@
             
             </fieldset>
                  
-        </form> 
+        </form>  -->
         
         
-         <?php if(isset($_POST['submitSearch'])) { ?>
+         <?php if(isset($_GET['id'])) { ?>
+             
+        <div class="mainContent">
             
-        <form class="form2" name="editUser" action="<?php echo $_SERVER['PHP_SELF'];  ?>" method="post">
+        <form class="form2" name="editUser" action="edituser.php" method="post">
             
             <fieldset id = "fieldYN">
                 
@@ -177,6 +186,8 @@
             
         </form>
         
+    </div>
+        
 <?php 
 
 }
@@ -204,11 +215,17 @@
            
            mysqli_query($dbc, $updateQuery); 
            
-           echo "<br><div class = \"mainContent\"> You have successfully updated the user \"" . $username . "\".</div>";     
+          $_SESSION['confirmMessage'] = "You have successfully updated \"" . $username . "\"!";   
+          
+           // echo "<div class = \"mainContent\">" . $_SESSION['confirmMessage'] . "</div>";
+           
+           header("Location: admin.php");
 
            }
 
            mysqli_close($dbc);
+           
+           
            
 ?>
        

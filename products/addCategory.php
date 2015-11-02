@@ -69,6 +69,12 @@ if ($_SESSION['adminFlag'] !== 1) {
               </fieldset>
               
           </form>
+<?php
+
+mysqli_close($dbc);
+
+?>
+          
 </div>
 
 </body>

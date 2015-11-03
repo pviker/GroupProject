@@ -11,6 +11,17 @@ form {
 	border-top-right-radius: 50px;
 }
 
+form.cartQty {
+	color: black;
+	/*background-size: 100% auto;*/
+	/*min-width: 30em;
+	min-height: 25em;*/
+	box-shadow: 0px black;
+	
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
 .form2 {
 	/*padding: 2px;*/
 	/*font-family: Arial, Helvetica, sans-serif;*/
@@ -79,6 +90,19 @@ input, textarea {
 	border-right-color: black;
 	border-bottom-color: black;
 	border-radius: 5px;
+	
+}
+
+input.cartQty {
+	padding: 2px;
+	margin: 5px;
+	background-color: white;
+	color: black;
+	border-top-color: white;
+	border-left-color: white;
+	border-right-color: black;
+	border-bottom-color: black;
+	border-radius: 0px;
 	
 }
 

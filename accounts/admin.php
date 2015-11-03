@@ -48,13 +48,14 @@
 		
 		<h1 class="indexH1">Administration Page</h1><br />
      	<!-- <h2 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h2> -->
-		<h2 class="indexH1">
+		<div class="adminLinks">
 			<span><a href="userinfo.php">View registered users</a></span> | 
 			<!-- <span><a href="edituser.php">Edit users</a></span> | -->
 			<span><a href="../products/addCategory.php">Add new category</a></span><br /> 
 			<span><a href="../products/addProduct.php">Add product</a></span> |
-			<span><a href="../products/editProduct.php">Edit/Delete product</a></span>
-		</h2>
+			<span><a href="../products/editProduct.php">Edit/Delete product</a></span><br />
+			<span><a href="../orders/viewAllOrders.php">View customer orders</a></span>
+		</div>
    
     </div>
      

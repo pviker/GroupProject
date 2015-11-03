@@ -21,7 +21,7 @@
 	require("../controllers/database.php");
     
     if (!isset($_SESSION['uname'])) {
-        header ('Location: login.php');  
+        header ('Location: ../accounts/login.php');  
     }
 	
 	
@@ -55,9 +55,11 @@
     
      <div class = "mainContentTable">
      	<!-- <h2 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h2><br /> -->
-     	<h1 class="indexH1">TESTING SHOPPING CART FUNCTIONALITY</h1>
-         
-         <table class = "usersTable">
+     	<h1 class="indexH1">
+     		TESTING SHOPPING CART FUNCTIONALITY
+     	</h1>
+        
+         <table class = "cartTable">
              <tr>
                  <td>Item ID</td>
                  <td>Thumbnail</td>
@@ -65,43 +67,51 @@
                  <td>Unit Cost</td>
                  <td>Qty.</td>
                  <td>Item Subtotal</td>
-                 <td>Delete From Cart</td>
-                 <td>...</td>
-                 <td>...</td>
-                 <td>...</td>
-                 <td>...</td>
-                 <td>...</td>
-                 <td>...</td>
-                 <td>...</td>
-                 <!-- <td>ID</td> -->
-     
+                 <td>Delete From Cart</td>     
              </tr>
-             
+            
              <?php 
              
-             // MORE THAN LIKELY GENERATE FROM SESSION ARRAY MYCART[]
-             
-             while($row = mysqli_fetch_assoc($results)) {
-                     
-                 echo "<tr>
-                 		<td>" . $row["userid"] . "</td>
-                 		<td>" . $row["first_name"] . "</td>
-                 		<td>" . $row["last_name"] . "</td>
-                 		<td>" . $row["date"] . "</td>
-                 		<td>" . $row["email"] . "</td>
-                 		<td>" . $row["dob"] . "</td>
-                 		<td>" . $row["address"] . "</td>
-                 		<td>" . $row["city"] . "</td>
-                 		<td>" . $row["state"] . "</td>
-                 		<td>" . $row["zip"] . "</td>
-                 		<td>" . $row["phone"] . "</td>
-                 		<td>" . $row["gender"] . "</td>
-                 		<td>" . $row["username"] . "</td>
-                 		<td>" . $row["admin"] . "</td>" .
-                 		//<td><a href=\"edituser.php?id=" . $row["userid"] . "\" style=\"color:black\" >EDIT</a></td>
-                 	"</tr>";    
-             }
-             
+             	// if there is a myCart session variable: populate cart
+             	if(isset($_SESSION['myCart'])){
+	             	$myCart = $_SESSION['myCart'];
+	            	$arrlength = count($myCart);
+					
+					// loop through each index of myCart[] array
+					foreach($_SESSION['myCart'] AS $temp)  {
+               			$prod_id = $temp["prod_id"];
+               			$qty = $temp["qty"];
+					    
+					    $query = "select * from products where prod_id =" . $prod_id;
+					    $results = mysqli_query($dbc, $query);
+		            
+			            // query DB with each index of array to populate cart table
+			            while($row = mysqli_fetch_assoc($results)) {
+				            	
+								// create quantity field based off qty wanted vs. available qty	            	
+								$qtyField = "<form action=\"updateCart.php\" class=\"cartQty\"method=\"post\">
+												<input type=\"text\" name=\"qty\" class=\"cartQty\" value=\"" . $qty  . "\" 
+													size=\"2\" id=\"qty\"/>\n
+												<br />available: " . $row["qty"] . "<br />
+												<input type=\"submit\" class=\"cartQty\" name=\"update\" alt=\"update\" 
+													value=\"update\" id=\"submit\" style=\"opacity: 1\" />
+											</form>";
+								     
+				                echo "<tr>
+				                		<td>" . $row["prod_id"] . "</td>
+				                 		<td><img src=\"../" . $row["photo_loc"] . "\" height=\"100\" width=\"100\"></td>
+				                 		<td>" . $row["title"] . "</td>
+				                 		<td>$" . $row["price"] . "</td>
+				                 		<td>"
+			        						. $qtyField . 
+			        					"</td>		                 		
+				                 		<td>$" . $row["price"] * $qty . "</td>
+				                 		<td>" . "DELETE" . "</td>
+				                 	  </tr>";    
+									  
+						} // end while loop
+					} // end for loop : $myCart[]
+				} // end if isset($myCart[])
              ?>
              
         	</table>

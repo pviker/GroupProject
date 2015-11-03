@@ -148,6 +148,13 @@ html, body {
 	text-align: center;
 	
 }
+
+.adminLinks {
+	text-align: center;
+	font-size: 22px;
+	
+}
+
 .mainContent p {
 	position:relative;
 	text-align: center;

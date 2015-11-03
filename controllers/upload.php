@@ -1,7 +1,7 @@
 <?php
 
 require("database.php");
-if($_FILES['photo']['name']==="") {
+
 //Directory to insert into
     $target_dir = "../images/";
 //Retrieve file name and append to directory for full filepath
@@ -52,7 +52,7 @@ if($_FILES['photo']['name']==="") {
             echo "Sorry, there was an error uploading your file.";
         }
     }
-}
+
     // $insertQuery = "insert into products (photo_loc) values ('" . $target_file . "')";
 //     
     // mysqli_query($dbc, $insertQuery);

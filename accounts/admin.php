@@ -53,7 +53,7 @@
 			<!-- <span><a href="edituser.php">Edit users</a></span> | -->
 			<span><a href="../products/addCategory.php">Add new category</a></span><br /> 
 			<span><a href="../products/addProduct.php">Add product</a></span> |
-			<span><a href="../products/editProduct.php">Edit product</a></span>
+			<span><a href="../products/editProduct.php">Edit/Delete product</a></span>
 		</h2>
    
     </div>

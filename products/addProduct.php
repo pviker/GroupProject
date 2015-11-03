@@ -43,15 +43,9 @@ if ($_SESSION['adminFlag'] !== 1) {
 	        <option value="">Select</option>;
 
 <?php
-        $con=mysqli_connect("localhost",$dbUser,$dbPass,$db);
-        // Check connection
-        if (mysqli_connect_errno())
-        {
-            echo "Failed to connect to MySQL: " . mysqli_connect_error();
-        }
 
         $sql="SELECT * from categories";
-        $result=mysqli_query($con,$sql);
+        $result=mysqli_query($dbc,$sql);
 
         while ($row = mysqli_fetch_assoc($result)) {
             $id = $row['id'];
@@ -62,7 +56,7 @@ if ($_SESSION['adminFlag'] !== 1) {
         // Free result set
          mysqli_free_result($result);
 
-         mysqli_close($con);
+         mysqli_close($dbc);
 
 ?>
 		</select><br />

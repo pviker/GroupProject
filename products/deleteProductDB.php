@@ -2,23 +2,22 @@
 
 	if(null === session_id()){
 	    session_start();
-	    //  if ($_SESSION['uname'] !== 'administrator') {
-	    //       header ('Location: login.php');
-	 // }
 	}
-	//product id
-	
+
+    require("../navigation.inc");
+    $navigation = new Navigation();
+    echo $navigation;
+
 	 if ($_SESSION['adminFlag'] !== 1) {
-		 header ('Location: ../accounts/login.php');  
+	//	 header ('Location: ../accounts/login.php');
      }
 	
-	require("../navigation.inc");
-	$navigation = new Navigation();
-	echo $navigation;
+
 	require("../controllers/database.php");
 
 	//product id to session
-	//$_SESSION["id"] = $id;
+	$id = $_SESSION["id"];
+
 
 	if (isset($_POST['cancel'])){
 		$_SESSION["message"] = "Cancelled record deletion";
@@ -35,30 +34,27 @@
 	
 	<!--START MAIN CONTENT-->
 	<div class="mainContent">
-	    <form action="confirmEditProduct.php" method="post">
+	   <!-- <form action="confirmEditProduct.php" method="post">-->
 	        <fieldset id="field1">
 	            <?php
-		            $id = $_SESSION['id'];
-		            $con=mysqli_connect("localhost",$dbUser,$dbPass,$db);
-		            // Check connection
-		            if (mysqli_connect_errno())
-		            {
-		                echo "Failed to connect to MySQL: " . mysqli_connect_error();
-		            }
+		           // $id = $_SESSION['id'];
+
 		            $sql = "delete from products where  prod_id = '". $id. "'";
 		
-		            if ($con->query($sql) === TRUE) {
+		            if ($dbc->query($sql) === TRUE) {
 		            	$_SESSION["message"] = "Record deleted successfully";
-		                echo "Record deleted successfully";
-		                header("Location: ../accounts/admin.php");
+
+
 		            } else {
-		                echo "Error deleting record: " . $con->error;
+						$_SESSION["message"] = "Error Deleting Record";
+
+
 		            }
 		            //Free results from memory
 		            //mysqli_free_result($results);
 		            //Close database connection
-		            mysqli_close($con);
-		        //    header("Location: accounts/admin.php");
+		            mysqli_close($dbc);
+                header("Location: ../accounts/admin.php");
 		        }
 	            ?>
 

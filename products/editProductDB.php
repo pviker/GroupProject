@@ -36,7 +36,7 @@
 	        <li><a href="../index.php">home</a></li>
 	        <li><a href="../accounts/admin.php">admin</a></li>
 	        <li><a href="editProduct.php">products</a></li>
-	        <li><a href="">edit product</a></li>
+	        <li><a href="">edit/delete product</a></li>
 	    </ul>
 	</div>
 
@@ -48,18 +48,13 @@
 	        <fieldset id="field1">
 	
 	<?php
-		$con=mysqli_connect("localhost",$dbUser,$dbPass,$db);
-		// Check connection
-		if (mysqli_connect_errno())
-		{
-		    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-		}
+
 		
 		$sql = "select products.title,products.descr,products.price,
 					products.photo_loc,categories.category,categories.subcategory from products ,
 						categories  where products.cat_id = categories.id and products.prod_id ='". $id. "'";
 		;
-		$result=mysqli_query($con,$sql);
+		$result=mysqli_query($dbc,$sql);
 		$row = mysqli_fetch_row($result);
 		
 		$cat = $row[4];
@@ -73,7 +68,7 @@
 		// Free result set
 		mysqli_free_result($result);
 		
-		mysqli_close($con);
+		mysqli_close($dbc);
 	//	var_dump($photo);
 	?>
 	
@@ -120,11 +115,12 @@
 	
 	            <label>Current Photo</label>
 	            <img src="../<?php echo $photo;?>" alt="Current photo" style="width:304px;height:228px;"><br />
-	            <input type ="hidden" name ="photo" value="<?php echo $photo;?>">
+	            <input type ="hidden" name ="oldphoto" value="<?php echo $photo;?>">
 	            <label>Upload new Photo: </label>
 	
 	            <input type="file" name="photo" id="photo" accept="image/*" >
-	
+                <input type="hidden" name="photo" id="photo"  >
+
 	
 	        </fieldset>
 	        <div class="buttons">

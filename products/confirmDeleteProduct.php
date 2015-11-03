@@ -2,20 +2,18 @@
 
 	if(null === session_id()){
 	    session_start();
-	    //  if ($_SESSION['uname'] !== 'administrator') {
-	    //       header ('Location: login.php');
 	       }
 	
 	require("../navigation.inc");
 	$navigation = new Navigation();
 	echo $navigation;
-	
-	$id = $_GET['id'];
-	$_SESSION['id'] = $id;
-	
+
 	if ($_SESSION['adminFlag'] !== 1) {
-		header ('Location: ../accounts/login.php');  
+		header ('Location: ../accounts/login.php');
+
     }
+    $id = $_GET['id'];
+    $_SESSION['id'] = $id;
 	
 ?>
 
@@ -37,6 +35,8 @@
 	<div class="buttons">
 	    <input type="submit" class="buttons" name="delete" alt="delete" value="delete" id="delete" />
 	    <input type="submit" class="buttons" name="cancel" value="cancel" />
+
+		</form>
 	</div>
 	<!--END MAIN CONTENT-->
 

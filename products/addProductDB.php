@@ -11,8 +11,8 @@
 	
 	 if ($_SESSION['adminFlag'] !== 1) {
 		 header ('Location: ../accounts/login.php');  
-     }	
-	
+     }
+	require("../controllers/upload.php");
 	require("../navigation.inc");
 	require("../controllers/database.php");
 	
@@ -32,11 +32,10 @@
 	    $price = $_POST['price'];
 	}
 	if (isset($_POST['photo'])) {
-		//$photoBase = $_POST['photo'];
 	    $photo = "images/" . $_POST['photo'];
 	}
 	
-	require("../controllers/upload.php");
+
 	$photo = "images/" .$photoBase;
 	
 	$_SESSION["subcat"] = $subcat;
@@ -44,24 +43,14 @@
 	$_SESSION["descr"] = $descr;
 	$_SESSION["price"] = $price;
 	$_SESSION["photo"] = $photo;
-	
-//	var_dump($_POST);
-	
-	// //Database connection
-	// @ $dbc = mysqli_connect('localhost', $dbUser, $dbPass, $db);
-// 	
-	// if(mysqli_connect_errno() ) {
-	    // echo "Error: could not connect to database. Please try again later.";
-	    // exit;
-	// }
+
 	
 	$productQuery = "insert into products (cat_id,title,descr,price,photo_loc) 
 						values ('" .$subcat. "', '" .$title. "', '" .$descr. "', '" .$price. "', '" .$photo. "')";
 	if(mysqli_query($dbc, $productQuery)){
-	    echo "Product Added";
 		$_SESSION["message"] = "New product upload successful!";
 	};
-	
+    mysqli_close($dbc);
 	header('Location: ../accounts/admin.php');
 
 ?>

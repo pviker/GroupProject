@@ -23,10 +23,6 @@
         header ('Location: login.php'); 
     }
     
-    // if(isset($_POST['submitSearch'])) {
-//         
-    // $usernameSearch = $_POST['search'];
-    
     if(isset($_GET['id'])) {
         
         $userId = $_GET['id'];
@@ -54,30 +50,7 @@
         $phone = $row['phone'];
         $gender = $row['gender'];
         $admin = $row['admin'];
-        
-    
-    
-    // if($username !== $usernameSearch) {
-//         
-        // echo 
-//         
-        // "<div class=\"breadcrumb\">
-        // <nav>
-          // <ul>
-            // <li><a href=\"../index.php\">home</a></li>
-            // <li><a href=\"admin.php\">admin</a></li> 
-            // <li><a href=\"\">edit user</a></li> 
-          // </ul>
-        // </nav>
-    // </div>
-//         
-        // <div class = \"mainContent\"> Username \"" . $usernameSearch . "\" does not exist. Please try again. <br><br>
-        // <a href=\"edituser.php\">Back to edit user</a>";
-//         
-        // exit;
-//         
-     // }
-//     
+            
     
     mysqli_free_result($result);
   
@@ -193,9 +166,10 @@
 		$gender_in . "', admin = '" . $admin_in . "' where users.userid = credentials.userid and credentials.username = '" .
 		$username . "'";
 	   
-		if( mysqli_query($dbc, $updateQuery)){ 
+		if( mysqli_query($dbc, $updateQuery)){
+		     
 			$_SESSION['confirmMessage'] = "You have successfully updated \"" . $username . "\"!";   
-			// echo "<div class = \"mainContent\">" . $_SESSION['confirmMessage'] . "</div>";
+			
 			header("Location: admin.php");
 		}
 	}

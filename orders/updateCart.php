@@ -1,5 +1,6 @@
 <?php 
 	// this page will update the qty for the selected item
+	
     // if(null === session_id()){
         session_start();
     // }
@@ -9,13 +10,8 @@
 	// initiate vars from update form from given product (called from cart.php)
     $newQty = $_POST['qty'];
 	$prod_id = $_POST['prod_id'];
-
-    // print_r($_SESSION['myCart']);
-    // foreach($_SESSION['myCart'] as $temp) {
         
     $myCart = $_SESSION['myCart'];
-    
-    //$prodID = $prod['prod_id'];
     
     $qtyQuery = "select qty from products where prod_id = '" . $prod_id . "'";
     $result = mysqli_query($dbc, $qtyQuery);
@@ -28,23 +24,19 @@
         
     } else {
     	
-    	// loop through array  			
+    	// loop through $myCart associate array() 			
 		foreach($myCart as $key => $value) {
 			
 			// update qty if myCart['prod_id'] == $prod_id
   			if($myCart[$key]['prod_id'] == $prod_id){
   				$myCart[$key]['qty'] = $newQty;
-  			}
+  			} 
 	  	}
 		
 		// update $myCart session var
         $_SESSION['myCart'] = $myCart;
-
-		// WE WILL PROBABLY WAIT TO UPDATE DB AFTER THE PURCHASE HAS BEEN MADE
-       // $updateQuery = "update products set qty='" . ($row['qty'] - $newQty) . "' where prod_id='" . $prodID . "'";        
-       // mysqli_query($dbc, $updateQuery);
-        
-       header("Location: cart.php");
+     
+        header("Location: cart.php");
    
      } // end else
 ?>

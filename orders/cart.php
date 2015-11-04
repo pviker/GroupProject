@@ -38,21 +38,7 @@
     <div class = "mainContent">
      	<!-- <h1><a href="admin.php">Admin Interface</a> </h1> <br/>	 -->		
     </div>
-    
-   
-    
-<?php 
-    
-    //Query for user info
-    $userInfoQuery = "select users.userid, first_name, last_name, date, email, dob, address, city, 
-    state, zip, phone, gender, username, admin from users, credentials where users.userid = credentials.userid";
-     
-    $results = mysqli_query($dbc, $userInfoQuery);
-     
-?>
-     
-     
-    
+ 
      <div class = "mainContentTable">
      	<!-- <h2 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h2><br /> -->
      	<h1 class="indexH1">
@@ -75,7 +61,7 @@
              	// if there is a myCart session variable: populate cart
              	if(isset($_SESSION['myCart'])){
 	             	$myCart = $_SESSION['myCart'];
-	            	$arrlength = count($myCart);
+	            	//$arrlength = count($myCart);
 					
 					// loop through each index of myCart[] array
 					foreach($_SESSION['myCart'] AS $temp)  {
@@ -96,7 +82,8 @@
 												<input type=\"submit\" class=\"cartQty\" name=\"update\" alt=\"update\" 
 													value=\"update\" id=\"submit\" style=\"opacity: 1\" />
 											</form>";
-								     
+								
+								// print table of cart items     
 				                echo "<tr>
 				                		<td>" . $row["prod_id"] . "</td>
 				                 		<td><img src=\"../" . $row["photo_loc"] . "\" height=\"100\" width=\"100\"></td>

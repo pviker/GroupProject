@@ -103,12 +103,13 @@ class Navigation {
 	}else $adminLink = "";
 	
 	if(!isset($_SESSION['myCart']))  {
-   $_SESSION['myCart'] = array();
-   $_SESSION['myToti'] = 0;
-   $_SESSION['myTotp'] = 0;
-}
+	   $_SESSION['myCart'] = array();
+	   $_SESSION['myToti'] = 0;
+	   $_SESSION['myTotp'] = 0;
+	}
 	
 	//require "$this->server/ics325/GroupProject/orders/cartHead.php";
+	
 	
 	if(isset($_SESSION['uname'])){
 		$cartLink = " | <a href=\"$this->server/ics325/GroupProject/orders/cart.php\"> view cart </a>";
@@ -116,7 +117,10 @@ class Navigation {
 					Order Qty = " . $_SESSION['myToti'] . "<br />
                  	Total $ = " . $_SESSION['myTotp'] .
 				"</div>";
-	} else $cartLink = "";
+	} else {
+		$cartLink = "";
+		$cart = "";
+	  }
 	
 	// $guitarSubCatList = $this->getGuitarNav();
 	

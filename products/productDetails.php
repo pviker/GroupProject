@@ -73,7 +73,7 @@
 	        		  	<span class=\"productImg\"><img src=\"../" . $row["photo_loc"] . "\" height=\"450\" width=\"450\" /></span>
 	        		  	<span>
 	        		  		<p>Price: $" . $row["price"] . "</p><br />
-	        		  		<p><a href=\"../orders/addToCart.php?prod_id=" . $prod_id . "\"><span>Add to cart</span></a></p><br />
+	        		  		<p><a href=\"../orders/addToCart.php?prod_id=" . $prod_id . "\" class=\"buyBtn\"><span>Add to cart</span></a></p><br />
 	        		  		<p>FEATURES:</p>
 	        		  		<p>" . $row["descr"] . "</p>
 	        		  	</span>";

@@ -49,11 +49,11 @@
           </ul>
     </div>
     
-    <div class = "mainContent">
+    <div class = "mainContentProducts">
     	
      	<h1 class="indexH1"><?php echo $subcat . " " . $cat; ?></h1>
      	
-     	<table>
+     	<table class="products">
 	     	<?php 
 	     		// Need to query that will grab all products that have a 
 	     		// cat_id referenced to category table matching a specific category 
@@ -97,7 +97,10 @@
 		        			</td>
 		        			<td>
 		        				$" . $row["price"] . "
-		        			</td>    
+		        			</td>
+		        			<td>
+		        				<a href=\"../orders/addToCart.php?prod_id=" . $row["prod_id"] . "\" class=\"buyBtn\">Add to cart</a>
+		        			</td>  
 	       				  </tr>";
 				} // end while
 				

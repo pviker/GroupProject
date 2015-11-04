@@ -42,8 +42,16 @@
      <div class = "mainContentTable">
      	<!-- <h2 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h2><br /> -->
      	<h1 class="indexH1">
-     		TESTING SHOPPING CART FUNCTIONALITY
+     		SHOPPING CART
      	</h1>
+     	<h2 class="indexH1">
+     		<?php 
+     			if(isset($_SESSION['qtyMessage'])){
+     				echo $_SESSION['qtyMessage']; 
+     				unset($_SESSION['qtyMessage']);
+				}
+			?>
+		</h2>
         
          <table class = "cartTable">
              <tr>
@@ -76,6 +84,7 @@
 				            	
 								// create quantity field based off qty wanted vs. available qty	            	
 								$qtyField = "<form action=\"updateCart.php\" class=\"cartQty\"method=\"post\">
+												<input type=\"hidden\" name=\"prod_id\" value=\"" . $prod_id . "\" id=\"prod_id\"/>
 												<input type=\"text\" name=\"qty\" class=\"cartQty\" value=\"" . $qty  . "\" 
 													size=\"2\" id=\"qty\"/>\n
 												<br />available: " . $row["qty"] . "<br />

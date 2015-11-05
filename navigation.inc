@@ -110,14 +110,15 @@ class Navigation {
 	
 	//require "$this->server/ics325/GroupProject/orders/cartHead.php";
 	
-	
 	if(isset($_SESSION['uname'])){
 		require("orders/getTotalPrice.php");
 		$cartLink = " | <a href=\"$this->server/ics325/GroupProject/orders/cart.php\"> view cart </a>";
-		$cart = "<div class=\"cartHead\">
-					Order Qty: " . $_SESSION['myTotalQuantity'] . "<br />
-                 	Total: $" . $_SESSION['myTotalPrice'] .
-				"</div>";
+		$cart = "<a href=\"$this->server/ics325/GroupProject/orders/cart.php\">
+					<div class=\"cartHead\">
+						Order Qty: " . $_SESSION['myTotalQuantity'] . "<br />
+                 		Total: $" . $_SESSION['myTotalPrice'] .
+				   "</div>
+				</a>";
 	} else {
 		$cartLink = "";
 		$cart = "";

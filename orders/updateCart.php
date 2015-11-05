@@ -37,7 +37,7 @@
 		
 		// update $myCart session var
         $_SESSION['myCart'] = $myCart;
-     
+     	require("cartTotal.php");
         header("Location: cart.php");
    
      } // end else

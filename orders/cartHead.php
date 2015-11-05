@@ -8,7 +8,7 @@
 	
 	if(!isset($_SESSION['myCart']))  {
 	   $_SESSION['myCart'] = array();
-	   $_SESSION['myTotalItems'] = 0;
+	   $_SESSION['myTotalQuantity'] = 0;
 	   $_SESSION['myTotalPrice'] = 0;
 	}
 

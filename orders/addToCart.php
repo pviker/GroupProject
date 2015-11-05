@@ -24,6 +24,8 @@
 		if (isset($_GET['prod_id'])){
 			$_SESSION['myCart'][] = array("prod_id"=>$_GET['prod_id'], "qty"=>1);
 			$_SESSION['cartMsg'] = "Item successfully added!";
+			
+			require("cartTotal.php");
 			header("Location: cart.php");
 		}
 	}

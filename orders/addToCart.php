@@ -1,11 +1,42 @@
 <?php
-
+/* 
+ * ICS325 - Group Project
+ * Iteration: 2
+ * Group: D for Dolphins
+ * File: userinfo.php
+ * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
+ * Description: This function adds the item to the cart if it is not already there
+ *   
+ * */
 	require ("cartHead.php");
+
+	$duplicateProd = false;
+	$myCart = $_SESSION['myCart'];
 	
 	if (isset($_GET['prod_id'])){
-		$_SESSION['myCart'][] = array("prod_id"=>$_GET['prod_id'], "qty"=>1);
+		$prod_id = $_GET['prod_id'];
 	}
 	
-	header("Location: cart.php");
+	// logic for duplicate cart products 
+	foreach($myCart as $key => $value) { 
+		if($myCart[$key]['prod_id'] == $prod_id){ 
+		     $duplicateProd = true;
+		} 
+	}
+	
+	if ($duplicateProd){
+	    $_SESSION['cartMsg'] = "Item already in cart!";
+		header("Location: cart.php");
+		
+	} else {
+		if (isset($_GET['prod_id'])){
+			$_SESSION['myCart'][] = array("prod_id"=>$_GET['prod_id'], "qty"=>1);
+			$_SESSION['cartMsg'] = "Item successfully added!";
+			
+			require("cartTotal.php");
+			header("Location: cart.php");
+		}
+	}
+	
 
 ?>

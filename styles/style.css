@@ -242,6 +242,36 @@ a:hover{
   text-decoration: none;
 }
 
+.deleteBtn {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #b1bfc7);
+  background-image: -moz-linear-gradient(top, #000000, #b1bfc7);
+  background-image: -ms-linear-gradient(top, #000000, #b1bfc7);
+  background-image: -o-linear-gradient(top, #000000, #b1bfc7);
+  background-image: linear-gradient(to bottom, #000000, #b1bfc7);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  text-shadow: 5px 4px 4px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: solid black 3px;
+  text-decoration: none;
+  overflow: visible;
+}
+
+.deleteBtn:hover {
+  background: #b1bfc7;
+  background-image: -webkit-linear-gradient(top, #b1bfc7, #000000);
+  background-image: -moz-linear-gradient(top, #b1bfc7, #000000);
+  background-image: -ms-linear-gradient(top, #b1bfc7, #000000);
+  background-image: -o-linear-gradient(top, #b1bfc7, #000000);
+  background-image: linear-gradient(to bottom, #b1bfc7, #000000);
+  text-decoration: none;
+}
+
 table.products {
 	table-layout: fixed;
 	width: auto;

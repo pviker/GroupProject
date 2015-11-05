@@ -53,7 +53,6 @@
      	<h1 class="indexH1">
      		SHOPPING CART
      	</h1>
- 
         
          <table class = "cartTable">
              <tr>
@@ -97,16 +96,17 @@
 												value=\"update\" id=\"submit\" style=\"opacity: 1\" />
 										</form>";
 							
-							// print table of cart items     
+							// print table of cart items  
+							$subTotal = money_format('%i', $row["price"] * $qty);
 			                echo "<tr>
 			                 		<td><img src=\"../" . $row["photo_loc"] . "\" height=\"100\" width=\"100\"></td>
-			                 		<td>" . $row["title"] . "<br /><br />item id: " . $row["prod_id"] . "</td>
+			                 		<td><a href=\"../products/productDetails.php?prod_id=". $row["prod_id"] ."\" style=\"color:black\">" . $row["title"] . "</a><br /><br />item id: " . $row["prod_id"] . "</td>
 			                 		<td>$" . $row["price"] . "</td>
 			                 		<td>"
 		        						. $qtyField . 
 		        					"</td>		                 		
-			                 		<td>$" . $row["price"] * $qty . "</td>
-			                 		<td><a href=\"deleteFromCart.php?prod_id=" . $row["prod_id"] . "\" id=\"deleteBtn\">
+			                 		<td>$" . $subTotal . "</td>
+			                 		<td><a href=\"deleteFromCart.php?prod_id=" . $row["prod_id"] . "\" class=\"deleteBtn\">
 			                 				DELETE
 			                 			</a>
 			                 		</td>

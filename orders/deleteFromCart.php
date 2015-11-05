@@ -25,8 +25,6 @@
 		} 
 	}
 	
-
-	
 	$_SESSION['myCart'] = $tempCart;
 	$_SESSION['cartMsg'] = "Item successfully deleted from cart!";
 	header("Location: cart.php");

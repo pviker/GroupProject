@@ -1,5 +1,12 @@
 <?php 
-	// this page will update the qty for the selected item
+/* 
+ * ICS325 - Group Project
+ * Iteration: 2
+ * Group: D for Dolphins
+ * File: userinfo.php
+ * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
+ * Description: This page updates the cart if the user wants to add or drop a quantity of an item in the cart
+ * */
 	
     // if(null === session_id()){
         session_start();

@@ -1,5 +1,13 @@
 <?php
-
+/* 
+ * ICS325 - Group Project
+ * Iteration: 2
+ * Group: D for Dolphins
+ * File: userinfo.php
+ * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
+ * Description: This function adds the item to the cart if it is not already there
+ *   
+ * */
 	require ("cartHead.php");
 
 	$duplicateProd = false;

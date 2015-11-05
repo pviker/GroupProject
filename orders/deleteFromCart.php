@@ -1,5 +1,13 @@
 <?php 
-// delete from array
+/* 
+ * ICS325 - Group Project
+ * Iteration: 2
+ * Group: D for Dolphins
+ * File: userinfo.php
+ * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
+ * Description: This function deletes an item from the cart if the user no longer wants it 
+ *   
+ * */
 
 	require ("cartHead.php");
 

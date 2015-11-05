@@ -114,8 +114,8 @@ class Navigation {
 	if(isset($_SESSION['uname'])){
 		$cartLink = " | <a href=\"$this->server/ics325/GroupProject/orders/cart.php\"> view cart </a>";
 		$cart = "<div class=\"cartHead\">
-					Order Qty = " . $_SESSION['myToti'] . "<br />
-                 	Total $ = " . $_SESSION['myTotp'] .
+					Order Qty: " . $_SESSION['myToti'] . "<br />
+                 	Total: $" . $_SESSION['myTotp'] .
 				"</div>";
 	} else {
 		$cartLink = "";

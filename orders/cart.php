@@ -24,6 +24,8 @@
         header ('Location: ../accounts/login.php');  
     }
 	
+	require("cartHead.php");
+	
 	
 	    
  ?>
@@ -40,22 +42,21 @@
     </div>
  
      <div class = "mainContentTable">
-     	<!-- <h2 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h2><br /> -->
-     	<h1 class="indexH1">
-     		SHOPPING CART
-     	</h1>
-     	<h2 class="indexH1">
+     	<h2 class="errorMsg">
      		<?php 
-     			if(isset($_SESSION['qtyMessage'])){
-     				echo $_SESSION['qtyMessage']; 
-     				unset($_SESSION['qtyMessage']);
+     			if(isset($_SESSION['cartMsg'])){
+     				echo $_SESSION['cartMsg']; 
+     				unset($_SESSION['cartMsg']);
 				}
 			?>
 		</h2>
+     	<h1 class="indexH1">
+     		SHOPPING CART
+     	</h1>
+ 
         
          <table class = "cartTable">
              <tr>
-                 <td>Item ID</td>
                  <td>Thumbnail</td>
                  <td>Item Descr.</td>
                  <td>Unit Cost</td>
@@ -94,15 +95,17 @@
 								
 								// print table of cart items     
 				                echo "<tr>
-				                		<td>" . $row["prod_id"] . "</td>
 				                 		<td><img src=\"../" . $row["photo_loc"] . "\" height=\"100\" width=\"100\"></td>
-				                 		<td>" . $row["title"] . "</td>
+				                 		<td>" . $row["title"] . "<br /><br />item id: " . $row["prod_id"] . "</td>
 				                 		<td>$" . $row["price"] . "</td>
 				                 		<td>"
 			        						. $qtyField . 
 			        					"</td>		                 		
 				                 		<td>$" . $row["price"] * $qty . "</td>
-				                 		<td>" . "DELETE" . "</td>
+				                 		<td><a href=\"deleteFromCart.php?prod_id=" . $row["prod_id"] . "\" id=\"deleteBtn\">
+				                 				DELETE
+				                 			</a>
+				                 		</td>
 				                 	  </tr>";    
 									  
 						} // end while loop
@@ -116,9 +119,11 @@
 		<?php     
 		  
 		    //Free results from memory
-		    mysqli_free_result($results);
-		    //Close database connection
-		    mysqli_close($dbc);
+		    if(isset($results)){
+			    mysqli_free_result($results);
+			    //Close database connection
+			    mysqli_close($dbc);
+			}
 		 
 		?>
 

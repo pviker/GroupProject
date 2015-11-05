@@ -155,9 +155,26 @@ html, body {
 
 .indexH1 {
 	text-align: center;
-	
 }
 
+.errorMsg {
+	text-align: center;
+	color: red;
+}
+
+#deleteBtn {
+	color:black; 
+	border:3px dotted black; 
+	padding: .5em;
+	text-decoration: none;
+}
+
+#deleteBtn:hover {
+	color:black; 
+	border:3px solid black; 
+	padding: .5em;
+	text-decoration: none;
+}
 .adminLinks {
 	text-align: center;
 	font-size: 22px;

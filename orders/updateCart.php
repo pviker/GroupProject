@@ -19,7 +19,7 @@
 	
     if($newQty > $row['qty']) {
         
-       $_SESSION['qtyMessage'] = "There are not enough in stock!<br />Please select a quantity at or below available amount.";
+       $_SESSION['cartMsg'] = "There are not enough in stock!<br />Please select a quantity at or below available amount.";
        header("Location: cart.php");
         
     } else {
@@ -32,6 +32,8 @@
   				$myCart[$key]['qty'] = $newQty;
   			} 
 	  	}
+		
+		$_SESSION['cartMsg'] = "Quantity successfully updated!";
 		
 		// update $myCart session var
         $_SESSION['myCart'] = $myCart;

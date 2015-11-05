@@ -108,13 +108,24 @@ class Navigation {
 	   $_SESSION['myTotp'] = 0;
 	}
 	
+
+	
 	if(isset($_SESSION['uname'])){
 		$this->getTotalPrice();
+		
+		if(isset($_SESSION['myTotalQuantity'])){
+			$myTotalQuantity = $_SESSION['myTotalQuantity'];
+		} else $myTotalQuantity = 0;
+		
+		if(isset($_SESSION['myTotalQuantity'])){
+			$myTotalPrice = $_SESSION['myTotalPrice'];
+		} else $myTotalPrice = 0;
+		
 		$cartLink = " | <a href=\"$this->server/ics325/GroupProject/orders/cart.php\"> view cart </a>";
 		$cart = "<a href=\"$this->server/ics325/GroupProject/orders/cart.php\">
 					<div class=\"cartHead\">
-						Order Qty: " . $_SESSION['myTotalQuantity'] . "<br />
-                 		Total: $" . $_SESSION['myTotalPrice'] .
+						Order Qty: " . $myTotalQuantity . "<br />
+                 		Total: $" . $myTotalPrice .
 				   "</div>
 				</a>";
 	} else {

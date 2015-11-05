@@ -73,7 +73,7 @@ $results = mysqli_query($dbc, $productQuery);
                 $row["subcategory"] . "</td><td>" . $row["title"] . "</td><td>" . $row["descr"] . "</td><td>" .
                 $row["price"] . "</td><td>" .  "<img src=../" . $row["photo_loc"] . " style=\"width:100px;height:100px\">" . " </td><td>" .
                 	"<a href =" . "editProductDB.php?id=$i&cat=$c&sub=$s&cid=$cID" . " style=\"color:black\">EDIT</a>". 
-                		"<a href =" . "confirmDeleteProduct.php?id=$i" . " style=\"color:black\">  DELETE</a>";
+                		"<a href =" . "confirmDeleteProduct.php?id=$i" . " style=\"color:black\">&nbsp;&nbsp;&nbsp;&nbsp;DELETE</a>";
 
         }
 

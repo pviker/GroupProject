@@ -119,7 +119,6 @@ class Navigation {
 		
 		if(isset($_SESSION['myTotalQuantity'])){
 			$myTotalPrice = $_SESSION['myTotalPrice'];
-			//$myTotalPrice = money_format('%i', $myTotalPrice);
 			$myTotalPrice = number_format($myTotalPrice,2);
 		} else $myTotalPrice = 0;
 		

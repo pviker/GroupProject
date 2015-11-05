@@ -97,7 +97,7 @@
 										</form>";
 							
 							// print table of cart items  
-							$subTotal = money_format('%i', $row["price"] * $qty);
+							$subTotal = number_format($row["price"] * $qty,2);
 			                echo "<tr>
 			                 		<td><img src=\"../" . $row["photo_loc"] . "\" height=\"100\" width=\"100\"></td>
 			                 		<td><a href=\"../products/productDetails.php?prod_id=". $row["prod_id"] ."\" style=\"color:black\">" . $row["title"] . "</a><br /><br />item id: " . $row["prod_id"] . "</td>

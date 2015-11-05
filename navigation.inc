@@ -119,7 +119,11 @@ class Navigation {
 		
 		if(isset($_SESSION['myTotalQuantity'])){
 			$myTotalPrice = $_SESSION['myTotalPrice'];
+			//$myTotalPrice = money_format('%i', $myTotalPrice);
+			$myTotalPrice = number_format($myTotalPrice,2);
 		} else $myTotalPrice = 0;
+		
+		
 		
 		$cartLink = " | <a href=\"$this->server/ics325/GroupProject/orders/cart.php\"> view cart </a>";
 		$cart = "<a href=\"$this->server/ics325/GroupProject/orders/cart.php\">

@@ -10,6 +10,18 @@
 
 /* MAIN NAVIGATION STYLE */
 
+
+div.cartHead {
+	position: fixed;
+	top: 3.5em;
+	/*margin-top: 5em;*/
+	right: 10px;
+	z-index: 1000;
+	border: 2px solid white;
+	padding: 3px;
+	 
+}
+
 #mainNav {
 	padding-top: 5em;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;

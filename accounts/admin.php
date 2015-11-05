@@ -12,10 +12,15 @@
   	if(null === session_id()){
 		session_start();
 	}
+    
 	require("../navigation.inc");
     $navigation = new Navigation();
     echo $navigation; 
     
+	if ($_SESSION['adminFlag'] !== 1) {
+    	header ('Location: login.php'); 
+    }
+	
 ?>
     
     <div class="breadcrumb">    
@@ -24,26 +29,33 @@
             <li><a href="">admin</a></li>            
           </ul>
     </div> 
-    
-    <?php
-    
-	if ($_SESSION['adminFlag'] !== 1) {
-    	header ('Location: login.php'); 
-    }
-    
-	?>
 		
 	<div class = "mainContent">
 		
-		<h1 class="indexH1">Administration Page </h1><br />
+		<h1 class="indexH1">
+			<?php 
+				if(isset($_SESSION["message"])){
+					echo $_SESSION["message"];
+					unset($_SESSION["message"]);
+				}
+                
+                if(isset($_SESSION["confirmMessage"])) {
+                    echo $_SESSION["confirmMessage"];
+                    unset($_SESSION["confirmMessage"]);
+                }
+			?>
+		</h1>
+		
+		<h1 class="indexH1">Administration Page</h1><br />
      	<!-- <h2 class="indexH1"><?php echo $_SESSION['confirmMessage']; ?>!</h2> -->
-		<h2 class="indexH1">
+		<div class="adminLinks">
 			<span><a href="userinfo.php">View registered users</a></span> | 
-			<span><a href="edituser.php">Edit users</a></span> |
-			<span><a href="newCategory.php">Add new category</a></span><br /> 
-			<span><a href="addProduct.php">Add product</a></span> |
-			<span><a href="editProduct.php">Edit product</a></span>
-		</h2>
+			<!-- <span><a href="edituser.php">Edit users</a></span> | -->
+			<span><a href="../products/addCategory.php">Add new category</a></span><br /> 
+			<span><a href="../products/addProduct.php">Add product</a></span> |
+			<span><a href="../products/editProduct.php">Edit/Delete product</a></span><br />
+			<span><a href="../orders/viewAllOrders.php">View customer orders</a></span>
+		</div>
    
     </div>
      

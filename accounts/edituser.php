@@ -111,26 +111,13 @@
 	                   <input type="text" name="gender" value = "<?php echo $gender ?>" size="10"><br>
 	                   
 	               <label>Admin:</label>
-	                   <select name="admin">
+	                  <select name="admin">
 	                       
-	                      <option value="1" <?php if($admin == 1) {
-	                          
-	                          echo "selected";
-	                          
-		} ?>
-                      
-                      >Yes</option>
-                      
-                      
-                      <option value="0" <?php if($admin == 0) {
-                          
-                          echo "selected";
-                          
-                      } ?>
-                      
-                      >No</option>
+	                      <option value="1" <?php if($admin == 1) {echo "selected";} ?> >Yes</option>
+
+                      <option value="0" <?php if($admin == 0) {echo "selected";} ?> >No</option>
                        
-                   </select><br><br>
+                   	  </select><br><br>
                
                <label>Update User:</label>
                    <input type="submit" name="updateUser" value="Update">
@@ -166,7 +153,7 @@
 		$gender_in . "', admin = '" . $admin_in . "' where users.userid = credentials.userid and credentials.username = '" .
 		$username . "'";
 	   
-		if( mysqli_query($dbc, $updateQuery)){
+		if(mysqli_query($dbc, $updateQuery)){
 		     
 			$_SESSION['confirmMessage'] = "You have successfully updated \"" . $username . "\"!";   
 			
@@ -175,9 +162,7 @@
 	}
 
    mysqli_close($dbc);
-           
-           
-           
+          
 ?>
        
      </div>

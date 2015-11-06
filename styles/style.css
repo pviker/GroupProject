@@ -26,6 +26,42 @@ body{
 	background-attachment: fixed;
 }
 
+div.customerInfo1 {
+
+	margin-top: 1em;
+	margin-left: 1em;
+	border: 2px white solid;
+	font-size: 20px;
+	width: 20em;
+	margin-bottom: 0;
+}
+
+div.customerInfo {
+
+	margin: 1em;
+	border: 2px white solid;
+	font-size: 20px;
+	width: 20em;
+	margin-top: 0;
+}
+
+div.customerInfo span {
+	margin-left: 5%;
+}
+
+div.orderTotal {
+	display: inline-block;
+	margin: 1em;
+	border: 2px white solid;
+	font-size: 20px;
+	width: 20em;
+	margin-top: 0;
+}
+
+div.orderTotal span {
+	margin-left: 5%;
+}
+
 #mainPageImg {
 	position: fixed;
     /*left: 0px;
@@ -270,6 +306,46 @@ a:hover{
   background-image: -o-linear-gradient(top, #b1bfc7, #000000);
   background-image: linear-gradient(to bottom, #b1bfc7, #000000);
   text-decoration: none;
+}
+
+.orderBtn {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #b1bfc7);
+  background-image: -moz-linear-gradient(top, #000000, #b1bfc7);
+  background-image: -ms-linear-gradient(top, #000000, #b1bfc7);
+  background-image: -o-linear-gradient(top, #000000, #b1bfc7);
+  background-image: linear-gradient(to bottom, #000000, #b1bfc7);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  text-shadow: 5px 4px 4px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: solid white 1px;
+  text-decoration: none;
+  overflow: visible;
+  position: relative; 
+  width: 15%;
+  text-align: center;
+  right: -80%;
+  cursor:pointer;
+  margin-bottom: .5em;
+}
+
+.orderBtn:hover {
+  background: #b1bfc7;
+  background-image: -webkit-linear-gradient(top, #b1bfc7, #000000);
+  background-image: -moz-linear-gradient(top, #b1bfc7, #000000);
+  background-image: -ms-linear-gradient(top, #b1bfc7, #000000);
+  background-image: -o-linear-gradient(top, #b1bfc7, #000000);
+  background-image: linear-gradient(to bottom, #b1bfc7, #000000);
+  text-decoration: none;
+}
+
+div.orderBtn a {
+	 text-decoration: none;
 }
 
 table.products {

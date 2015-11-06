@@ -115,14 +115,26 @@
         			 		"<span>" . $row["address"] . "</span><br />" .
 							"<span>" . $row["city"] . ", " . $row["state"] . "</span><br />" .
 							"<span>" . $row["zip"] . "</span><br />" .
-							"<span>" . $row["phone"] . "</span>";
+							"<span>Phone #: " . $row["phone"] . "</span>";
 					
         		?>
         	</div>
+        	<?php 
+        	
+        		$subTotal = $_SESSION['myTotalPrice'];
+				$totalTax = $_SESSION['myTotalPrice'] * .07125;
+				$grandTotal = $subTotal + $totalTax;
+				
+				$subTotal = number_format($subTotal,2);
+				$totalTax = number_format($totalTax, 2);
+				$grandTotal = number_format($grandTotal, 2);
+				
+        	
+        	?>
         	<div class="orderTotal">
-        		<span>Order subtotal: $100</span><br />
-        		<span>Tax: 7%</span><br />
-        		<span>Grand total: $107</span>
+        		<span>Order subtotal: <?php echo "$".$subTotal; ?></span><br />
+        		<span>Tax: <?php echo "$".$totalTax ?></span><br />
+        		<span>Grand total: <?php echo "$".$grandTotal ?></span>
         		
         	</div>
         	

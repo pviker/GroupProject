@@ -32,8 +32,15 @@ div.customerInfo1 {
 	margin-left: 1em;
 	border: 2px white solid;
 	font-size: 20px;
-	width: 20em;
+	width: 75%;
 	margin-bottom: 0;
+	border-bottom: 1px white dashed;
+}
+
+div.centerCustomerInfo{
+	margin: auto;
+	width: 50%;
+	
 }
 
 div.customerInfo {
@@ -41,7 +48,7 @@ div.customerInfo {
 	margin: 1em;
 	border: 2px white solid;
 	font-size: 20px;
-	width: 20em;
+	width: 100%;
 	margin-top: 0;
 }
 
@@ -50,11 +57,11 @@ div.customerInfo span {
 }
 
 div.orderTotal {
-	display: inline-block;
+	
 	margin: 1em;
 	border: 2px white solid;
 	font-size: 20px;
-	width: 20em;
+	width: 100%;
 	margin-top: 0;
 }
 
@@ -345,6 +352,46 @@ a:hover{
 }
 
 div.orderBtn a {
+	 text-decoration: none;
+}
+
+.payBtn {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #b1bfc7);
+  background-image: -moz-linear-gradient(top, #000000, #b1bfc7);
+  background-image: -ms-linear-gradient(top, #000000, #b1bfc7);
+  background-image: -o-linear-gradient(top, #000000, #b1bfc7);
+  background-image: linear-gradient(to bottom, #000000, #b1bfc7);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  text-shadow: 5px 4px 4px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: solid white 1px;
+  text-decoration: none;
+  overflow: visible;
+  position: relative; 
+  width: 100%;
+  text-align: center;
+  
+  cursor:pointer;
+  margin-bottom: 5em;
+}
+
+.payBtn:hover {
+  background: #b1bfc7;
+  background-image: -webkit-linear-gradient(top, #b1bfc7, #000000);
+  background-image: -moz-linear-gradient(top, #b1bfc7, #000000);
+  background-image: -ms-linear-gradient(top, #b1bfc7, #000000);
+  background-image: -o-linear-gradient(top, #b1bfc7, #000000);
+  background-image: linear-gradient(to bottom, #b1bfc7, #000000);
+  text-decoration: none;
+}
+
+div.payBtn a {
 	 text-decoration: none;
 }
 

@@ -52,9 +52,10 @@
 		</h2>
      	<h1 class="indexH1">Shopping cart</h1>
      	
-     	<div class="orderBtn"><a href="confirmOrder.php">
-     	Review Order
-       </a> </div>
+     	<div class="orderBtn">
+     		<a href="confirmOrder.php">Review Order</a>
+     	</div>
+     	
         <table class = "cartTable">
             <tr>
                 <td>Thumbnail</td>

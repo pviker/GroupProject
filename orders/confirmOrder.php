@@ -40,6 +40,8 @@
     	<h1 class="indexH1">Review order</h1>
     	<h2 class="indexH1">Please review your order and shipment information</h2>
         
+       
+        
         <table class = "cartTable">
             <tr>
                 <td></td>
@@ -137,6 +139,10 @@
         		<span>Grand total: <?php echo "$".$grandTotal ?></span>
         		
         	</div>
+        	
+        	<div class="payBtn">
+     			<a href="orderPayment.php">Go to payment page</a>
+     		</div>
         	
         	
 		</div>

@@ -25,10 +25,9 @@ CREATE TABLE `credentials` (
   `userid` INT NULL,
   `username` VARCHAR(45) NULL,
   `password` VARCHAR(45) NULL,
-  `admin` BINARY NULL,
   PRIMARY KEY (`userid`),
   FOREIGN KEY (`userid`) REFERENCES users(`userid`));
-
+<<<<<<< Updated upstream
   
   CREATE TABLE `categories` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -40,8 +39,8 @@ CREATE TABLE `products` (
   `prod_id` INT NOT NULL AUTO_INCREMENT,
   `cat_id` INT NULL,
   `title` VARCHAR(70) NULL,
-  `descr` MEDIUMTEXT NULL,
-  `price` decimal(7,2) NULL,
+  `desc` MEDIUMTEXT NULL,
+  `price` INT NULL,
   `photo_loc` VARCHAR(100) NULL,
   PRIMARY KEY (`prod_id`),
   INDEX `cat_id_idx` (`cat_id` ASC),
@@ -65,7 +64,9 @@ insert into categories (category, subcategory) values
  -> on * (enter) 
  -> to user1 identified by 'abc123'; 
  
+=======
 
 
-
-
+ALTER TABLE `music_electric`.`credentials` 
+ADD COLUMN `admin` BINARY NULL AFTER `password`;
+>>>>>>> Stashed changes

@@ -1,5 +1,5 @@
 <?php 
-        
+    session_start();    
 /* 
  * ICS325 - Group Project
  * Iteration: 2
@@ -10,10 +10,6 @@
  *   
  * */
 
-    if(null === session_id()){
-        session_start();
-    }
-    
     require("../navigation.inc");
     $navigation = new Navigation();
     echo $navigation;

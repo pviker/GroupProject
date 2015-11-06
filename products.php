@@ -14,11 +14,11 @@
 		session_start();
 	}
 	
-    require("../navigation.inc");
+    require("navigation.inc");
     $navigation = new Navigation();
     echo $navigation;
 
-	require("../controllers/database.php");
+	require("controllers/database.php");
 //	require("URLpath.inc");
 	// $URLpath = new URLpath();
 	// $this->server = $server;
@@ -41,7 +41,7 @@
  
 	<div class="breadcrumb">    
           <ul>
-            <li><a href="../index.php">home</a></li>
+            <li><a href="index.php">home</a></li>
             <li><a href="products.php?cat=<?php echo $_GET["cat"]; ?>"><?php echo $_GET["cat"]; ?></a></li>
             <?php if (isset($_GET["subcat"])){ ?>
             	<li><a href=""><?php echo $_GET["subcat"]; ?></a></li> 
@@ -49,11 +49,11 @@
           </ul>
     </div>
     
-    <div class = "mainContentProducts">
+    <div class = "mainContent">
     	
      	<h1 class="indexH1"><?php echo $subcat . " " . $cat; ?></h1>
      	
-     	<table class="products">
+     	<table>
 	     	<?php 
 	     		// Need to query that will grab all products that have a 
 	     		// cat_id referenced to category table matching a specific category 
@@ -63,11 +63,11 @@
 	     		//$this->server = $server;
 	     		
 	     		if($cat == "Guitars" && $subcat == ""){
-	     			$query = "select * from products, categories where categories.category = \"Guitars\" and id=cat_id";
+	     			$query = "select * from products, categories where cat_id in (1, 2, 3, 9) and id=cat_id";
 	     		} else if($cat == "Amps" && $subcat == ""){
-	     				$query = "select * from products, categories where categories.category = \"Amps\" and id=cat_id";
+	     				$query = "select * from products, categories where cat_id in (4, 5, 6) and id=cat_id";
 	     		  } else if($cat == "Drums" && $subcat == ""){
-	     					$query = "select * from products, categories where categories.category = \"Drums\" and id=cat_id";		
+	     					$query = "select * from products, categories where cat_id in (7, 8) and id=cat_id";		
 	     			} else {
 	     					$query = "select * from products, categories where cat_id = " . $id . " and id=cat_id";
 					  }
@@ -80,16 +80,16 @@
 					
 		        	echo "<tr>
 		        			<td>
-		        				<a href=\"$server/ics325/GroupProject/products/productDetails.php?prod_id=" . 
+		        				<a href=\"$server/ics325/GroupProject/productDetails.php?prod_id=" . 
 		        						$row["prod_id"] . "&id=" . $row["id"] . "&cat=" . $row["category"] . "&subcat=" . 
 		        							$row["subcategory"] . "\">
 		        					<span class=\"img\">
-		        						<img src=\"../" . $row["photo_loc"] . "\" height=\"200\" width=\"200\" />
+		        						<img src=\"" . $row["photo_loc"] . "\" height=\"200\" width=\"200\" />
 		        					</span>
 		        				</a>
 		        			</td>
 		        			<td>
-		        				<a href=\"$server/ics325/GroupProject/products/productDetails.php?prod_id=" . 
+		        				<a href=\"$server/ics325/GroupProject/productDetails.php?prod_id=" . 
 		        						$row["prod_id"] . "&id=" . $row["id"] . "&cat=" . $row["category"] . "&subcat=" . 
 		        							$row["subcategory"] . "\">" . 
 		        								$row["title"] . "
@@ -97,10 +97,7 @@
 		        			</td>
 		        			<td>
 		        				$" . $row["price"] . "
-		        			</td>
-		        			<td>
-		        				<a href=\"../orders/addToCart.php?prod_id=" . $row["prod_id"] . "\" class=\"buyBtn\">Add to cart</a>
-		        			</td>  
+		        			</td>    
 	       				  </tr>";
 				} // end while
 				

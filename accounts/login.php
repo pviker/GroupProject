@@ -26,7 +26,9 @@
 	
 	}  
 	
-   
+	// $admin = "administrator";
+	// $adminPass = "password";
+//     
 	if((!isset($username)) || (!isset($password))) {
   
 ?>	
@@ -42,7 +44,9 @@
 	
 	<!--START MAIN CONTENT-->
 	<div class="mainContent">	
-	    
+		<!-- <h1 class="indexH1"><a href="userinfo.php">View all users!</a></h1> -->	
+
+		<!-- <form onsubmit="return submitForm()" action="mailinglistresults.html" method="post"> -->
 		<form name="login" action="login.php" method="post">
 			
 			<fieldset id="field1">
@@ -93,7 +97,7 @@
         
         $_SESSION['adminFlag'] = 1;
         
-        header("Location: admin.php");
+        header("Location: userinfo.php");
     }
         
      

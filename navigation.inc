@@ -19,6 +19,7 @@ class Navigation {
   protected $keywords = "Music, Electric, Inc, Instruments, Gear, Guitars, Drums";
 //  protected	$server;  
   protected $filePath;
+  protected $adminLink;
   
   public function __construct(){
 
@@ -96,6 +97,7 @@ class Navigation {
         				<a href=\"$this->server/ics325/GroupProject/accounts/logout.php\">logout</a>";
     }
 	
+	$adminLink = "";
 	if(isset($_SESSION['adminFlag'])){
 		if ($_SESSION['adminFlag'] == 1) {
 			$adminLink =  "| <a href=\"$this->server/ics325/GroupProject/accounts/admin.php\"> admin </a>"; 

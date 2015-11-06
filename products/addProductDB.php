@@ -34,6 +34,9 @@
 	if (isset($_POST['photo'])) {
 	    $photo = "images/" . $_POST['photo'];
 	}
+	if (isset($_POST['qty'])) {
+	    $qty = $_POST['qty'];
+	}
 	
 
 	$photo = "images/" .$photoBase;
@@ -45,8 +48,8 @@
 	$_SESSION["photo"] = $photo;
 
 	
-	$productQuery = "insert into products (cat_id,title,descr,price,photo_loc) 
-						values ('" .$subcat. "', '" .$title. "', '" .$descr. "', '" .$price. "', '" .$photo. "')";
+	$productQuery = "insert into products (cat_id,title,descr,price,photo_loc,qty)
+						values ('" .$subcat. "', '" .$title. "', '" .$descr. "', '" .$price. "', '" .$photo. "', '" .$qty.  "')";
 	if(mysqli_query($dbc, $productQuery)){
 		$_SESSION["message"] = "New product upload successful!";
 	};

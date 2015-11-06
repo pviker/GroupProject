@@ -73,7 +73,8 @@ if ($_SESSION['adminFlag'] !== 1) {
 		
 		    <label>Price:</label>
 		    	<input type="text" name="price" size="15" value="" id="price" /><br />
-		
+			<label>Qty:</label>
+			<input type="text" name="qty" size="15" value="" id="qty" /><br />
 			<label>Photo Location:</label>
 				
 		    	<input type="file" name="photo" id="photo" accept="image/*" value="">

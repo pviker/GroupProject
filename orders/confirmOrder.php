@@ -25,50 +25,34 @@
     }
 	
 	require("cartHead.php");
-	
-	
-	    
+  
  ?>
  
 	<div class="breadcrumb">    
           <ul>
             <li><a href="../index.php">home</a></li>
-            <li><a href="">shopping cart</a></li>          
+            <li><a href="../orders/cart.php">cart</a></li>
+            <li><a href="">review order</a></li>          
           </ul>
     </div>
-    
-    <div class = "mainContent">
-     	<!-- <h1><a href="admin.php">Admin Interface</a> </h1> <br/>	 -->		
-    </div>
  
-     <div class = "mainContentTable">
-     	<h2 class="errorMsg">
-     		<?php 
-     			if(isset($_SESSION['cartMsg'])){
-     				echo $_SESSION['cartMsg']; 
-     				unset($_SESSION['cartMsg']);
-				}
-			?>
-		</h2>
-     	<h1 class="indexH1">Shopping cart</h1>
-     	
-     	<div class="orderBtn"><a href="confirmOrder.php">
-     	Review Order
-       </a> </div>
+    <div class = "mainContentTable">
+    	<h1 class="indexH1">Review order</h1>
+    	<h2 class="indexH1">Please review your order and shipment information</h2>
+        
         <table class = "cartTable">
             <tr>
-                <td>Thumbnail</td>
-                <td>Item Descr.</td>
+                <td></td>
+                <td>Item Description</td>
                 <td>Unit Cost</td>
-                <td>Qty.</td>
-                <td>Item Subtotal</td>
-                <td>Delete From Cart</td>     
+                <td>Quantity</td>
+                <td>Item Subtotal</td>  
             </tr>
-            
-             <?php 
+           
+            <?php 
              
-             	// if there is a myCart session variable: populate cart
-             	if(isset($_SESSION['myCart'])){
+            	// if there is a myCart session variable: populate cart
+            	if(isset($_SESSION['myCart'])){
 	             	$myCart = $_SESSION['myCart'];
 					$totalPrice = 0;
 					
@@ -82,43 +66,67 @@
 		            	
 			            // query DB with each index of array to populate cart table
 			            while($row = mysqli_fetch_assoc($results)) {
-			            	
-							// set total price session var
-							//$totalPrice += $qty * $row["price"];
-							 
-				            	
-							// create quantity field based off qty wanted vs. available qty	            	
-							$qtyField = "<form action=\"updateCart.php\" class=\"cartQty\"method=\"post\">
-											<input type=\"hidden\" name=\"prod_id\" value=\"" . $prod_id . "\" id=\"prod_id\"/>
-											<input type=\"text\" name=\"qty\" class=\"cartQty\" value=\"" . $qty  . "\" 
-												size=\"2\" id=\"qty\"/>\n
-											<br />available: " . $row["qty"] . "<br />
-											<input type=\"submit\" class=\"cartQty\" name=\"update\" alt=\"update\" 
-												value=\"update\" id=\"submit\" style=\"opacity: 1\" />
-										</form>";
 							
 							// print table of cart items  
 							$subTotal = number_format($row["price"] * $qty,2);
 			                echo "<tr>
 			                 		<td><img src=\"../" . $row["photo_loc"] . "\" height=\"100\" width=\"100\"></td>
-			                 		<td><a href=\"../products/productDetails.php?prod_id=". $row["prod_id"] ."\" style=\"color:black\">" . $row["title"] . "</a><br /><br />item id: " . $row["prod_id"] . "</td>
+			                 		<td>" . $row["title"] . "<br /><br />item id: " . $row["prod_id"] . "</td>
 			                 		<td>$" . $row["price"] . "</td>
 			                 		<td>"
-		        						. $qtyField . 
+		        						. $qty . 
 		        					"</td>		                 		
 			                 		<td>$" . $subTotal . "</td>
-			                 		<td><a href=\"deleteFromCart.php?prod_id=" . $row["prod_id"] . "\" class=\"deleteBtn\">
-			                 				DELETE
-			                 			</a>
-			                 		</td>
+			                 		
 			                 	  </tr>";  
 						} // end while loop
 					} // end for loop : $myCart[]
 				} // end if isset($myCart[])
+				
              ?>
              
         	</table>
+        	
+        	<!-- SHIPMENT INFO -->
+        	<?php 
+        	
+        		if(isset($_SESSION['uname'])){
+        			$username = $_SESSION['uname'];
+        		} else $username = "";
+        	
+				require("../controllers/database.php");
+        		$query = "select userid from credentials where username = \"" . $username . "\"";
+				$results = mysqli_query($dbc, $query);
+				$row = mysqli_fetch_assoc($results);		
+				$userid = $row['userid'];
 
+				$query = "select * from users where userid= " . $userid;
+				$results = mysqli_query($dbc, $query);
+				$row = mysqli_fetch_assoc($results);
+        	
+        	?>
+        	
+        	<div class="customerInfo1">
+        		<span style='font-weight: bold; margin-left: 5%'>Billing/Shipping information:</span>
+        	</div>
+        	<div class="customerInfo">
+        		<?php 
+        			echo	"<span>" . $row["first_name"] . " " . $row["last_name"] . "</span><br />" .
+        			 		"<span>" . $row["address"] . "</span><br />" .
+							"<span>" . $row["city"] . ", " . $row["state"] . "</span><br />" .
+							"<span>" . $row["zip"] . "</span><br />" .
+							"<span>" . $row["phone"] . "</span>";
+					
+        		?>
+        	</div>
+        	<div class="orderTotal">
+        		<span>Order subtotal: $100</span><br />
+        		<span>Tax: 7%</span><br />
+        		<span>Grand total: $107</span>
+        		
+        	</div>
+        	
+        	
 		</div>
      
 		<?php     

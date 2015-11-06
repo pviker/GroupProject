@@ -39,7 +39,7 @@
 
 //Query for user info
 $productQuery = "select products.prod_id,products.cat_id,products.title,products.descr,products.price,
-					products.photo_loc,categories.category,categories.subcategory from products ,categories  
+					products.photo_loc,products.qty,categories.category,categories.subcategory from products ,categories
 						where products.cat_id = categories.id order by categories.category, categories.subcategory";
 
 $results = mysqli_query($dbc, $productQuery);
@@ -58,7 +58,8 @@ $results = mysqli_query($dbc, $productQuery);
             <td>Title</td>
             <td>Descripton</td>
             <td>Price</td>
-            <td>photo</td>
+            <td>Qty.</td>
+            <td>Photo</td>
         </tr>
 
         <?php
@@ -71,7 +72,7 @@ $results = mysqli_query($dbc, $productQuery);
             $cID = $row['cat_id'];
             echo "<tr><td>" . $row["prod_id"] . "</td><td>" . $row["category"] . "</td><td>" .
                 $row["subcategory"] . "</td><td>" . $row["title"] . "</td><td>" . $row["descr"] . "</td><td>" .
-                $row["price"] . "</td><td>" .  "<img src=../" . $row["photo_loc"] . " style=\"width:100px;height:100px\">" . " </td><td>" .
+                $row["price"] ."</td><td>" . $row["qty"] ."</td><td>" .  "<img src=../" . $row["photo_loc"] . " style=\"width:100px;height:100px\">" . " </td><td>" .
                 	"<a href =" . "editProductDB.php?id=$i&cat=$c&sub=$s&cid=$cID" . " style=\"color:black\">EDIT</a>". 
                 		"<a href =" . "confirmDeleteProduct.php?id=$i" . " style=\"color:black\">&nbsp;&nbsp;&nbsp;&nbsp;DELETE</a>";
 

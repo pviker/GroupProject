@@ -51,18 +51,19 @@
 
 		
 		$sql = "select products.title,products.descr,products.price,
-					products.photo_loc,categories.category,categories.subcategory from products ,
+					products.photo_loc, products.qty,categories.category,categories.subcategory from products ,
 						categories  where products.cat_id = categories.id and products.prod_id ='". $id. "'";
 		;
 		$result=mysqli_query($dbc,$sql);
 		$row = mysqli_fetch_row($result);
 		
-		$cat = $row[4];
-		$sub = $row[5];
+		$cat = $row[5];
+		$sub = $row[6];
 		$title = $row[0];
 		$descr = $row[1];
 		$price = $row[2];
 		$photo = $row[3];
+		$qty = $row[4];
 		
 		
 		// Free result set
@@ -109,11 +110,15 @@
 	            <textarea name="descr"   rows ="3" cols = "55" id="descr"><?php echo "$descr"; ?> </textarea> <br />
 	
 	
-	            <label>Price:</label>
-	            <input type="text" name="price" size="15"
-	                   value="<?php echo "$price" ?>" id="price" /><br />
-	
-	            <label>Current Photo</label>
+	          				<label>Price:</label>
+				<input type="text" name="price" size="15"
+					   value="<?php echo "$price" ?>" id="price" /><br />
+
+				<label>Qty:</label>
+				<input type="text" name="qty" size="15"
+					   value="<?php echo "$qty" ?>" id="qty" /><br />
+
+				<label>Current Photo</label>
 	            <img src="../<?php echo $photo;?>" alt="Current photo" style="width:304px;height:228px;"><br />
 	            <input type ="hidden" name ="oldphoto" value="<?php echo $photo;?>">
 	            <label>Upload new Photo: </label>

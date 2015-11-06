@@ -35,14 +35,17 @@ $id = $_SESSION['id'];
 	if (isset($_POST['price'])) {
 	    $price = $_POST['price'];
 	}
+    if (isset($_POST['qty'])) {
+	$qty = $_POST['qty'];
+    }
 	if (isset($_POST['oldphoto'])) {
 	    $photo = $_POST['oldphoto'];
-        $sql = "update products set cat_id='". $catID. "', title='". $title. "',descr='". $descr. "',price='". $price. "' where prod_id ='". $id. "'";
+        $sql = "update products set cat_id='". $catID. "', title='". $title. "',descr='". $descr. "',price='". $price. "',qty='". $qty. "' where prod_id ='". $id. "'";
 	}
 	if ($_FILES['photo']['name'] != "") {
         $photo = "images/" .$_FILES['photo']['name'];
         $sql = "update products set cat_id='". $catID. "', title='". $title. "', descr='". $descr. "',price='". $price. "',
-				photo_loc='". $photo. "' where prod_id ='". $id. "'";
+				photo_loc='". $photo. "',qty='". $qty. "' where prod_id ='". $id. "'";
 	}
 
 

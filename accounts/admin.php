@@ -34,6 +34,7 @@
 		
 		<h1 class="indexH1">
 			<?php 
+			
 				if(isset($_SESSION["message"])){
 					echo $_SESSION["message"];
 					unset($_SESSION["message"]);

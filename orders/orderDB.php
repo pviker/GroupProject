@@ -1,4 +1,5 @@
 <?php
+
 /* 
  * ICS325 - Group Project
  * Iteration: 5
@@ -79,12 +80,13 @@
 		$sql = "UPDATE products SET qty='$newQty' WHERE prod_id=$prod_id";
 		
 		if (mysqli_query($dbc, $sql)) {
-		   //echo "Record updated successfully";
+		   // echo "Record updated successfully";
 		} else {
 		   // echo "Error updating record: " . mysqli_error($conn);
 		}
 		
 	}
+	
 	// after persisting to the DB, unset cart session vars
 	// unset($_SESSION['myCart']);
 	// unset($_SESSION['myTotalQuantity']);

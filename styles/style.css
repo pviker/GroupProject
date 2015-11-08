@@ -26,6 +26,10 @@ body{
 	background-attachment: fixed;
 }
 
+a.noHover:hover {
+	text-decoration: none;
+}
+
 div.customerInfo1 {
 
 	margin-top: 1em;
@@ -39,7 +43,7 @@ div.customerInfo1 {
 
 div.centerCustomerInfo{
 	margin: auto;
-	width: 50%;
+	width: 75%;
 	
 }
 
@@ -48,7 +52,7 @@ div.customerInfo {
 	margin: 1em;
 	border: 2px white solid;
 	font-size: 20px;
-	width: 100%;
+	width: auto;
 	margin-top: 0;
 }
 
@@ -61,7 +65,7 @@ div.orderTotal {
 	margin: 1em;
 	border: 2px white solid;
 	font-size: 20px;
-	width: 100%;
+	width: auto;
 	margin-top: 0;
 }
 
@@ -374,11 +378,10 @@ div.orderBtn a {
   text-decoration: none;
   overflow: visible;
   position: relative; 
-  width: 100%;
+  width: 90%;
+  margin: 1em;
   text-align: center;
-  
   cursor:pointer;
-  margin-bottom: 5em;
 }
 
 .payBtn:hover {

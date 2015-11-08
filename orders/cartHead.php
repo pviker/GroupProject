@@ -1,10 +1,8 @@
 <?php
 
-	if (!isset($_SESSION)) session_start();
-	 
-	// start session and init cart here, then require this page in all other pages
-	 
-
+	if(!isset($_SESSION)) session_start();
+	if(!isset($_SESSION['uname'])) header("Location: ../accounts/login.php");
+	if(!isset($_SESSION['myCart'])) header("Location: cart.php");
 	
 	if(!isset($_SESSION['myCart']))  {
 	   $_SESSION['myCart'] = array();
@@ -13,7 +11,11 @@
 	}
 
 	if(empty($_SESSION['myCart'])){
-		$_SESSION['cartMsg'] = "Cart is empty, browse products and add to cart.";
+		if(isset($_SESSION["cartMsg"])){
+			if($_SESSION["cartMsg"] != "Item successfully deleted from cart!"){
+				$_SESSION['cartMsg'] = "Cart is empty, browse products and add to cart.";
+			}
+		}
 	}
 
 ?>

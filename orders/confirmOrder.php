@@ -2,27 +2,28 @@
 
 /* 
  * ICS325 - Group Project
- * Iteration: 2
+ * Iteration: 5
  * Group: D for Dolphins
- * File: userinfo.php
+ * File: confirmOrder.php
  * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
  * Description: This page displays the users cart
  *   
  * */
  
- 	if(null === session_id()){
-		session_start();
-	}
+ 	if(!isset($_SESSION)) session_start();
+	if(!isset($_SESSION['uname'])) header("Location: ../accounts/login.php");
+	if(!isset($_SESSION['myCart'])) header("Location: cart.php");
 	
     require("../navigation.inc");
     $navigation = new Navigation();
     echo $navigation;
 
 	require("../controllers/database.php");
-    
-    if (!isset($_SESSION['uname'])) {
-        header ('Location: ../accounts/login.php');  
-    }
+
+	if(empty($_SESSION['myCart'])){
+		$_SESSION['cartMsg'] = "Cart is empty, browse products and add to cart.";
+		header ('Location: cart.php');
+	}
 	
 	require("cartHead.php");
   
@@ -140,9 +141,11 @@
         		
         	</div>
         	
-        	<div class="payBtn">
-     			<a href="orderPayment.php">Go to payment page</a>
-     		</div>
+        	<a href="orderPayment.php" class="noHover">
+        		<div class="payBtn">
+     				Go to payment page
+     			</div>
+     		</a>
         	
         	
 		</div>

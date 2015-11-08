@@ -2,13 +2,15 @@
 
 /* 
  * ICS325 - Group Project
- * Iteration: 2
+ * Iteration: 5
  * Group: D for Dolphins
  * File: userinfo.php
  * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
- * Description: This page displays the users cart
+ * Description: This page displays the current logged in customers' cart
  *   
  * */
+ 
+ 
  
  	if(null === session_id()){
 		session_start();

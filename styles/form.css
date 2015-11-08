@@ -11,6 +11,13 @@ form {
 	border-top-right-radius: 50px;
 }
 
+form.noStyle {
+	color: white;
+	box-shadow: none;
+	border-top-left-radius: none;
+	border-top-right-radius: none;
+}
+
 form.cartQty {
 	color: black;
 	/*background-size: 100% auto;*/

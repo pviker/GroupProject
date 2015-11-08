@@ -9,6 +9,11 @@
  *   
  * */
 
+	if(!isset($_SESSION)) session_start();
+	if(!isset($_SESSION['uname'])) header("Location: ../accounts/login.php");
+	if(!isset($_SESSION['myCart'])) header("Location: cart.php");
+	
+ 
 	require ("cartHead.php");
 
 	$myCart = $_SESSION['myCart'];

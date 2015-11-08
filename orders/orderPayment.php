@@ -31,8 +31,9 @@
 	<div class="breadcrumb">    
           <ul>
             <li><a href="../index.php">home</a></li>
-            <li><a href="../orders/cart.php">cart</a></li>
-            <li><a href="">review order</a></li>          
+            <li><a href="cart.php">cart</a></li>
+            <li><a href="confirmOrder.php">review order</a></li>  
+            <li><a href="">payment details</a></li>        
           </ul>
     </div>
  
@@ -90,9 +91,11 @@
         		<span>Order subtotal: <?php echo "$".$subTotal; ?></span><br />
         		<span>Tax: <?php echo "$".$totalTax ?></span><br />
         		<span>Grand total: <?php echo "$".$grandTotal ?></span>
-        	</div>        	
+        	</div> 
+        	
+        	<div class="orderTotal">     	
     	
-        <form action="" method="post">
+        <form action="confirmPayment.php" method="post" class="noStyle">
 			<fieldset id="field1">
 				<label>Merchant: </label>
 		    	<select id="category"  name="subcat">
@@ -111,6 +114,8 @@
 			</fieldset>
 			<input type="submit" class="payBtn" name="Submit" alt="Submit" value="Submit" id="submit" style="opacity: 1" />
 		</form>
+		
+		</div> 
         	
 		</div>
      

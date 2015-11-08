@@ -2,7 +2,7 @@
 
 /* 
  * ICS325 - Group Project
- * Iteration: 2
+ * Iteration: 5
  * Group: D for Dolphins
  * File: navigation.inc
  * Author: Kevin Casey, Jordan Grenier, Paul Schilmoeller, Patrick Viker, Joshua Wilson
@@ -10,11 +10,11 @@
  * 				applied to all php view pages of the MVC model.
  *   
  * */
- 
-session_start();
+
+if(!isset($_SESSION)) session_start();
 
 class Navigation {
-  // class Page's attributes
+
   protected $title = "Music Electric Inc.";
   protected $keywords = "Music, Electric, Inc, Instruments, Gear, Guitars, Drums";
 //  protected	$server;  

@@ -81,10 +81,12 @@
         		$subTotal = $_SESSION['myTotalPrice'];
 				$totalTax = $_SESSION['myTotalPrice'] * .07125;
 				$grandTotal = $subTotal + $totalTax;
+				$_SESSION['grandTotal'] = $grandTotal;
 				
 				$subTotal = number_format($subTotal,2);
 				$totalTax = number_format($totalTax, 2);
 				$grandTotal = number_format($grandTotal, 2);
+				
 
         	?>
         	<div class="orderTotal">
@@ -113,6 +115,7 @@
 			    	<textarea name="notes" value="" rows ="3" cols = "65" id="notes"> </textarea> <br />
 			</fieldset>
 			<input type="submit" class="payBtn" name="Submit" alt="Submit" value="Submit" id="submit" style="opacity: 1" />
+			<input type="hidden" name="grandTotal" value="<?php $grandTotal ?>" id="grandTotal" />
 		</form>
 		
 		</div> 

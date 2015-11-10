@@ -69,6 +69,7 @@
 							"<span>Phone #: " . $row["phone"] . "</span>";
         		?>
         	</div>
+        	
         	<?php 
         	
         	/** *
@@ -77,15 +78,18 @@
 			 * SESSION WILL BE UNSET BY THE TIME THIS CODE IS REACHED 
 			 * 
 			 * **/
-        	
-        		$subTotal = $_SESSION['myTotalPrice'];
-				$totalTax = $_SESSION['myTotalPrice'] * .07125;
-				$grandTotal = $subTotal + $totalTax;
-				
+			 	
+			 	$query = "select * from orders where orders_id = " . $order_id;
+				$results = mysqli_query($dbc, $query);
+				$row = mysqli_fetch_assoc($results);	
+					
+				$grandTotal = $row['amount'];
+				$subTotal = $grandTotal / 1.07125;
+				$totalTax = $grandTotal - $subTotal;
+        				
 				$subTotal = number_format($subTotal,2);
 				$totalTax = number_format($totalTax, 2);
 				$grandTotal = number_format($grandTotal, 2);
-				
         	
         	?>
         	<div class="orderTotal">
@@ -94,8 +98,6 @@
         		<span>Charge amount: <?php echo "$".$grandTotal ?></span>
         		
         	</div>        	
-        	
-		
         
         <table class = "cartTable">
             <tr>
@@ -107,39 +109,35 @@
             </tr>
            
             <?php 
-             
-            	// if there is a myCart session variable: populate cart
-            	if(isset($_SESSION['myCart'])){
-	             	$myCart = $_SESSION['myCart'];
-					$totalPrice = 0;
+            
+           		$orderItemsQuery = "select prod_id, qty from order_items where order_id = " . $order_id;
+				$results = mysqli_query($dbc, $orderItemsQuery);
+				//$row = mysqli_fetch_assoc($results);
 					
-					// loop through each index of myCart[] array
-					foreach($_SESSION['myCart'] AS $temp)  {
-               			$prod_id = $temp["prod_id"];
-               			$qty = $temp["qty"];
-					    
-					    $query = "select * from products where prod_id =" . $prod_id;
-					    $results = mysqli_query($dbc, $query);
-		            	
-			            // query DB with each index of array to populate cart table
-			            while($row = mysqli_fetch_assoc($results)) {
+				// loop through orderItems
+				while($orderItemsRow = mysqli_fetch_assoc($results))  {
+           			$prod_id = $orderItemsRow["prod_id"];
+           			$qty = $orderItemsRow["qty"];
+				    
+				    $productQuery = "select title, price, photo_loc from products where prod_id =" . $prod_id;
+				    $productResults = mysqli_query($dbc, $productQuery);
+					$row = mysqli_fetch_assoc($productResults);									
+						
+					// print table of cart items  
+					$subTotal = number_format($row["price"] * $qty,2);
+	                echo "<tr>
+	                 		<td><img src=\"../" . $row["photo_loc"] . "\" height=\"100\" width=\"100\"></td>
+	                 		<td>" . $row["title"] . "<br /><br />item id: " . $prod_id . "</td>
+	                 		<td>$" . $row["price"] . "</td>
+	                 		<td>"
+        						. $qty . 
+        					"</td>		                 		
+	                 		<td>$" . $subTotal . "</td>
+	                 		
+	                 	  </tr>";  
+					
+				 } // end while loop
 							
-							// print table of cart items  
-							$subTotal = number_format($row["price"] * $qty,2);
-			                echo "<tr>
-			                 		<td><img src=\"../" . $row["photo_loc"] . "\" height=\"100\" width=\"100\"></td>
-			                 		<td>" . $row["title"] . "<br /><br />item id: " . $row["prod_id"] . "</td>
-			                 		<td>$" . $row["price"] . "</td>
-			                 		<td>"
-		        						. $qty . 
-		        					"</td>		                 		
-			                 		<td>$" . $subTotal . "</td>
-			                 		
-			                 	  </tr>";  
-						} // end while loop
-					} // end for loop : $myCart[]
-				} // end if isset($myCart[])
-				
              ?>
              
         	</table>

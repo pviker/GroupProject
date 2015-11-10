@@ -13,7 +13,16 @@
  	// authorize page access
 	if(!isset($_SESSION)) session_start();
 	if(!isset($_SESSION['uname'])) header("Location: ../accounts/login.php");
-	if(!isset($_SESSION['myCart'])) header("Location: cart.php");
+	if(empty($_SESSION['myCart']) || !isset($_SESSION['myCart'])){
+		header("Location: cart.php");
+	}
+	
+	$previousPage = $_SERVER['HTTP_REFERER'];
+	if (strpos($previousPage,'orderPayment.php') == false) {
+   		header("Location: cart.php");
+	}
+	
+
 
 	require("../controllers/database.php");
 	require("cartHead.php");
@@ -88,8 +97,9 @@
 	}
 	
 	// after persisting to the DB, unset cart session vars
-	// unset($_SESSION['myCart']);
-	// unset($_SESSION['myTotalQuantity']);
-	// unset($_SESSION['myTotalPrice']);
+	 unset($_SESSION['myCart']);
+	 unset($_SESSION['myTotalQuantity']);
+	 unset($_SESSION['myTotalPrice']);
+
 ?>
 

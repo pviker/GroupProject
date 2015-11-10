@@ -95,7 +95,7 @@
 											<input type=\"hidden\" name=\"prod_id\" value=\"" . $prod_id . "\" id=\"prod_id\"/>
 											<input type=\"text\" name=\"qty\" class=\"cartQty\" value=\"" . $qty  . "\" 
 												size=\"2\" id=\"qty\"/>\n
-											<br />available: " . $row["qty"] . "<br />
+												<br />available: " . $row["qty"] . "<br />
 											<input type=\"submit\" class=\"cartQty\" name=\"update\" alt=\"update\" 
 												value=\"update\" id=\"submit\" style=\"opacity: 1\" />
 										</form>";

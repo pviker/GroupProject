@@ -1,0 +1,17 @@
+//Selecting orders from customers
+
+
+select orders.orderid, userid, amount, date, prod_id, item_price, qty from orders, order_items where orders.orderid = order_items.orderid and orders.orderid = '1';
+
+//Selecting products from orders
+
+select products.prod_id, title, descr, price, photo_loc from products, order_items where orderid='1' and order_items.prod_id = products.prod_id;
+
+
+//Select products from orders (nested query)
+
+select title, price from products where prod_id in (select prod_id from orders, order_items where orders.orders_id = order_items.order_id and orders.orders_id = '1');
+
+//Select quantity for each product
+
+select qty from orders, order_items where orders.orders_id=order_items.order_id and orders.orders_id='1';

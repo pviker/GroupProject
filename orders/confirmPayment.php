@@ -10,29 +10,26 @@
  *   
  * */
 	
+	// accessibility conditionals
 	if(!isset($_SESSION)) session_start();
 	if(!isset($_SESSION['uname'])) header("Location: ../accounts/login.php");
-//	if(!isset($_SESSION['myCart'])) header("Location: cart.php");
 	if(empty($_SESSION['myCart']) || !isset($_SESSION['myCart'])){
 		header("Location: cart.php");
 		exit;
 	}
-	
-	$previousPage = $_SERVER['HTTP_REFERER'];
-	if (strpos($previousPage,'orderPayment.php') == false) {
+	if (strpos($_SERVER['HTTP_REFERER'],'orderPayment.php') == false) {
    		header("Location: cart.php");
 		exit;
 	}
 	
+	// handles persisting data to orders table
 	require("orderDb.php");
 	
     require("../navigation.inc");
     $navigation = new Navigation();
     echo $navigation;
-    
-    if (!isset($_SESSION['uname'])) {
-        header ('Location: ../accounts/login.php');  
-    }
+	
+	$_SESSION['currentOrderID'] = $order_id;
   
  ?>
  
@@ -45,7 +42,7 @@
  
     <div class = "mainContentTable">
     	<h1 class="indexH1">Thank you for your order!</h1><br />
-    	<h1 class="indexH1"><a href="">View Receipt</a></h1><br />
+    	<h1 class="indexH1"><a href="orderReceipt.php?order_id" target="_blank">View Receipt</a></h1><br />
     	<h2 class="">Order Summary:</h2>
         
        <!-- SHIPMENT INFO -->

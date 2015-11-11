@@ -35,6 +35,18 @@ if(null === session_id()){
             <li><a href="">view my orders</a></li>           
           </ul>
      </div>
+     
+     <div class = "mainContentTable">
+        
+        <h1 class="indexH1">My Orders</h1>
+         
+         <table class = "cartTable">
+             <tr>
+                 <td>Order ID</td>
+                 <td>Order Date</td>
+                 <td>Total Amount</td>
+                 <td>Products</td>
+         </tr>
 
 <?php  
 
@@ -48,10 +60,29 @@ if(null === session_id()){
      
      $orderResult = mysqli_query($dbc, $orderQuery);
      
+     while($orderRow = mysqli_fetch_assoc($orderResult)) {
+         
+          echo "<tr>
+      
+                <td>" . $orderRow['orders_id'] . "</td>
+                <td>" . $orderRow['date'] . "</td>
+                <td>" . $orderRow['amount']  . "</td>
+                <td><a href=\"viewOrderProducts.php?orderid=" . $orderRow['orders_id'] . "\" style=\"color:black\"\">View Products</a></td>
+                
+           </tr>";
+         
+         
+         
+         
+     }
      
      
-
-
-
-
 ?>
+
+</table>
+
+</div>
+
+</body>
+
+</html>

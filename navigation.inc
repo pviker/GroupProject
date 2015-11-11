@@ -94,7 +94,8 @@ class Navigation {
 	$loggedIn = "<a href=\"$this->server/ics325/GroupProject/accounts/login.php\">login</a>";
 	if(isset($_SESSION['uname'])) {
         $loggedIn = "Welcome, " . $_SESSION['uname'] . " | 
-        				<a href=\"$this->server/ics325/GroupProject/accounts/logout.php\">logout</a>";
+        				<a href=\"$this->server/ics325/GroupProject/accounts/logout.php\">logout</a> 
+        					| <a href=\"$this->server/ics325/GroupProject/orders/viewMyOrders.php\"> order history </a> ";
     }
 	
 	$adminLink = "";
@@ -103,6 +104,9 @@ class Navigation {
 			$adminLink =  "| <a href=\"$this->server/ics325/GroupProject/accounts/admin.php\"> admin </a>"; 
 		} 
 	}else $adminLink = "";
+	
+	$orderHistoryLink = "";
+	if(isset($_SESSION['']))
 	
 	if(!isset($_SESSION['myCart']))  {
 	   $_SESSION['myCart'] = array();

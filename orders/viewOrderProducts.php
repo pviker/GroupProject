@@ -21,8 +21,8 @@ if(null === session_id()){
     
     require("../controllers/database.php");
     
-    if ($_SESSION['adminFlag'] !== 1) {
-        header ('Location: login.php'); 
+    if (!isset($_SESSION['uname'])) {
+        header ('Location: ../accounts/login.php'); 
     }
 
 ?>

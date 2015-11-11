@@ -239,6 +239,7 @@ class Navigation {
 	
 	public function getTotalPrice(){
 			
+		$totalPrice = 0;
 		require("controllers/database.php");	
 		if(isset($_SESSION['myCart'])){
 		 	$myCart = $_SESSION['myCart'];
@@ -259,6 +260,7 @@ class Navigation {
 			} // end for loop : $myCart[]
 		} // end if isset($myCart[])
 		
+	
 		$_SESSION['myTotalPrice'] = $totalPrice;
 	} // end function
 	

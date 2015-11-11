@@ -54,48 +54,17 @@ if(null === session_id()){
           
 <?php 
 
-      $selectOrdersQuery = "select * from orders order by date";
+      $selectOrdersQuery = " select orders_id, amount, orders.date, first_name, last_name from orders, users where orders.user_id=users.userid order by last_name, date;";
       
       $orderResults = mysqli_query($dbc, $selectOrdersQuery);
       
-      $sortedUsersQuery = "select userid, first_name, last_name from users where userid in (select user_id from orders) order by last_name";
-      
-      $sortedUsersResults = mysqli_query($dbc, $sortedUsersQuery);
-      
-      // $sortedUserArray = array();
-//       
-      // while($row = mysqli_fetch_assoc($sortedUsersResults)) {
-//                   
-           // $sortedUserArray[] = $row;
-//           
-      // }
-      
-      // print_r($sortedUserArray);
-      
       while($orderRow = mysqli_fetch_assoc($orderResults)) {
-              
-          // $userID = "";
-//               
-          // foreach($sortedUserArray as $temp) {
-//               
-              // $userID = $temp['userid'];
-              
-          
-          
-          $userQuery = "select first_name, last_name from users where users.userid = '" . $orderRow['user_id'] . "'";
-          
-          $userResults = mysqli_query($dbc, $userQuery);
-          
-          $userRow = mysqli_fetch_assoc($userResults);
-          
-          
-          
-          
+                             
       echo "<tr>
       
                 <td>" . $orderRow['orders_id'] . "</td>
-                <td>" . $userRow['first_name'] . "</td>
-                <td>" . $userRow['last_name']  . "</td>
+                <td>" . $orderRow['first_name'] . "</td>
+                <td>" . $orderRow['last_name']  . "</td>
                 <td>" . $orderRow['date']      . "</td>
                 <td>" . $orderRow['amount']    . "</td>
                 <td><a href=\"viewOrderProducts.php?orderid=" . $orderRow['orders_id'] . "\" style=\"color:black\"\">View Products</a></td>

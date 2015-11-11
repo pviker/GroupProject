@@ -14,16 +14,18 @@
 	if(!isset($_SESSION['uname'])) header("Location: ../accounts/login.php");
 	if(!isset($_SESSION['myCart'])) header("Location: cart.php");
 	
+	if(empty($_SESSION['myCart'])){
+		$_SESSION['cartMsg'] = "Cart is empty, browse products and add to cart.";
+		header ('Location: cart.php');
+	}
+	
     require("../navigation.inc");
     $navigation = new Navigation();
     echo $navigation;
 
 	require("../controllers/database.php");
 
-	if(empty($_SESSION['myCart'])){
-		$_SESSION['cartMsg'] = "Cart is empty, browse products and add to cart.";
-		header ('Location: cart.php');
-	}
+
 	
 	require("cartHead.php");
   

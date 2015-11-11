@@ -23,7 +23,7 @@
 	}
 	
 	// handles persisting data to orders table
-	require("orderDb.php");
+	require("orderDB.php");
 	
     require("../navigation.inc");
     $navigation = new Navigation();
@@ -42,7 +42,7 @@
  
     <div class = "mainContentTable">
     	<h1 class="indexH1">Thank you for your order!</h1><br />
-    	<h1 class="indexH1"><a href="orderReceipt.php?order_id" target="_blank">View Receipt</a></h1><br />
+    	<h1 class="indexH1"><a href="orderReceipt.php" target="_blank">View Receipt</a></h1><br />
     	<h2 class="">Order Summary:</h2>
         
        <!-- SHIPMENT INFO -->

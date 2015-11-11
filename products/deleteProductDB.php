@@ -3,58 +3,40 @@
 	if(null === session_id()){
 	    session_start();
 	}
-
-    require("../navigation.inc");
-    $navigation = new Navigation();
-    echo $navigation;
-
-	 if ($_SESSION['adminFlag'] !== 1) {
-	//	 header ('Location: ../accounts/login.php');
-     }
+	session_start();
 	
-
-	require("../controllers/database.php");
-
-	//product id to session
-	$id = $_SESSION["id"];
-
-
+	if ($_SESSION['adminFlag'] !== 1) {
+		header ('Location: ../accounts/login.php');
+	}
+	
 	if (isset($_POST['cancel'])){
 		$_SESSION["message"] = "Cancelled record deletion";
 		header ('Location: ../accounts/admin.php');
 	} else if(isset($_POST['delete'])){
-?>
 
-	<div class="breadcrumb">
-	    <ul>
-	        <li><a href="../index.php">home</a></li>
-	        <li><a href="">Add Product</a></li>
-	    </ul>
-	</div>
+		require("../controllers/database.php");
 	
-	<!--START MAIN CONTENT-->
-	<div class="mainContent">
-	   <!-- <form action="confirmEditProduct.php" method="post">-->
-	        <fieldset id="field1">
-	            <?php
-		           // $id = $_SESSION['id'];
-
-		            $sql = "delete from products where  prod_id = '". $id. "'";
+		//product id to session
+		$id = $_SESSION["id"];
 		
-		            if ($dbc->query($sql) === TRUE) {
-		            	$_SESSION["message"] = "Record deleted successfully";
+		$sql = "delete from products where  prod_id = ". $id;
+		
+		if ($dbc->query($sql) === TRUE) {
+			$_SESSION["message"] = "Record deleted successfully";
+			echo $_SESSION['message'];
+		} else {
+			$_SESSION["message"] = "Error Deleting Record";
+			echo $_SESSION['message']. "\n";
+			echo $sql;
+		}
+		
+		//Free results from memory
+		//mysqli_free_result($results);
+		//Close database connection
+		mysqli_close($dbc);
 
-
-		            } else {
-						$_SESSION["message"] = "Error Deleting Record";
-
-
-		            }
-		            //Free results from memory
-		            //mysqli_free_result($results);
-		            //Close database connection
-		            mysqli_close($dbc);
-                header("Location: ../accounts/admin.php");
-		        }
-	            ?>
+	
+		header("Location: ../accounts/admin.php");
+	}
+?>
 

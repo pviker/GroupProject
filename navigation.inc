@@ -94,14 +94,14 @@ class Navigation {
 	$loggedIn = "<a href=\"$this->server/ics325/GroupProject/accounts/login.php\">login</a>";
 	if(isset($_SESSION['uname'])) {
         $loggedIn = "Welcome, " . $_SESSION['uname'] . " | 
-        				<a href=\"$this->server/ics325/GroupProject/accounts/logout.php\">logout</a> 
-        					| <a href=\"$this->server/ics325/GroupProject/orders/viewMyOrders.php\"> order history </a> ";
+        				<a href=\"$this->server/ics325/GroupProject/accounts/logout.php\">logout</a>  
+        					| <a href=\"$this->server/ics325/GroupProject/orders/viewMyOrders.php\"> order history</a> ";
     }
 	
 	$adminLink = "";
 	if(isset($_SESSION['adminFlag'])){
 		if ($_SESSION['adminFlag'] == 1) {
-			$adminLink =  "| <a href=\"$this->server/ics325/GroupProject/accounts/admin.php\"> admin </a>"; 
+			$adminLink =  " | <a href=\"$this->server/ics325/GroupProject/accounts/admin.php\">admin</a> "; 
 		} 
 	}else $adminLink = "";
 	
@@ -128,9 +128,8 @@ class Navigation {
 			$myTotalPrice = number_format($myTotalPrice,2);
 		} else $myTotalPrice = 0;
 		
+		$cartLink = " | <a href=\"$this->server/ics325/GroupProject/orders/cart.php\">view cart</a> ";
 		
-		
-		$cartLink = " | <a href=\"$this->server/ics325/GroupProject/orders/cart.php\"> view cart </a>";
 		$cart = "<a href=\"$this->server/ics325/GroupProject/orders/cart.php\">
 					<div class=\"cartHead\">
 						Order Qty: " . $myTotalQuantity . "<br />
@@ -185,7 +184,7 @@ class Navigation {
 		<div class=\"head\">Music Electric Inc.</div>
 		<div class=\"users\">"
 			. $loggedIn .
-			" | <a href=\"$this->server/ics325/GroupProject/accounts/register.php\">register </a>"
+			" | <a href=\"$this->server/ics325/GroupProject/accounts/register.php\">register</a> "
 			. $adminLink 
 			. $cartLink .
 		"</div>" . $cart;  // end return 

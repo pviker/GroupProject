@@ -54,17 +54,40 @@ if(null === session_id()){
           
 <?php 
 
-      $selectOrdersQuery = "select * from orders";
+      $selectOrdersQuery = "select * from orders order by date";
       
       $orderResults = mysqli_query($dbc, $selectOrdersQuery);
       
+      $sortedUsersQuery = "select userid, first_name, last_name from users where userid in (select user_id from orders) order by last_name";
+      
+      $sortedUsersResults = mysqli_query($dbc, $sortedUsersQuery);
+      
+      // $sortedUserArray = array();
+//       
+      // while($row = mysqli_fetch_assoc($sortedUsersResults)) {
+//                   
+           // $sortedUserArray[] = $row;
+//           
+      // }
+      
+      // print_r($sortedUserArray);
+      
       while($orderRow = mysqli_fetch_assoc($orderResults)) {
+              
+          // $userID = "";
+//               
+          // foreach($sortedUserArray as $temp) {
+//               
+              // $userID = $temp['userid'];
+              
+          
           
           $userQuery = "select first_name, last_name from users where users.userid = '" . $orderRow['user_id'] . "'";
           
           $userResults = mysqli_query($dbc, $userQuery);
           
           $userRow = mysqli_fetch_assoc($userResults);
+          
           
           
           
@@ -79,7 +102,11 @@ if(null === session_id()){
                 
            </tr>";
                 
-      }
+          } 
+             
+      // }
+          
+          
       
 ?>         
           

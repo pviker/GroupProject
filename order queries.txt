@@ -15,3 +15,10 @@ select title, price from products where prod_id in (select prod_id from orders, 
 //Select quantity for each product
 
 select qty from orders, order_items where orders.orders_id=order_items.order_id and orders.orders_id='1';
+
+//Select sorted users that have orders
+
+select userid, first_name, last_name from users where userid in (select user_id from orders) order by last_name;
+
+
+ $userQuery = "select first_name, last_name from users where users.userid = '" . $orderRow['user_id'] . "'";

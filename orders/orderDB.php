@@ -32,7 +32,7 @@
 	// init db persist vars
 	$userid = $row['userid'];
 	$amount = $_SESSION['grandTotal'];
-	$date = date("d-m-Y");
+	$date = date("Y-m-d");
 		
 	// persist current order
 	$query = "INSERT INTO orders (user_id, amount, date)

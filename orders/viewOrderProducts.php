@@ -27,14 +27,27 @@ if(null === session_id()){
 
 ?>
 
-     <div class="breadcrumb">    
-          <ul>
-            <li><a href="../index.php">home</a></li>
-            <li><a href="../accounts/admin.php">admin</a></li> 
-            <li><a href="viewAllOrders.php">view all orders</a></li>
-            <li><a href="">view products in order</a></li>           
-          </ul>
-     </div>
+	<?php     
+		if ($_SESSION['adminFlag'] == 1) {
+    ?>
+	     <div class="breadcrumb">    
+	          <ul>
+	            <li><a href="../index.php">home</a></li>
+	            <li><a href="../accounts/admin.php">admin</a></li> 
+	            <li><a href="viewAllOrders.php">view all orders</a></li>
+	            <li><a href="">view products in order</a></li>           
+	          </ul>
+	     </div>
+     <?php } else{ ?>
+	     <div class="breadcrumb">    
+	          <ul>
+	            <li><a href="../index.php">home</a></li>
+	            <li><a href="viewMyOrders.php">view my orders</a></li>
+	            <li><a href="">view products in order</a></li>           
+	          </ul>
+	     </div>
+     <?php } ?>
+     
      
      <div class = "mainContentTable">
         

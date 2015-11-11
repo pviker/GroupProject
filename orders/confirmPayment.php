@@ -12,7 +12,17 @@
 	
 	if(!isset($_SESSION)) session_start();
 	if(!isset($_SESSION['uname'])) header("Location: ../accounts/login.php");
-	if(!isset($_SESSION['myCart'])) header("Location: cart.php");
+//	if(!isset($_SESSION['myCart'])) header("Location: cart.php");
+	if(empty($_SESSION['myCart']) || !isset($_SESSION['myCart'])){
+		header("Location: cart.php");
+		exit;
+	}
+	
+	$previousPage = $_SERVER['HTTP_REFERER'];
+	if (strpos($previousPage,'orderPayment.php') == false) {
+   		header("Location: cart.php");
+		exit;
+	}
 	
 	require("orderDb.php");
 	

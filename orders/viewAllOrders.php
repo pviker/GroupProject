@@ -54,7 +54,7 @@ if(null === session_id()){
           
 <?php 
 
-      $selectOrdersQuery = " select orders_id, amount, orders.date, first_name, last_name from orders, users where orders.user_id=users.userid order by last_name, date;";
+      $selectOrdersQuery = " select orders_id, amount, orders.date, first_name, last_name from orders, users where orders.user_id=users.userid order by last_name, first_name, date;";
       
       $orderResults = mysqli_query($dbc, $selectOrdersQuery);
       

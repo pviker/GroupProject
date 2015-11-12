@@ -105,11 +105,52 @@ if(null === session_id()){
              
              <tr>Total Amount</tr>
              
-                <td>$<?php echo $totalAmount ?></td>
+                <td>$<?php echo number_format($totalAmount * 1.07125, 2); ?></td>
                 
          </table>       
                 
-</div>                
+</div>   
+
+<?php 
+
+    $userQuery = "select first_name, last_name, email, address, city, state, zip, phone from users, orders 
+    where users.userid=orders.user_id and orders.orders_id='" . $orderID . "'";
+    
+    $userResult = mysqli_query($dbc, $userQuery);
+    
+    $userRow = mysqli_fetch_assoc($userResult);
+    
+?>
+
+<br><br><br>
+ <div class = "mainContentTable">
+        
+        <h1 class="indexH1">Customer Info</h1>
+         
+         <table class = "cartTable">
+             <tr>
+                 <td>First Name</td>
+                 <td>Last Name</td>
+                 <td>E-Mail</td>
+                 <td>Address</td>
+                 <td>City</td>
+                 <td>State</td>
+                 <td>Zip Code</td>
+                 <td>Phone Number</td>
+                 
+             </tr>
+             
+             <td><?php echo $userRow['first_name']; ?></td>
+             <td><?php echo $userRow['last_name']; ?></td>
+             <td><?php echo $userRow['email']; ?></td>
+             <td><?php echo $userRow['address']; ?></td>
+             <td><?php echo $userRow['city']; ?></td>
+             <td><?php echo $userRow['state']; ?></td>
+             <td><?php echo $userRow['zip']; ?></td>
+             <td><?php echo $userRow['phone']; ?></td>
+           
+           
+           </table>     
 
 </body>
 

@@ -152,14 +152,14 @@
 	-webkit-border-bottom-left-radius:0px;
 	border-bottom-left-radius:0px;
 }.amountTable tr:hover td{
-	background-color:#ffffff;
+	/*background-color:#ffffff;*/
 		
 
 }
 .amountTable td{
 	vertical-align:middle;
 	
-	background-color:#b2b2b2;
+	background-color:#ffffff;
 
 	border:1px solid #000000;
 	border-width:0px 1px 1px 0px;

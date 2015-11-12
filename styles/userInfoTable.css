@@ -94,3 +94,115 @@
 .usersTable tr:first-child td:last-child{
 	border-width:0px 0px 1px 1px;
 }
+
+
+.amountTable {
+	margin:0px;padding:0px;
+	width:10%;
+	/*box-shadow: 10px 10px 5px #888888;*/
+	border:0px solid #000000;
+	
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+	
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+	
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+	
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+	
+	position: absolute;
+    right: 130px;
+	
+	
+	
+}.amountTable table{
+    border-collapse: collapse;
+        border-spacing: 0;
+	width:100%;
+	height:100%;
+	margin:0px;padding:0px;
+
+}.amountTable tr:last-child td:last-child {
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+	
+}
+.amountTable table tr:first-child td:first-child {
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+
+	
+}
+.amountTable table tr:first-child td:last-child {
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+}.amountTable tr:last-child td:first-child{
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+}.amountTable tr:hover td{
+	background-color:#ffffff;
+		
+
+}
+.amountTable td{
+	vertical-align:middle;
+	
+	background-color:#b2b2b2;
+
+	border:1px solid #000000;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:7px;
+	font-size:16px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#000000;
+}.amountTable tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}.amountTable tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}.amountTable tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
+.amountTable tr:first-child td{
+		background:-o-linear-gradient(bottom, #333333 5%, #333333 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #333333), color-stop(1, #333333) );
+	background:-moz-linear-gradient( center top, #333333 5%, #333333 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#333333", endColorstr="#333333");	background: -o-linear-gradient(top,#333333,333333);
+
+	background-color:#333333;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:14px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ffffff;
+}
+.amountTable tr:first-child:hover td{
+	background:-o-linear-gradient(bottom, #333333 5%, #333333 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #333333), color-stop(1, #333333) );
+	background:-moz-linear-gradient( center top, #333333 5%, #333333 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#333333", endColorstr="#333333");	background: -o-linear-gradient(top,#333333,333333);
+
+	background-color:#333333;
+}
+.amountTable tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+.amountTable tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}
+
+
+

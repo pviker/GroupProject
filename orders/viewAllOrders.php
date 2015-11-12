@@ -71,12 +71,8 @@ if(null === session_id()){
                 
            </tr>";
                 
-          } 
-             
-      // }
-          
-          
-      
+      }
+               
 ?>         
           
  </table>

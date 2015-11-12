@@ -55,6 +55,7 @@ if(null === session_id()){
          
          <table class = "cartTable">
              <tr>
+                 <td>Order ID</td>
                  <td>Photo</td>
                  <td>Product</td>
                  <td>Description</td>
@@ -72,41 +73,43 @@ if(null === session_id()){
     
     $productResults = mysqli_query($dbc, $productInfoQuery);
     
-    // $qtyQuery = "select qty from orders, order_items where orders.orders_id=order_items.order_id and orders.orders_id='" . $orderID . "'";
-//     
-    // $qtyResults = mysqli_query($dbc, $qtyQuery);
+    $totalAmount = "";
     
     while($productRow = mysqli_fetch_assoc($productResults)) {
         
         echo "<tr>
         
+                <td>" . $orderID . "</td>        
                 <td><img src=\"../" . $productRow['photo_loc'] . "\" height=\"100\" width=\"100\"></td>
                 <td>" . $productRow['title'] . "</td>
                 <td>" . $productRow['descr'] . "</td>
                 <td>" . $productRow['price'] . "</td>
-                <td>" . $productRow['qty']   . "</td>";
-                
-                
-         // $qtyRow = mysqli_fetch_assoc($qtyResults);
-//          
-         // foreach($qtyRow as $qty) {
-//              
-             // echo "<td>" . $qty . "</td>";             
-//              
-         // }
+                <td>" . $productRow['qty']   . "</td>
              
+             </tr>";      
              
-                
-        echo "</tr>";        
+             $totalAmount += $productRow['price'] * $productRow['qty'];  
            
      }
-
 
 ?>
 
 </table>
 
 </div>
+<br><br>
+
+<div class = "amountTable">
+
+        <table>
+             
+             <tr>Total Amount</tr>
+             
+                <td>$<?php echo $totalAmount ?></td>
+                
+         </table>       
+                
+</div>                
 
 </body>
 

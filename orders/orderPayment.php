@@ -102,10 +102,10 @@
 				<label>Merchant: </label>
 		    	<select id="category"  name="subcat">
 		        	<option value="">Select</option>
-					<option value="visa">Visa</option>
-					<option value="mastercard">MasterCard</option>
-					<option value="discover">Discover</option>
-					<option value="amex">American Express</option>
+					<option style = "color:black" value="visa">Visa</option>
+					<option style = "color:black" value="mastercard">MasterCard</option>
+					<option style = "color:black" value="discover">Discover</option>
+					<option style = "color:black" value="amex">American Express</option>
 				</select><br />
 			    <label>Card number:</label>
 			   		<input type="text" name="creditCard" placeholder="no dashes" value="" size="16" id="creditCard"/><br />

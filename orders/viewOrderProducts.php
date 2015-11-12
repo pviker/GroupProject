@@ -68,8 +68,11 @@ if(null === session_id()){
 
     $orderID = $_GET['orderid'];
 
-    $productInfoQuery = "select order_items.qty, title, price, descr, photo_loc from order_items, products where order_items.prod_id = products.prod_id and products.prod_id in 
-    (select order_items.prod_id from order_items where order_id='" . $orderID . "')";
+    // $productInfoQuery = "select order_items.qty, title, price, descr, photo_loc from order_items, products where order_items.prod_id = products.prod_id and products.prod_id in 
+    // (select order_items.prod_id from order_items where order_id='" . $orderID . "')";
+	
+	$productInfoQuery = "select order_items.qty, descr, title, price, photo_loc from order_items, products where 
+	 	order_items.prod_id=products.prod_id and order_id=".$orderID;
     
     $productResults = mysqli_query($dbc, $productInfoQuery);
     

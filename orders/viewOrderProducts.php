@@ -67,14 +67,14 @@ if(null === session_id()){
 
     $orderID = $_GET['orderid'];
 
-    $productInfoQuery = "select title, descr, price, photo_loc from products where prod_id in 
-    (select prod_id from orders, order_items where orders.orders_id = order_items.order_id and orders.orders_id ='" . $orderID . "')";
-
+    $productInfoQuery = "select order_items.qty, title, price, descr, photo_loc from order_items, products where order_items.prod_id = products.prod_id and products.prod_id in 
+    (select order_items.prod_id from order_items where order_id='" . $orderID . "')";
+    
     $productResults = mysqli_query($dbc, $productInfoQuery);
     
-    $qtyQuery = "select qty from orders, order_items where orders.orders_id=order_items.order_id and orders.orders_id='" . $orderID . "'";
-    
-    $qtyResults = mysqli_query($dbc, $qtyQuery);
+    // $qtyQuery = "select qty from orders, order_items where orders.orders_id=order_items.order_id and orders.orders_id='" . $orderID . "'";
+//     
+    // $qtyResults = mysqli_query($dbc, $qtyQuery);
     
     while($productRow = mysqli_fetch_assoc($productResults)) {
         
@@ -83,15 +83,17 @@ if(null === session_id()){
                 <td><img src=\"../" . $productRow['photo_loc'] . "\" height=\"100\" width=\"100\"></td>
                 <td>" . $productRow['title'] . "</td>
                 <td>" . $productRow['descr'] . "</td>
-                <td>" . $productRow['price']  . "</td>";
+                <td>" . $productRow['price'] . "</td>
+                <td>" . $productRow['qty']   . "</td>";
                 
-         $qtyRow = mysqli_fetch_assoc($qtyResults);
-         
-         foreach($qtyRow as $qty) {
-             
-             echo "<td>" . $qty . "</td>";             
-             
-         }
+                
+         // $qtyRow = mysqli_fetch_assoc($qtyResults);
+//          
+         // foreach($qtyRow as $qty) {
+//              
+             // echo "<td>" . $qty . "</td>";             
+//              
+         // }
              
              
                 
